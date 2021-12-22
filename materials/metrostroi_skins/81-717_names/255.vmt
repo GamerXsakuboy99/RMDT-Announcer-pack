@@ -1,0 +1,7 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "metrostroi_skins/81-702_names/255"
+	"$model" "1"
+	"$alphatest" "1"
+  	"$allowalphatocoverage" "1"
+}
