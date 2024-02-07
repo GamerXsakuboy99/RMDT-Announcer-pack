@@ -1,20 +1,16 @@
 # Announcer for Rockport Metropolitan maps.
 
-### Workshop version: Beta 7.5
+### Workshop version: Beta 7.7
 
 ## Update log
-- Rebuild the ANSP code fully.
-- Added all terminal announcers where it's possible right now. (v29 stops)
-- Added two new destination boards.
-- Added RRI support fully now.
-- Reactivated the Aviation university and Urban park destination boards.
-
+- Added old Concord announcer from old hidden content pack.
 
 ### Current voices.
 - @[0145] - Valentin [DE/EN] 
 - @[0160] - ☭Papa Trocki☭ 
 - @[0025] - Marius_Mustang
 - Mr Ballistic101
+- Concord
 
 ### Current bugs
 - n/a
