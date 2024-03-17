@@ -1,6 +1,7 @@
 # Announcer for Rockport Metropolitan maps.
 
-### Workshop version: Beta 7.7
+### Workshop version: Beta 7.6
+### GitHub Version: Beta 7.6
 
 ## Update log
 - Added old Concord announcer from old hidden content pack.
