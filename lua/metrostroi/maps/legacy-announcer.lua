@@ -2,6 +2,11 @@ local Map = game.GetMap():lower() or ""
 if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_snow") then
     Metrostroi.PlatformMap = "ruralline_old"
     Metrostroi.CurrentMap = "ruralline_old"
+    print("Play the V3 already!! - RMDT")
+elseif Map:find("gm_metro_ruralline_v3") then
+    Metrostroi.PlatformMap = "ruralline_v3"
+    Metrostroi.CurrentMap = "ruralline_v3"
+    print("Welcome to the future! - RMDT")
 else
     return
 end
