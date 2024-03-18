@@ -1,6 +1,7 @@
 # Announcer for Rockport Metropolitan maps.
 
 ## !!! THIS IS A DEVELOPMENT VERSION OF THE ANNOUNCER, DO NOT DOWNLOAD !!!!
+Download stable/released version from the Release Branch.
 
 ### Workshop version: V1 First Full version.
 ### Update log
