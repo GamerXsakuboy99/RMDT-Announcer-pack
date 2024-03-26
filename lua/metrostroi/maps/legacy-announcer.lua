@@ -42,7 +42,7 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
         {
             153, "Aviation University",
             arr = {{"arr_aviation_university"},{"arr_aviation_university"}},
-            arrlast = {{nil},{"arr_aviation_university"},
+            arrlast = {{nil},{"arr_aviation_university"}},
             dep = {{"next_city_hall"},{"next_market_street"}},
         },
         {
@@ -65,7 +65,7 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
         {
             157, "Rocklake",
             arrlast = {{"arr_rocklake", nil, "click2"},{nil}},
-            dep = {nil, "next_urban_park"}},
+            dep = {{nil, "next_urban_park"}},
         }
     }
 })
