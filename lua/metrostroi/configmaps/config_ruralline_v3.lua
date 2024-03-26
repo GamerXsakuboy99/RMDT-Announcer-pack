@@ -1,10 +1,8 @@
 local Map = game.GetMap():lower() or ""
-if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_snow") then
-    Metrostroi.PlatformMap = "ruralline_old"
-    Metrostroi.CurrentMap = "ruralline_old"
-elseif Map:find("gm_metro_ruralline_v3") then
-    Metrostroi.PlatformMap = "ruralline_v3"
-    Metrostroi.CurrentMap = "ruralline_v3"
+if Map:find("gm_metro_ruralline_v3") then
+    Metrostroi.PlatformMap = "ruralline_new"
+    Metrostroi.CurrentMap = "ruralline_new"
+
 else
     return
 end
@@ -20,7 +18,7 @@ Metrostroi.AddCISConfig("LVP Route map 1995", {
 		English = true,
 		{900, "Market street",},
 		{902, "Aviation university",},
-		{903, "Lakeview City hall",},
+		{903, "City hall",},
 		{904, "White forest",},
 		{905, "Urban park",},
 		{906, "Rocklake",},
