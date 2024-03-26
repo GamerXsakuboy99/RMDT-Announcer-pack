@@ -1,6 +1,6 @@
 local Map = game.GetMap() or ""
 
-if Map:find("gm_metro_ruralline") and Map:find("_v29") then
+if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_old") or Map:find("gm_metro_ruralline_v29_snow") then
     Metrostroi.CurrentMap = "gm_metro_ruralline"
 else
     return

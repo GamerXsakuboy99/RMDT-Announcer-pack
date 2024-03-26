@@ -1,6 +1,6 @@
 local Map = game.GetMap():lower() or ""
 
-if Map:find("gm_metro_ruralline") and Map:find("_v29") then
+if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_old") or Map:find("gm_metro_ruralline_v29_snow") then
     Metrostroi.PlatformMap = "ruralline"
     Metrostroi.CurrentMap = "ruralline_v29"
 else
@@ -70,13 +70,12 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Valentin", {
             153,"Aviation university",
             arr = {{"gong","this_st","aviation","doors_right"},{"gong","this_st","aviation","doors_right"}},
             dep = {{"gong","doors_clsing","st_cm","next_st","city","platform_right"},{"gong","doors_clsing","st_cm","next_st","market","platform_right"}},
-            arrlast = {{"gong","this_st","aviation","terminal","doors_right"},{"gong","this_st","aviation","terminal","doors_right"}},
+            arrlast = {{nil},{"gong","this_st","aviation","terminal","doors_right"}},
         },
         {
             154,"City Hall",
             arr = {{"gong","this_st","city","doors_right"},{"gong","this_st","city","doors_right"}},
             dep = {{"gong","doors_clsing","st_cm","next_st","white","platform_right"},{"gong","doors_clsing","st_cm","next_st","aviation","platform_right"}},
-            --arrlast = {{"gong","this_st","city","terminal","doors_left"},{"gong","this_st","city","terminal","doors_left"}}, Not possible on V29
         },
         {
             155,"White Forest",
@@ -87,14 +86,13 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Valentin", {
         {
             156,"Urban Park",
             arr = {{"gong","this_st","urban","doors_right","tram63"},{"gong","this_st","urban","doors_right","tram63"}},
-            dep = {{"gong","doors_clsing","st_cm","next_st","rocklake","platform_left"},{"gong","doors_clsing","st_cm","next_st","white","platform_right"}},
-            arrlast = {{"gong","this_st","urban","terminal","doors_right"},{"gong","this_st","urban","terminal","doors_right"}},
+            dep = {{"gong","doors_clsing","st_cm","next_st","rocklake","platform_right"},{"gong","doors_clsing","st_cm","next_st","white","platform_right"}},
+            arrlast = {{"gong","this_st","urban","terminal","doors_right"},{nil}},
         },
         {
             157,"Rocklake",
             dep = {{nil},{"gong","doors_clsing","st_cm","next_st","urban","platform_right"}},
-            arrlast = {{"gong","this_st","rocklake","terminal","doors_left"},{nil}},
-            ignorelast = true,
+            arrlast = {{"gong","this_st","rocklake","terminal","doors_right"},{nil}},
         }
     }
 }
@@ -139,13 +137,12 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Trocki", {
                 153,"Aviation University",
                 arr = {{"gong","tis","aviation","spc1"},{"gong","tis","aviation","spc1"}},
                 dep = {{"st_cm","next_st","city"},{"st_cm","next_st","market"}},
-                arrlast = {{"gong","this","aviation","eol","spc1"},{"gong","this","aviation","eol","spc1"}}
+                arrlast = {{nil},{"gong","this","aviation","eol","spc1"}}
             },
             {
                 154,"City Hall",
                 arr = {{"gong","tis","city","spc1"},{"gong","tis","city","spc1"}},
                 dep = {{"st_cm","next_st","white"},{"st_cm","next_st","aviation"}},
-                --arrlast = {{"gong","this","city","eol","spc1"},{"gong","this","city","eol","spc1"}},
             },
             {
                 155,"White Forest",
@@ -157,13 +154,12 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Trocki", {
                 156,"Urban Park",
                 arr = {{"gong","tis","urban","spc1"},{"gong","tis","urban","spc1"}},
                 dep = {{"st_cm","next_st","rocklake"},{"st_cm","next_st","white"}},
-                arrlast = {{"gong","this","urban","eol","spec1"},{"gong","this","urban","eol","spec1"}},
+                arrlast = {{"gong","this","urban","eol","spec1"},{nil}},
             },
             {
                 157,"Rocklake",
                 arrlast = {{"gong","tis","rocklake","eol","spc1"},{nil}},
                 dep = {{nil},{"st_cm","next_st","urban"}},
-                ignorelast = true,
             }
         }
     }
@@ -210,14 +206,12 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Marius", {
                 153,"Aviation University",
                 arr = {{"gong","aviation","exit_right"},{"gong","aviation","exit_right"}},
                 dep = {{"gong","doors","st_cm","next_st","city"},{"gong","doors","st_cm","next_st","market"}},
-                arrlast = {{"gong","aviation","terminal","exit_right"},{"gong","aviation","terminal","exit_right"}},
-                -- ignorelast = true, not possible on V29 due the switch
+                arrlast = {{nil},{"gong","aviation","terminal","exit_right"}},
             },
             {
                 154,"City Hall",
                 arr = {{"gong","city","exit_right"},{"gong","city","exit_right"}},
                 dep = {{"gong","doors","st_cm","next_st","white"},{"gong","doors","st_cm","next_st","aviation"}},
-                --arrlast = {{"gong","city","terminal","exit_right"},{"gong","city","terminal","exit_right"}},
             },
             {
                 155,"White Forest",
@@ -230,13 +224,12 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Marius", {
                 156,"Urban Park",
                 arr = {{"gong","urban","exit_right"},{"gong","urban","exit_right"}},
                 dep = {{"gong","doors","st_cm","next_st","rock"},{"gong","doors","st_cm","next_st","white"}},
-                arrlast = {{"gong","urban","terminal","exit_right"},{"gong","urban","terminal","exit_right"}},
+                arrlast = {{"gong","urban","terminal","exit_right"},{nil}},
             },
             {
                 157,"Rocklake",
-                arrlast = {{"gong","rock","exit_left","terminal"},{nil}},
+                arrlast = {{"gong","rock","exit_right","terminal"},{nil}},
                 dep = {{nil},{"gong","next_st","urban","doors","st_cm"}},
-                ignorelast = true,
             }
         }
     }
@@ -282,15 +275,12 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Ballistic", {
             153,"Aviation University",
             arr = {{"gong","this_st","aviation"},{"gong","this_st","aviation"}},
             dep = {{"st_cm","next_st","city,"},{"st_cm","next_st","market"}},
-            arrlast = {{"gong","this_st","aviation","terminal"},{"gong","this_st","aviation","terminal"}},
-            --ignorelast = true,
+            arrlast = {{nil},{"gong","this_st","aviation","terminal"}},
         },
         {
             154,"City Hall",
             arr = {{"gong","this_st","city"},{"gong","this_st","city"}},
             dep = {{"st_cm","next_st","white","st_cm"},{"st_cm","next_st","aviation","st_cm"}},
-            --arrlast = {{"gong","this_st","city","terminal"},{"gong","this_st","city","terminal"}},
-            --ignorelast = true,
         },
         {
             155,"White Forest",
@@ -302,9 +292,8 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Ballistic", {
         {
             156,"Urban Park",
             arr = {{"gong","this_st","urban"},{"gong","this_st","urban"}},
-            arrlast = {{"gong","this_st","urban","terminal"},{"gong","this_st","urban","terminal"}},
+            arrlast = {{"gong","this_st","urban","terminal"},{nil}},
             dep = {{"st_cm","next_st","rocklake"},{"st_cm","next_st","white","st_cm"}},
-            ignorelast = true,
         },
         {
             157,"Rocklake",

@@ -1,6 +1,6 @@
 local Map = game.GetMap():lower() or ""
 
-if Map:find("gm_metro_ruralline") and Map:find("_v29") then
+if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_old") or Map:find("gm_metro_ruralline_v29_snow") then
     Metrostroi.PlatformMap = "ruralline"
     Metrostroi.CurrentMap = "ruralline_v29"
 else
@@ -52,15 +52,13 @@ Metrostroi.SetRRIAnnouncer({
             153,"Aviation University",
             arr = {{"gong", "tis", "aviation", "spc1"},{"gong", "tis", "aviation", "spc1"}},
             dep = {{"st_cm", "next_st", "city"}, {"st_cm", "next_st", "market"}},
-            arrlast = {{"gong","this","aviation","eol","spc1"},{"gong","this","aviation","eol","spc1"}},
-            -- ignorelast = true,
+            arrlast = {{nil},{"gong","this","aviation","eol","spc1"}},
             have_inrerchange = false,
         },
         {
             154,"City Hall",
             arr = {{"gong", "tis", "city","spc1"},{"gong", "tis", "city","spc1"}},
             dep = {{"st_cm", "next_st", "white"}, {"st_cm", "next_st", "aviation"}},
-            -- arrlast = {{"gong","this","city","eol","spc1"},{"gong","this","city","eol","spc1"}},
             have_inrerchange = true,
         },
         {
@@ -75,8 +73,7 @@ Metrostroi.SetRRIAnnouncer({
             156,"Urban park",
             arr = {{"gong", "tis", "urban","spc1"},{"gong", "tis", "urban","spc1"}},
             dep = {{"st_cm", "next_st", "rocklake"}, {"st_cm", "next_st", "white"}},
-            arrlast = {{"gong","tis","urban","terminal","spc1"},{"gong","tis","urban","terminal","spc1"}},
-            -- ignorelast = true,
+            arrlast = {{"gong","tis","urban","terminal","spc1"},{nil}},
             have_inrerchange = true,
         },
         {

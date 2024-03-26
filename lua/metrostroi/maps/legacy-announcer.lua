@@ -1,5 +1,5 @@
 local Map = game.GetMap():lower() or ""
-if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_snow") then
+if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_old") or Map:find("gm_metro_ruralline_v29_snow") then
     Metrostroi.PlatformMap = "ruralline_old"
     Metrostroi.CurrentMap = "ruralline_old"
 else
@@ -35,31 +35,37 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
         spec_last = {"announcer_ready", "gong"},
         spec_wait = {"red_signal"},
         {
-            151, "Market Street", arrlast = {nil, "arr_market_street", "click2"},
-            dep = {"next_aviation_university", nil},
+            151, "Market Street",
+            arrlast = {{nil},{"arr_market_street", "click2"}},
+            dep = {{"next_aviation_university"},{nil}},
         },
         {
-            153, "Aviation University", arr = {"arr_aviation_university", "arr_aviation_university"},
-            dep = {"next_city_hall", "next_market_street"},
+            153, "Aviation University",
+            arr = {{"arr_aviation_university"},{"arr_aviation_university"}},
+            arrlast = {{nil},{"arr_aviation_university"},
+            dep = {{"next_city_hall"},{"next_market_street"}},
         },
         {
-            154, "City Hall", arr = {"arr_city_hall", "arr_city_hall"},
-            dep = {"next_white_forest", "next_aviation_university"},
+            154, "City Hall",
+            arr = {{"arr_city_hall"},{"arr_city_hall"}},
+            dep = {{"next_white_forest"},{"next_aviation_university"}},
         },
         {
-            155, "White Forest", arr = {"arr_white_forest", "arr_white_forest"},
-            arrlast = {"arr_white_forest_last", "arr_white_forest_last", "click2"},
-            dep = {"next_urban_park", "next_city_hall"},
-            ignorelast = true,
+            155, "White Forest", 
+            arr = {{"arr_white_forest"},{"arr_white_forest"}},
+            arrlast = {{"arr_white_forest_last"},{nil}},
+            dep = {{"next_urban_park"},{"next_city_hall"}},
         },
         {
-            156, "Urban Park", arr = {"arr_urban_park", "arr_urban_park"},
-            dep = {"next_rocklake", "next_white_forest"},
+            156, "Urban Park",
+            arr = {{"arr_urban_park"},{"arr_urban_park"}},
+            dep = {{"next_rocklake"},{"next_white_forest"}},
+            arrlast = {{"arr_urban_park"},{nil}},
         },
         {
-            157, "Rocklake", arrlast = {"arr_rocklake", nil, "click2"},
-            dep = {nil, "next_urban_park"},
-            ignorelast = true,
+            157, "Rocklake",
+            arrlast = {{"arr_rocklake", nil, "click2"},{nil}},
+            dep = {nil, "next_urban_park"}},
         }
     }
 })
