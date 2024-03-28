@@ -299,7 +299,6 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Ballistic", {
             157,"Rocklake",
             arrlast = {{"gong","this_st","rocklake","terminal"},{nil}},
             dep = {{nil},{"st_cm","next_st","urban","st_cm"}},
-            ignorelast = true,
         }
         }
     }

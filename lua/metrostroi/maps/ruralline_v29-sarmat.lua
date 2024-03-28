@@ -7,9 +7,7 @@ else
     return
 end
 
-print("UPO Announcer loading....")
-
-Metrostroi.SetUPOAnnouncer({
+Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic",{
     --Announcer Startup
 	name = "[UPO] Rockport metropolitan | Ballistic",
 	tone = {"subway_announcers/valentin_announcer/sarmat_upo/mireo_gong_01.mp3",1.31},
@@ -29,34 +27,44 @@ Metrostroi.SetUPOAnnouncer({
 	--Warning Bell
 	st_cm = {"subway_announcers/global-sounds/announcer-play.mp3", 2.27},
 },{
-    {
-	  151,"Market Street",
-	  arr_last = {nil,{"THIIS","MAR","TERHE"}},
-	  dep = {{"NEXIS","AVI",0.5,"st_cm"},nil},
-	},
-	{
-	  153,"Aviation University",
-	  arr = {{"THIIS","AVI"},{"THIIS","AVI"}},
-	  dep = {{"NEXIS","CIT",0.2,"st_cm"},{"NEXIS","MAR",0.2,"st_cm"}},
-	},
-	{
-	  154,"City Hall",
-	  arr = {{"THIIS","CIT"},{"THIIS","CIT"}},
-	  dep = {{"NEXIS","WHI",0.2,"st_cm"},{"NEXIS","AVI",0.2,"st_cm"}},
-	},
-	{
-	  155,"White Forest",
-	  arr = {{"THIIS","WHI"},{"THIIS","WHI"}},
-	  dep = {{"NEXIS","URB",0.2,"st_cm"},{"NEXIS","CIT",0.2,"st_cm"}},
-	},
-	{
-	  156,"Urban Park",
-	  arr = {{"THIIS","URB"},{"THIIS","URB"}},
-	  dep = {{"NEXIS","ROC",0.2,"st_cm"},{"NEXIS","WHI",0.2,"st_cm"}},
-	},
-	{
-	  157,"Rocklake",
-	  arr_last = {{"THIIS","ROC","TERHE"},{nil}},
-	  dep = {nil,{"NEXIS","URB",0.2,"st_cm"}},
-	},
-})
+    { --МАРШРУТ
+        LED = {3,4,5,5,5,5,3,2},
+        {
+            151,"Market Street",
+            arr_last = {nil,{"THIIS","MAR","TERHE"}},
+            dep = {{"NEXIS","AVI",0.5,"st_cm"},nil},
+            right_doors = true,
+          },
+          {
+            153,"Aviation University",
+            arr = {{"THIIS","AVI"},{"THIIS","AVI"}},
+            dep = {{"NEXIS","CIT",0.2,"st_cm"},{"NEXIS","MAR",0.2,"st_cm"}},
+            right_doors = true,
+          },
+          {
+            154,"City Hall",
+            arr = {{"THIIS","CIT"},{"THIIS","CIT"}},
+            dep = {{"NEXIS","WHI",0.2,"st_cm"},{"NEXIS","AVI",0.2,"st_cm"}},
+            right_doors = true,
+          },
+          {
+            155,"White Forest",
+            arr = {{"THIIS","WHI"},{"THIIS","WHI"}},
+            dep = {{"NEXIS","URB",0.2,"st_cm"},{"NEXIS","CIT",0.2,"st_cm"}},
+            right_doors = true,
+          },
+          {
+            156,"Urban Park",
+            arr = {{"THIIS","URB"},{"THIIS","URB"}},
+            dep = {{"NEXIS","ROC",0.2,"st_cm"},{"NEXIS","WHI",0.2,"st_cm"}},
+            right_doors = true,
+          },
+          {
+            157,"Rocklake",
+            arr_last = {{"THIIS","ROC","TERHE"},{nil}},
+            dep = {nil,{"NEXIS","URB",0.2,"st_cm"}},
+            right_doors = true,
+          },
+        }
+    }
+)

@@ -70,5 +70,20 @@ Removed capitals & removed unused content. (Final update) Newer version coming l
 
 V7.6
 
-### Update: 26 Mar @ 6:00am
+### Update: 26 Mar @ 5:24am
 Updated announcer to support old V29 version & added new turn around points to the announcers.
+
+### Update: 26 Mar @ 5:31am
+GitHub seems not to remove the capital letters if the file does not change.. 
+isn't the name change a file change?
+
+### Update: 26 Mar @ 1:57pm
+forgot few symbols... -_-
+
+### Update: 28 Mar @ 
+- Fixed Concords announcer.
+- Remove Ignore-last settings from all stations expect White Forest.
+- Fixed Lowercase station name from RRI.
+- Added Sarmat announcer.
+
+V7.9

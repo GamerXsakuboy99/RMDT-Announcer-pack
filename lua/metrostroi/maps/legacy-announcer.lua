@@ -64,8 +64,8 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
         },
         {
             157, "Rocklake",
-            arrlast = {{"arr_rocklake", nil, "click2"},{nil}},
-            dep = {{nil, "next_urban_park"}},
+            arrlast = {{"arr_rocklake", 0.5, "click2"},{nil}},
+            dep = {{nil},{"next_urban_park"}},
         }
     }
 })

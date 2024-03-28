@@ -77,10 +77,9 @@ Metrostroi.SetRRIAnnouncer({
             have_inrerchange = true,
         },
         {
-            157,"rocklake",
+            157,"Rocklake",
             arrlast = {{"gong", "tis", "rocklake","eol","spc1"},{nil}},
             dep = {{nil}, {"st_cm", "next_st", "urban"}},
-            ignorelast = true,
             have_inrerchange = false,
         }
     }

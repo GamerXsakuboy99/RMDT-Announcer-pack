@@ -81,7 +81,6 @@ Metrostroi.TickerAdverts = {
     "......Fuck....you......for....reading....this.....",
     "......You.....have.....been....gnomed....",
     "....Can't...connect....to....http://192.195.5.42:30324.....",
-    ".....Covid-19.....is....a....myth....it's...Zorona-19!....."
 }
 
 print("end of loading base files.")
