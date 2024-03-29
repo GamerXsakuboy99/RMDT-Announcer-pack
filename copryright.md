@@ -36,7 +36,7 @@ Shit luck mate. You can ofc tell us to remove it but we will not. We will remove
 
 #### Taking down a RMDT or MEU Mod due it violates your copyright?
 As stated up.  i keep violating that copyright as long your workshop content is in Workshop publicly for all to use. 
-Only way to get me take down my own mods is via the Court.
+Only way to get me take down my own mods is via theCourt.
 * Trust me, i will throw whole book to your face
 
 ### Copyright share between people who work on RMDT content
