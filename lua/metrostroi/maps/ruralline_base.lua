@@ -8,6 +8,7 @@ if Map:find("gm_metro_ruralline") then
 else
     return
 end
+
 print("=========================================================")
 print("========RMDT Announcer loader: Base files loading========")
 print("========        Script Version: Beta V8          ========")
@@ -94,7 +95,7 @@ Metrostroi.AddPassSchemeTex("720","Ruralline_1999",{
 })
 
 -- //TODO after V4 is released, replace v3a with V4.
-Metrostroi.AddPassSchemeTex("720","Ruralline_2004",{
+Metrostroi.AddPassSchemeTex("720","Ruralline_2005",{
     "metrostroi_skins/81-720_schemes/720-linemap-ruralline-v3a-left",
     "metrostroi_skins/81-720_schemes/720-linemap-ruralline-v3a-right",
 })
