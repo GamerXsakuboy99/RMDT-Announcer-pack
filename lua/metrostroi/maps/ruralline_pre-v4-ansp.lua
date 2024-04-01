@@ -12,25 +12,13 @@ else
 end
 
 --[[
-    Global door alarms duration times. (Old ones)
-
-    - doors_closing_alarm(bell).mp3 2.19
-    - doors_closing_alarm(digital).mp3 2.59
-    - doors_closing_alarm(old_digital).mp3 1.41
-    - announcer-starting.mp3 2.27
-
-    Global Door alars duration times. (New ones)
-    - doors_closing_alarm(bell).mp3 2.19
-    - doors_closing_alarm(digital).mp3 2.59
-    - doors_closing_alarm(old_digital).mp3 1.41
-    - Announcement_chime.mp3 0.95
-    - announcer-starting.mp3 2.21
-    - Miero_gong.mp3 1.24
-    - rri-click.mo3 0.31
-    - pl75-doors.mp3 2.40
-    - ring old.mp3 7.15
+    Global Door alars duration times.
+    miero_gong_01 : 1.24
+    rri-click : 0.31
+    old-doors : 4.54
+    futr-doors : 2.40
+    tape-doors : 4.25
     
-
     GLobal way of code:
 
     Left side:  Market street ---> Rocklake
@@ -40,7 +28,7 @@ end
 
 print("=========================================================")
 print("========RMDT Announcer loader: Ruralline-Pre-V4-ANSP Lua code Loading.========")
-print("========        Script Version: Beta V8          ========")
+print("========        Script Version: V1         ========")
 print("=========================================================")
 
 
@@ -48,7 +36,12 @@ print("RMDT Announcer loader: Valentin's announcer & routes")
 
 Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
     -- Announcer starting files
-
+    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
+    click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
+    -- Doors closing
+    dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
+    --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
+    --drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
     -- Special announcer files
     doors_both = {"subway_announcers/v3_announcers/valentin_announcer/special/doors_both.mp3",2.50},
     doors_both_ger = {"subway_announcers/v3_announcers/valentin_announcer/special/doors_both_ger.mp3",2.25},
@@ -110,72 +103,67 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
           LED = {3,8,5,5,4,5},
           Name = "Line M53 MS-RL",
           Loop = false,
-          spec_last = {"announcer_ready", "gong"},
+          spec_last = {"ann_start", "dro_cls"},
           spec_wait = {"unss",0.5,"unss_ger"},
         {
             151,"Market Street",
             --arr = {{}},
-            dep = {{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"welc_lvp","nx_st","aviation","platform_right",0.3,"ravenholm_closed",0.5,"welc_lvp_ger","nx_st_ger","aviation_ger","platform_right_ger",0.3,"ravenholm_closed_ger",0.7,"rri_click"},{nil}},
-            arrlast = {{nil},{"gong","ths","market","doors_right","trhm",0.5,"ths_ger","market_ger","doors_right_ger","trhm_ger",0.7,"rri_click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"welc_lvp","nx_st","aviation","platform_right",0.5,"ravenholm_closed",0.5,"welc_lvp_ger","nx_st_ger","aviation_ger","platform_right_ger",0.3,"ravenholm_closed_ger",0.7,"click"},{nil}},
+            arrlast = {{nil},{"ann_start","ths","market","doors_right","trhm",0.5,"ths_ger","market_ger","doors_right_ger","trhm_ger",0.7,"click"}},
         },
         {
             153,"Aviation university",
-            arr = {{"gong","ths","aviation","doors_right","mind_gap_step",1.0,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"},{"gong","ths","aviation","doors_right","mind_gap_step",1.0,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"}},
-            dep = {{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger",0.7,"rri_click"},{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","market","platform_right",0.3,"ravenholm_closed",0.5,"nx_st_ger","market_ger","platform_right_ger",0.3,"ravenholm_closed_ger",0.5,"rri_click"}},
-            --arrlast = {{"gong","ths","aviation","doors_both","trhm",0.5","ths_ger","aviation_ger","doors_both_ger","trhm_ger"}},
+            arr = {{"ann_start","ths","aviation","doors_right","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"},{"ann_start","ths","aviation","doors_right","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger",0.7,"click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","market","platform_right",0.3,"ravenholm_closed",0.5,"nx_st_ger","market_ger","platform_right_ger",0.3,"ravenholm_closed_ger",0.5,"click"}},
         },
         {
             154,"City Hall",
-            arr = {{"gong","ths","city","doors_right","mind_gap_step",1.0,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"},{"gong","ths","city","doors_right","mind_gap_step",1.0,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"}},
-            dep = {{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger",0.7,"rri_click"},{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","aviation","platform_right",0.5,"nx_st_ger","aviation_ger","platform_right_ger",0.7,"rri_click"}},
+            arr = {{"ann_start","ths","city","doors_right","mind_gap_step",1.0,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"},{"ann_start","ths","city","doors_right","mind_gap_step",1.0,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger",0.7,"click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","aviation","platform_right",0.5,"nx_st_ger","aviation_ger","platform_right_ger",0.7,"click"}},
         },
         {
             155,"White Forest",
-            arr = {{"gong","ths","white","doors_right","mind_gap_step",1.0,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"},{"gong","ths","white","doors_right","mind_gap_step",1.0,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"}},
-            dep = {{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","urban","platform_right",0.5,"nx_st_ger","urban_ger","platform_right_ger",0.7,"rri_click"},{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger",0.7,"rri_click"}},
-            arrlast = {{"gong","ths","white","doors_both","trhm",0.5,"ths_ger","white_ger","doors_both_ger","trhm_ger",0.7,"rri_click"},{"gong","ths","white","doors_right","trhm",0.5,"ths_ger","white_ger","doors_right_ger","trhm_ger",0.7,"rri_click"}},
+            arr = {{"ann_start","ths","white","doors_right","mind_gap_step",1.0,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"},{"ann_start","ths","white","doors_right","mind_gap_step",1.0,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","urban","platform_right",0.5,"nx_st_ger","urban_ger","platform_right_ger",0.7,"click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger",0.7,"click"}},
         },
         {
             156,"Urban Park",
-            arr = {{"gong","ths","urban","doors_right","mind_gap_step",1.0,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"},{"gong","ths","urban","doors_right","mind_gap_step",1.0,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"}},
-            dep = {{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","rocklake","platform_left",0.5,"nx_st_ger","rocklake_ger","platform_left_ger",0.7,"rri_click"},{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger",0.7,"rri_click"}},
-            arrlast = {{"gong","ths","urban","doors_right","trhm",0.5,"ths_ger","urban_ger","doors_right_ger","trhm_ger",0.7,"rri_click"}},
+            arr = {{"ann_start","ths","urban","doors_right","mind_gap_step",1.0,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"},{"ann_start","ths","urban","doors_right","mind_gap_step",1.0,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","rocklake","platform_right",0.5,"nx_st_ger","rocklake_ger","platform_right_ger",0.7,"click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger",0.7,"click"}},
         },
         {
             157,"Rocklake",
-            --arr = {{"gong","ths","white","doors_right","mind_gap_step",1.0,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"}},  -Not possible in V29 / V3
-            dep = {{nil},{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"welc_lvp","nx_st","urban","platform_right",0.5,"welc_lvp_ger","nx_st_ger","urban_ger","platform_right_ger",0.7,"rri_click"}},
-            arrlast = {{"gong","ths","rocklake","doors_left","trhm",0.5,"ths_ger","rocklake_ger","doors_left_ger","trhm_ger",0.7,"rri_click"},{nil}},
-            ignorelast = true,
+            --arr = {{"ann_start","ths","white","doors_right","mind_gap_step",1.0,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"}},  -Not possible in V29 / V3
+            dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dorcl",5.0,"welc_lvp","nx_st","urban","platform_right",0.5,"welc_lvp_ger","nx_st_ger","urban_ger","platform_right_ger",0.7,"rri_click"}},
+            arrlast = {{"ann_start","ths","rocklake","doors_right","trhm",0.5,"ths_ger","rocklake_ger","doors_right_ger","trhm_ger",0.7,"click"},{nil}},
         },
         },
         {
           LED = {3,8,5,5,4,5},
           Name = "Line M53A MS-WF",
           Loop = false,
-          spec_last = {"announcer_ready", "gong"},
+          spec_last = {"ann_start", "dro_cls"},
           spec_wait = {"unss",0.5,"unss_ger"},
         {
             151,"Market Street",
             --arr = {{}},
-            dep = {{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"welc_lvp","nx_st","aviation","platform_right",0.3,"ravenholm_closed",0.5,"welc_lvp_ger","nx_st_ger","aviation_ger","platform_right_ger",0.3,"ravenholm_closed_ger",0.7,"rri_click"},{nil}},
-            arrlast = {{nil},{"gong","ths","market","doors_right","trhm",0.5,"ths_ger","market_ger","doors_right_ger","trhm_ger",0.7,"rri_click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"welc_lvp","nx_st","aviation","platform_right",0.3,"ravenholm_closed",0.5,"welc_lvp_ger","nx_st_ger","aviation_ger","platform_right_ger",0.3,"ravenholm_closed_ger",0.7,"click"},{nil}},
+            arrlast = {{nil},{"ann_start","ths","market","doors_right","trhm",0.5,"ths_ger","market_ger","doors_right_ger","trhm_ger",0.7,"click"}},
         },
         {
             153,"Aviation university",
-            arr = {{"gong","ths","aviation","doors_right","mind_gap_step",1.0,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"},{"gong","ths","aviation","doors_right","mind_gap_step",1.0,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"}},
-            dep = {{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger",0.7,"rri_click"},{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","market","platform_right",0.3,"ravenholm_closed",0.5,"nx_st_ger","market_ger","platform_right_ger",0.3,"ravenholm_closed_ger",0.5,"rri_click"}},
-            --arrlast = {{"gong","ths","aviation","doors_both","trhm",0.5","ths_ger","aviation_ger","doors_both_ger","trhm_ger"}},
+            arr = {{"ann_start","ths","aviation","doors_right","mind_gap_step",1.0,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"},{"ann_start","ths","aviation","doors_right","mind_gap_step",1.0,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger",0.7,"click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","market","platform_right",0.3,"ravenholm_closed",0.5,"nx_st_ger","market_ger","platform_right_ger",0.3,"ravenholm_closed_ger",0.5,"click"}},
         },
         {
             154,"City Hall",
-            arr = {{"gong","ths","city","doors_right","mind_gap_step",1.0,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"},{"gong","ths","city","doors_right","mind_gap_step",1.0,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"}},
-            dep = {{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger",0.7,"rri_click"},{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","aviation","platform_right",0.5,"nx_st_ger","aviation_ger","platform_right_ger",0.7,"rri_click"}},
+            arr = {{"ann_start","ths","city","doors_right","mind_gap_step",1.0,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"},{"ann_start","ths","city","doors_right","mind_gap_step",1.0,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger",0.7,"click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","aviation","platform_right",0.5,"nx_st_ger","aviation_ger","platform_right_ger",0.7,"click"}},
         },
         {
             155,"White Forest",
-            dep = {{nil},{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger",0.7,"rri_click"}},
-            arrlast = {{"gong","ths","white","doors_both","trhm",0.5,"ths_ger","white_ger","doors_both_ger","trhm_ger",0.7,"rri_click"},{nil}},
+            dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger",0.7,"click"}},
+            arrlast = {{"ann_start","ths","white","doors_both","trhm",0.5,"ths_ger","white_ger","doors_both_ger","trhm_ger",0.7,"click"},{nil}},
             ignorelast = true,
         },
         },
@@ -183,27 +171,51 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
           LED = {3,8,5,5,4,5},
           Name = "Line M53B WF-RL",
           Loop = false,
-          spec_last = {"announcer_ready", "gong"},
+          spec_last = {"ann_start", "dro_cls"},
           spec_wait = {"unss",0.5,"unss_ger"},
         {
             155,"White Forest",
-            dep = {{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","urban","platform_right",0.5,"nx_st_ger","urban_ger","platform_right_ger",0.7,"rri_click"},{nil}},
-            arrlast = {{nil},{"gong","ths","white","doors_right","trhm",0.5,"ths_ger","white_ger","doors_right_ger","trhm_ger",0.7,"rri_click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","urban","platform_right",0.5,"nx_st_ger","urban_ger","platform_right_ger",0.7,"click"},{nil}},
+            arrlast = {{nil},{"ann_start","ths","white","doors_right","trhm",0.5,"ths_ger","white_ger","doors_right_ger","trhm_ger",0.7,"click"}},
         },
         {
             156,"Urban Park",
-            arr = {{"gong","ths","urban","doors_right","mind_gap_step",1.0,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"},{"gong","ths","urban","doors_right","mind_gap_step",1.0,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"}},
-            dep = {{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","rocklake","platform_left",0.5,"nx_st_ger","rocklake_ger","platform_left_ger",0.7,"rri_click"},{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger",0.7,"rri_click"}},
-            arrlast = {{"gong","ths","urban","doors_right","trhm",0.5,"ths_ger","urban_ger","doors_right_ger","trhm_ger",0.7,"rri_click"}},
+            arr = {{"ann_start","ths","urban","doors_right","mind_gap_step",1.0,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"},{"ann_start","ths","urban","doors_right","mind_gap_step",1.0,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","rocklake","platform_left",0.5,"nx_st_ger","rocklake_ger","platform_left_ger",0.7,"click"},{"ann_start","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger",0.7,"click"}},
         },
         {
             157,"Rocklake",
-            --arr = {{"gong","ths","white","doors_right","mind_gap_step",1.0,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"}},  -Not possible in V29 / V3
-            dep = {{nil},{"gong","doors_closing","doors_closing_ger","dorcl",5.0,"welc_lvp","nx_st","urban","platform_right",0.5,"welc_lvp_ger","nx_st_ger","urban_ger","platform_right_ger",0.7,"rri_click"}},
-            arrlast = {{"gong","ths","rocklake","doors_left","trhm",0.5,"ths_ger","rocklake_ger","doors_left_ger","trhm_ger",0.7,"rri_click"},{nil}},
-            ignorelast = true,
-        }
-        }
+            dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"welc_lvp","nx_st","urban","platform_right",0.5,"welc_lvp_ger","nx_st_ger","urban_ger","platform_right_ger",0.7,"click"}},
+            arrlast = {{"ann_start","ths","rocklake","doors_right","trhm",0.5,"ths_ger","rocklake_ger","doors_right_ger","trhm_ger",0.7,"click"},{nil}},
+        },
+        },
+        {
+            LED = {3,8,5,5,4,5},
+            Name = "Line M53C AV - UP",
+            Loop = false,
+            spec_last = {"ann_start", "dro_cls"},
+            spec_wait = {"unss",0.5,"unss_ger"},
+        {
+            153,"Aviation university",
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger",0.7,"click"},{nil}},
+            arrlast = {{nil},{"ann_start","ths","aviation","doors_right","trhm",0.5,"ths_ger","aviation_ger","doors_right_ger","trhm_ger"}},
+        },
+        {
+            154,"City Hall",
+            arr = {{"ann_start","ths","city","doors_right","mind_gap_step",1.0,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"},{"ann_start","ths","city","doors_right","mind_gap_step",1.0,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger",0.7,"click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","aviation","platform_right",0.5,"nx_st_ger","aviation_ger","platform_right_ger",0.7,"click"}},
+        },
+        {
+            155,"White Forest",
+            arr = {{"ann_start","ths","white","doors_right","mind_gap_step",1.0,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"},{"ann_start","ths","white","doors_right","mind_gap_step",1.0,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger",0.7,"click"}},
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","urban","platform_right",0.5,"nx_st_ger","urban_ger","platform_right_ger",0.7,"click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger",0.7,"click"}},
+        },
+        {
+            156,"Urban Park",
+            dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","rocklake","platform_right",0.5,"nx_st_ger","rocklake_ger","platform_right_ger",0.7,"click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger",0.7,"click"}},
+            arrlast = {{"ann_start","ths","urban","doors_right","trhm",0.5,"ths_ger","urban_ger","doors_right_ger","trhm_ger",0.7,"click"},{nil}},
+        },
+        },
     }
 )
 
@@ -233,39 +245,39 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
                 Name = "Line M53 MS-RL",
                 Loop = false,
                 spec_last = {"announcer_ready"},
-                spec_wait = {"gong", "fault"},
+                spec_wait = {"ann_start", "fault"},
             {
                 151,"Market Street",
-                arrlast = {{nil},{"gong","tis","market","eol","spc1"}},
-                dep = {{"st_cm","next_st","aviation","gong"},{nil}},
+                arrlast = {{nil},{"ann_start","tis","market","eol","spc1"}},
+                dep = {{"st_cm","next_st","aviation","ann_start"},{nil}},
             },
             {
                 153,"Aviation University",
-                arr = {{"gong","tis","aviation","spc1"},{"gong","tis","aviation","spc1"}},
+                arr = {{"ann_start","tis","aviation","spc1"},{"ann_start","tis","aviation","spc1"}},
                 dep = {{"st_cm","next_st","city"},{"st_cm","next_st","market"}},
-                arrlast = {{"gong","this","aviation","eol","spc1"},{"gong","this","aviation","eol","spc1"}}
+                arrlast = {{"ann_start","this","aviation","eol","spc1"},{"ann_start","this","aviation","eol","spc1"}}
             },
             {
                 154,"City Hall",
-                arr = {{"gong","tis","city","spc1"},{"gong","tis","city","spc1"}},
+                arr = {{"ann_start","tis","city","spc1"},{"ann_start","tis","city","spc1"}},
                 dep = {{"st_cm","next_st","white"},{"st_cm","next_st","aviation"}},
-                --arrlast = {{"gong","this","city","eol","spc1"},{"gong","this","city","eol","spc1"}},
+                --arrlast = {{"ann_start","this","city","eol","spc1"},{"ann_start","this","city","eol","spc1"}},
             },
             {
                 155,"White Forest",
-                arr = {{"gong","tis","white","spc1"},{"gong","tis","white","spc1"}},
+                arr = {{"ann_start","tis","white","spc1"},{"ann_start","tis","white","spc1"}},
                 dep = {{"st_cm","next_st","urban"},{"st_cm","next_st","city"}},
-                arrlast = {{"gong","this","white","eol","spc1"},{"gong","this","white","eol","spc1"}},
+                arrlast = {{"ann_start","this","white","eol","spc1"},{"ann_start","this","white","eol","spc1"}},
             },
             {
                 156,"Urban Park",
-                arr = {{"gong","tis","urban","spc1"},{"gong","tis","urban","spc1"}},
+                arr = {{"ann_start","tis","urban","spc1"},{"ann_start","tis","urban","spc1"}},
                 dep = {{"st_cm","next_st","rocklake"},{"st_cm","next_st","white"}},
-                arrlast = {{"gong","this","urban","eol","spec1"},{"gong","this","urban","eol","spec1"}},
+                arrlast = {{"ann_start","this","urban","eol","spec1"},{"ann_start","this","urban","eol","spec1"}},
             },
             {
                 157,"Rocklake",
-                arrlast = {{"gong","tis","rocklake","eol","spc1"},{nil}},
+                arrlast = {{"ann_start","tis","rocklake","eol","spc1"},{nil}},
                 dep = {{nil},{"st_cm","next_st","urban"}},
                 ignorelast = true,
             },
@@ -275,27 +287,27 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
                 Name = "Line M53A MS-WF",
                 Loop = false,
                 spec_last = {"announcer_ready"},
-                spec_wait = {"gong", "fault"},
+                spec_wait = {"ann_start", "fault"},
             {
                 151,"Market Street",
-                arrlast = {{nil},{"gong","tis","market","eol","spc1"}},
-                dep = {{"st_cm","next_st","aviation","gong"},{nil}},
+                arrlast = {{nil},{"ann_start","tis","market","eol","spc1"}},
+                dep = {{"st_cm","next_st","aviation","ann_start"},{nil}},
             },
             {
                 153,"Aviation University",
-                arr = {{"gong","tis","aviation","spc1"},{"gong","tis","aviation","spc1"}},
+                arr = {{"ann_start","tis","aviation","spc1"},{"ann_start","tis","aviation","spc1"}},
                 dep = {{"st_cm","next_st","city"},{"st_cm","next_st","market"}},
-                arrlast = {{"gong","this","aviation","eol","spc1"},{"gong","this","aviation","eol","spc1"}}
+                arrlast = {{"ann_start","this","aviation","eol","spc1"},{"ann_start","this","aviation","eol","spc1"}}
             },
             {
                 154,"City Hall",
-                arr = {{"gong","tis","city","spc1"},{"gong","tis","city","spc1"}},
+                arr = {{"ann_start","tis","city","spc1"},{"ann_start","tis","city","spc1"}},
                 dep = {{"st_cm","next_st","white"},{"st_cm","next_st","aviation"}},
             },
             {
                 155,"White Forest",
                 dep = {{nil},{"st_cm","next_st","city"}},
-                arrlast = {{"gong","this","white","eol","spc1"},{nil}},
+                arrlast = {{"ann_start","this","white","eol","spc1"},{nil}},
             },
             },
             {
@@ -303,21 +315,21 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
                 Name = "Line M53B WF-RL",
                 Loop = false,
                 spec_last = {"announcer_ready"},
-                spec_wait = {"gong", "fault"},
+                spec_wait = {"ann_start", "fault"},
             {
                 155,"White Forest",
                 dep = {{"st_cm","next_st","urban"},{nil}},
-                arrlast = {{nil},{"gong","this","white","eol","spc1"}},
+                arrlast = {{nil},{"ann_start","this","white","eol","spc1"}},
             },
             {
                 156,"Urban Park",
-                arr = {{"gong","tis","urban","spc1"},{"gong","tis","urban","spc1"}},
+                arr = {{"ann_start","tis","urban","spc1"},{"ann_start","tis","urban","spc1"}},
                 dep = {{"st_cm","next_st","rocklake"},{"st_cm","next_st","white"}},
-                arrlast = {{"gong","this","urban","eol","spec1"},{"gong","this","urban","eol","spec1"}},
+                arrlast = {{"ann_start","this","urban","eol","spec1"},{"ann_start","this","urban","eol","spec1"}},
             },
             {
                 157,"Rocklake",
-                arrlast = {{"gong","tis","rocklake","eol","spc1"},{nil}},
+                arrlast = {{"ann_start","tis","rocklake","eol","spc1"},{nil}},
                 dep = {{nil},{"st_cm","next_st","urban"}},
                 ignorelast = true,
             }
@@ -358,40 +370,40 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Ballistic", {
           spec_wait = {{"st_cm"},{nil}},
         {
             151,"Market Street",
-            arrlast = {{nil},{"gong","this_st","market","terminal"}},
+            arrlast = {{nil},{"ann_start","this_st","market","terminal"}},
             dep = {{"st_cm","next_st","aviation"},{nil}},
         },
         {
             153,"Aviation University",
-            arr = {{"gong","this_st","aviation"},{"gong","this_st","aviation"}},
+            arr = {{"ann_start","this_st","aviation"},{"ann_start","this_st","aviation"}},
             dep = {{"st_cm","next_st","city"},{"st_cm","next_st","market"}},
-            arrlast = {{"gong","this_st","aviation","terminal"},{"gong","this_st","aviation","terminal"}},
+            arrlast = {{"ann_start","this_st","aviation","terminal"},{"ann_start","this_st","aviation","terminal"}},
             --ignorelast = true,
         },
         {
             154,"City Hall",
-            arr = {{"gong","this_st","city"},{"gong","this_st","city"}},
+            arr = {{"ann_start","this_st","city"},{"ann_start","this_st","city"}},
             dep = {{"st_cm","next_st","white","st_cm"},{"st_cm","next_st","aviation","st_cm"}},
-            --arrlast = {{"gong","this_st","city","terminal"},{"gong","this_st","city","terminal"}},
+            --arrlast = {{"ann_start","this_st","city","terminal"},{"ann_start","this_st","city","terminal"}},
             --ignorelast = true,
         },
         {
             155,"White Forest",
-            arr = {{"gong","this_st","white"},{"gong","this_st","white"}},
-            arrlast = {{"gong","this_st","white","terminal"},{"gong","this_st","white","terminal"}},
+            arr = {{"ann_start","this_st","white"},{"ann_start","this_st","white"}},
+            arrlast = {{"ann_start","this_st","white","terminal"},{"ann_start","this_st","white","terminal"}},
             dep = {{"st_cm","next_st","urban","st_cm"},{"st_cm","next_st","city","st_cm"}},
             ignorelast = true,
         },
         {
             156,"Urban Park",
-            arr = {{"gong","this_st","urban"},{"gong","this_st","urban"}},
-            arrlast = {{"gong","this_st","urban","terminal"},{"gong","this_st","urban","terminal"}},
+            arr = {{"ann_start","this_st","urban"},{"ann_start","this_st","urban"}},
+            arrlast = {{"ann_start","this_st","urban","terminal"},{"ann_start","this_st","urban","terminal"}},
             dep = {{"st_cm","next_st","rocklake"},{"st_cm","next_st","white","st_cm"}},
             ignorelast = true,
         },
         {
             157,"Rocklake",
-            arrlast = {{"gong","this_st","rocklake","terminal"},{nil}},
+            arrlast = {{"ann_start","this_st","rocklake","terminal"},{nil}},
             dep = {{nil},{"st_cm","next_st","urban","st_cm"}},
             ignorelast = true,
         },
@@ -404,40 +416,40 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Ballistic", {
               spec_wait = {{"st_cm"},{nil}},
             {
                 151,"Market Street",
-                arrlast = {{nil},{"gong","this_st","market","terminal"}},
+                arrlast = {{nil},{"ann_start","this_st","market","terminal"}},
                 dep = {{"st_cm","next_st","aviation"},{nil}},
             },
             {
                 153,"Aviation University",
-                arr = {{"gong","this_st","aviation"},{"gong","this_st","aviation"}},
+                arr = {{"ann_start","this_st","aviation"},{"ann_start","this_st","aviation"}},
                 dep = {{"st_cm","next_st","city"},{"st_cm","next_st","market"}},
-                arrlast = {{"gong","this_st","aviation","terminal"},{"gong","this_st","aviation","terminal"}},
+                arrlast = {{"ann_start","this_st","aviation","terminal"},{"ann_start","this_st","aviation","terminal"}},
                 --ignorelast = true,
             },
             {
                 154,"City Hall",
-                arr = {{"gong","this_st","city"},{"gong","this_st","city"}},
+                arr = {{"ann_start","this_st","city"},{"ann_start","this_st","city"}},
                 dep = {{"st_cm","next_st","white","st_cm"},{"st_cm","next_st","aviation","st_cm"}},
-                --arrlast = {{"gong","this_st","city","terminal"},{"gong","this_st","city","terminal"}},
+                --arrlast = {{"ann_start","this_st","city","terminal"},{"ann_start","this_st","city","terminal"}},
                 --ignorelast = true,
             },
             {
                 155,"White Forest",
-                arr = {{"gong","this_st","white"},{"gong","this_st","white"}},
-                arrlast = {{"gong","this_st","white","terminal"},{"gong","this_st","white","terminal"}},
+                arr = {{"ann_start","this_st","white"},{"ann_start","this_st","white"}},
+                arrlast = {{"ann_start","this_st","white","terminal"},{"ann_start","this_st","white","terminal"}},
                 dep = {{"st_cm","next_st","urban","st_cm"},{"st_cm","next_st","city","st_cm"}},
                 ignorelast = true,
             },
             {
                 156,"Urban Park",
-                arr = {{"gong","this_st","urban"},{"gong","this_st","urban"}},
-                arrlast = {{"gong","this_st","urban","terminal"},{"gong","this_st","urban","terminal"}},
+                arr = {{"ann_start","this_st","urban"},{"ann_start","this_st","urban"}},
+                arrlast = {{"ann_start","this_st","urban","terminal"},{"ann_start","this_st","urban","terminal"}},
                 dep = {{"st_cm","next_st","rocklake"},{"st_cm","next_st","white","st_cm"}},
                 ignorelast = true,
             },
             {
                 157,"Rocklake",
-                arrlast = {{"gong","this_st","rocklake","terminal"},{nil}},
+                arrlast = {{"ann_start","this_st","rocklake","terminal"},{nil}},
                 dep = {{nil},{"st_cm","next_st","urban","st_cm"}},
                 ignorelast = true,
             },
@@ -450,40 +462,40 @@ Metrostroi.AddANSPAnnouncer("[ANSP | EN] Rockport metropolitan | Ballistic", {
                   spec_wait = {{"st_cm"},{nil}},
                 {
                     151,"Market Street",
-                    arrlast = {{nil},{"gong","this_st","market","terminal"}},
+                    arrlast = {{nil},{"ann_start","this_st","market","terminal"}},
                     dep = {{"st_cm","next_st","aviation"},{nil}},
                 },
                 {
                     153,"Aviation University",
-                    arr = {{"gong","this_st","aviation"},{"gong","this_st","aviation"}},
+                    arr = {{"ann_start","this_st","aviation"},{"ann_start","this_st","aviation"}},
                     dep = {{"st_cm","next_st","city"},{"st_cm","next_st","market"}},
-                    arrlast = {{"gong","this_st","aviation","terminal"},{"gong","this_st","aviation","terminal"}},
+                    arrlast = {{"ann_start","this_st","aviation","terminal"},{"ann_start","this_st","aviation","terminal"}},
                     --ignorelast = true,
                 },
                 {
                     154,"City Hall",
-                    arr = {{"gong","this_st","city"},{"gong","this_st","city"}},
+                    arr = {{"ann_start","this_st","city"},{"ann_start","this_st","city"}},
                     dep = {{"st_cm","next_st","white","st_cm"},{"st_cm","next_st","aviation","st_cm"}},
-                    --arrlast = {{"gong","this_st","city","terminal"},{"gong","this_st","city","terminal"}},
+                    --arrlast = {{"ann_start","this_st","city","terminal"},{"ann_start","this_st","city","terminal"}},
                     --ignorelast = true,
                 },
                 {
                     155,"White Forest",
-                    arr = {{"gong","this_st","white"},{"gong","this_st","white"}},
-                    arrlast = {{"gong","this_st","white","terminal"},{"gong","this_st","white","terminal"}},
+                    arr = {{"ann_start","this_st","white"},{"ann_start","this_st","white"}},
+                    arrlast = {{"ann_start","this_st","white","terminal"},{"ann_start","this_st","white","terminal"}},
                     dep = {{"st_cm","next_st","urban","st_cm"},{"st_cm","next_st","city","st_cm"}},
                     ignorelast = true,
                 },
                 {
                     156,"Urban Park",
-                    arr = {{"gong","this_st","urban"},{"gong","this_st","urban"}},
-                    arrlast = {{"gong","this_st","urban","terminal"},{"gong","this_st","urban","terminal"}},
+                    arr = {{"ann_start","this_st","urban"},{"ann_start","this_st","urban"}},
+                    arrlast = {{"ann_start","this_st","urban","terminal"},{"ann_start","this_st","urban","terminal"}},
                     dep = {{"st_cm","next_st","rocklake"},{"st_cm","next_st","white","st_cm"}},
                     ignorelast = true,
                 },
                 {
                     157,"Rocklake",
-                    arrlast = {{"gong","this_st","rocklake","terminal"},{nil}},
+                    arrlast = {{"ann_start","this_st","rocklake","terminal"},{nil}},
                     dep = {{nil},{"st_cm","next_st","urban","st_cm"}},
                     ignorelast = true,
                 }

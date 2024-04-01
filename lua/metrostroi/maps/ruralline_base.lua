@@ -11,7 +11,7 @@ end
 
 print("=========================================================")
 print("========RMDT Announcer loader: Base files loading========")
-print("========        Script Version: Beta V8          ========")
+print("========   Script Version: V1 Release version    ========")
 print("=========================================================")
 
 -- Station texture plates.
