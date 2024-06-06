@@ -6,8 +6,6 @@ if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v3") or Ma
 elseif Map:find("gm_metro_ruralline_v29_old") then
   print("Old Ruralline V29 support has been dropped.")
 end
-    return
-end
 
 Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic",{
     --Announcer Startup

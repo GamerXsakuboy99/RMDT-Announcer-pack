@@ -1,12 +1,15 @@
 local Map = game.GetMap():lower() or ""
+
 if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_snow") then
     Metrostroi.PlatformMap = "ruralline_old"
     Metrostroi.CurrentMap = "ruralline_old"
     print("Play the V3 already!! - RMDT")
 elseif Map:find("gm_metro_ruralline_v3") then
-    Metrostroi.PlatformMap = "ruralline_v3"
-    Metrostroi.CurrentMap = "ruralline_v3"
-    print("Welcome to the future! - RMDT")
+    Metrostroi.PlatformMap = "ruralline_legacy"
+    Metrostroi.CurrentMap = "ruralline_legacy"
+    print("Legacy version of the ruralline.")
+elseif Map:find("gm_metro_ruralline_v4") then
+    print("ruralline_legacy_v1-v3.lua does not support the V4 map of the rurralline, if you don't have announcers on the V4 then something has one wrong.")
 else
     return
 end
@@ -15,9 +18,9 @@ end
     Global Door alars duration times.
     miero_gong_01 : 1.24
     rri-click : 0.31
-    old-doors : 4.54
-    futr-doors : 2.40
-    tape-doors : 4.25
+    old-doors (1995) : 4.54
+    futr-doors (2005) : 2.40
+    tape-doors  : 4.25
     
     GLobal way of code:
 
@@ -27,12 +30,12 @@ end
 ]]--
 
 print("=========================================================")
-print("========RMDT Announcer loader: Ruralline-Pre-V4-ANSP Lua code Loading.========")
+print("========RMDT Announcer loader: ruralline_legacy_v1-v3-ansp Lua code Loading.========")
 print("========        Script Version: V1         ========")
 print("=========================================================")
 
 
-print("RMDT Announcer loader: Valentin's announcer & routes")
+print("RMDT Announcer loader: Valentin's announcer & routes (V3)")
 
 Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
     -- Announcer starting files
