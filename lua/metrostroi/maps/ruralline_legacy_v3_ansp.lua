@@ -3,13 +3,17 @@ local Map = game.GetMap():lower() or ""
 if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_snow") then
     Metrostroi.PlatformMap = "ruralline_old"
     Metrostroi.CurrentMap = "ruralline_old"
-    print("Play the V3 already!! - RMDT")
+    --print("=======SUPPORT FOR V29 HAS BEEN DROPPED=======")
+    --print("=======ruralline_legacy_v3_ansp.lua file only supports V3 map anymore=======")
+    print("=======TEMP V29 SUPPORT, DISABLED WHEN V3 IS RELEASED=======")
+    print("=======!!! Station IDS dont match, Announcer version V1 is updated for V3 version of the map!!!=======")
 elseif Map:find("gm_metro_ruralline_v3") then
     Metrostroi.PlatformMap = "ruralline_legacy"
     Metrostroi.CurrentMap = "ruralline_legacy"
     print("Legacy version of the ruralline.")
 elseif Map:find("gm_metro_ruralline_v4") then
-    print("ruralline_legacy_v1-v3.lua does not support the V4 map of the rurralline, if you don't have announcers on the V4 then something has one wrong.")
+    print("=======ruralline_legacy_v3_ansp.lua does not support the V4 map of the rurralline=======")
+    print("=======if you don't have announcers on the V4 then something has one wrong======= ")
 else
     return
 end
@@ -23,7 +27,6 @@ end
     tape-doors  : 4.25
     
     GLobal way of code:
-
     Left side:  Market street ---> Rocklake
     Right side: Rocklake ----> Market Street
 
@@ -255,32 +258,32 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
             spec_last = {"ann_start", "click"},
             spec_wait = {"ann_start", "fault"},
         {
-            151, "Market Park",
+            900, "Market Park",
             dep = {{"ann_start","dro_cls",0.5,"next_st","aviation","click"},{nil}},
             arrlast = {{nil},{"ann_start","tis","market","eol","spec1","click"}},
         },
         {
-            153, "Aviation Uni.",
+            902, "Aviation Uni.",
             dep = {{"ann_start","dro_cls",0.5,"next_st","city","click"},{"ann_start","dro_cls",0.5,"next_st","market","click"}},
             arr = {{"ann_start","tis","aviation","click"},{"ann_start","tis","aviation","click"}},
         },
         {
-            154, "Lakeview city Hall",
+            903, "Lakeview city Hall",
             dep = {{"ann_start","dro_cls",0.5,"next_st","white","click"},{"ann_start","dro_cls",0.5,"next_st","aviation","click"}},
             arr = {{"ann_start","tis","city","click"},{"ann_start","tis","city","click"}},
         },
         {
-            155, "White Forest",
+            904, "White Forest",
             dep = {{"ann_start","dro_cls",0.5,"next_st","urban","click"},{"ann_start","dro_cls",0.5,"next_st","city","click"}},
             arr = {{"ann_start","tis","white","click"},{"ann_start","tis","white","click"}},
         },
         {
-            156, "Urban Park",
+            905, "Urban Park",
             dep = {{"ann_start","dro_cls",0.5,"next_st","rocklake","click"},{"ann_start","dro_cls",0.5,"next_st","white","click"}},
             arr = {{"ann_start","tis","urban","click"},{"ann_start","tis","urban","click"}},
         },
         {
-            152, "Rocklake",
+            906, "Rocklake",
             dep = {{nil},{"ann_start","dro_cls",0.5,"next_st","urban","click"}},
             arrlast = {{"ann_start","tis","rocklake","eol","spec1","click"},{nil}},
         },
@@ -292,22 +295,22 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
             spec_last = {"ann_start", "click"},
             spec_wait = {"ann_start", "fault"},
         {
-            151, "Market Park",
+            900, "Market Park",
             dep = {{"ann_start","dro_cls",0.5,"next_st","aviation","click"},{nil}},
             arrlast = {{nil},{"ann_start","tis","market","eol","spec1","click"}},
         },
         {
-            153, "Aviation Uni.",
+            902, "Aviation Uni.",
             dep = {{"ann_start","dro_cls",0.5,"next_st","city","click"},{"ann_start","dro_cls",0.5,"next_st","market","click"}},
             arr = {{"ann_start","tis","aviation","click"},{"ann_start","tis","aviation","click"}},
         },
         {
-            154, "Lakeview city Hall",
+            903, "Lakeview city Hall",
             dep = {{"ann_start","dro_cls",0.5,"next_st","white","click"},{"ann_start","dro_cls",0.5,"next_st","aviation","click"}},
             arr = {{"ann_start","tis","city","click"},{"ann_start","tis","city","click"}},
         },
         {
-            155, "White Forest",
+            904, "White Forest",
             dep = {{nil},{"ann_start","dro_cls",0.5,"next_st","city","click"}},
             arrlast = {{"ann_start","tis","white","eol","spec1","click"},{nil}},
         },
@@ -319,17 +322,17 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
             spec_last = {"ann_start", "click"},
             spec_wait = {"ann_start", "fault"},
         {
-            155, "White Forest",
+            904, "White Forest",
             dep = {{"ann_start","dro_cls",0.5,"next_st","urban","click"},{nil}},
             arrlast = {{nil},{"ann_start","tis","white","eol","spec1","click"}},
         },
         {
-            156, "Urban Park",
+            905, "Urban Park",
             dep = {{"ann_start","dro_cls",0.5,"next_st","rocklake","click"},{"ann_start","dro_cls",0.5,"next_st","white","click"}},
             arr = {{"ann_start","tis","urban","click"},{"ann_start","tis","urban","click"}},
         },
         {
-            152, "Rocklake",
+            906, "Rocklake",
             dep = {{nil},{"ann_start","dro_cls",0.5,"next_st","urban","click"}},
             arrlast = {{"ann_start","tis","rocklake","eol","spec1","click"},{nil}},
         },
@@ -341,22 +344,22 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
             spec_last = {"ann_start", "click"},
             spec_wait = {"ann_start", "fault"},
         {
-            153, "Aviation Uni.",
+            902, "Aviation Uni.",
             dep = {{"ann_start","dro_cls",0.5,"next_st","city","click"},{nil}},
             arrlast = {{nil},{"ann_start","tis","aviation","eol","spec1","click"}},
         },
         {
-            154, "Lakeview city Hall",
+            903, "Lakeview city Hall",
             dep = {{"ann_start","dro_cls",0.5,"next_st","white","click"},{"ann_start","dro_cls",0.5,"next_st","aviation","click"}},
             arr = {{"ann_start","tis","city","click"},{"ann_start","tis","city","click"}},
         },
         {
-            155, "White Forest",
+            904, "White Forest",
             dep = {{"ann_start","dro_cls",0.5,"next_st","urban","click"},{"ann_start","dro_cls",0.5,"next_st","city","click"}},
             arr = {{"ann_start","tis","white","click"},{"ann_start","tis","white","click"}},
         },
         {
-            156, "Urban Park",
+            905, "Urban Park",
             dep = {{nil},{"ann_start","dro_cls",0.5,"next_st","white","click"}},
             arrlast = {{"ann_start","tis","urban","eol","spec1","click"},{nil}},
         },
@@ -364,7 +367,182 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
     }
 )
 
-print("RMDT Announcer loader: Marius's announcer & routes")
+print("RMDT Announcer loader: Marius's announcer & routes (V3)")
+
+Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
+    -- Announcer starting files
+    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
+    click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
+    -- Doors closing
+    dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
+    --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
+    --drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
+    -- Normal Announcer files
+    market = {"",},
+    aviation = {"",},
+    city = {"",},
+    white = {"",},
+    urban = {"",},
+    rocklake = {"",},
+    -- Special announcers
+    drc_cls = {"",},
+    drc_lf = {"",},
+    drc_rh = {"",},
+    chime = {"",},
+    rh_pass = {"",},
+    terminal = {"",},
+    },
+    {
+        {
+            LED = {},
+            Name = "M53 MS - RL",
+            Loop = false,
+            spec_last = {"",""},
+            spec_wait = {"",""},
+        {
+            900, "Market Street",
+            dep = {{"chime","drc_cls",1.0,"chime","rh_pass"},{nil}},
+            arrlast = {{nil},{"chime","market","terminal","drc_rh"}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            903, "Lakeview City Hall",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "White Forest",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Urban Park",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Rocklake",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        },
+        {
+            LED = {},
+            Name = "M53A MS - WF",
+            Loop = false,
+            spec_last = {"",""},
+            spec_wait = {"",""},
+        {
+            900, "Market Street",
+            dep = {{"chime","drc_cls",1.0,"chime","rh_pass"},{nil}},
+            arrlast = {{nil},{"chime","market","terminal","drc_rh"}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        },
+        {
+            LED = {},
+            Name = "M53 MS - RL",
+            Loop = false,
+            spec_last = {"",""},
+            spec_wait = {"",""},
+        {
+            900, "Market Street",
+            dep = {{"chime","drc_cls",1.0,"chime","rh_pass"},{nil}},
+            arrlast = {{nil},{"chime","market","terminal","drc_rh"}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        },
+        {
+            LED = {},
+            Name = "M53 MS - RL",
+            Loop = false,
+            spec_last = {"",""},
+            spec_wait = {"",""},
+        {
+            900, "Market Street",
+            dep = {{"chime","drc_cls",1.0,"chime","rh_pass"},{nil}},
+            arrlast = {{nil},{"chime","market","terminal","drc_rh"}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        {
+            902, "Aviation Uni.",
+            dep = {{},{}},
+            arr = {{},{}},
+        },
+        },
+    }
+)
 
 print("RMDT Announcer loader: Now loading Ballistic announcer")
 
