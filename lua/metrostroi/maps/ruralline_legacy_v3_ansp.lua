@@ -512,7 +512,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
 print("RMDT Announcer loader: Now loading Ballistic announcer")
 -- Waits for new audio files
 print("RMDT Announcer loader: Now loading norwaylcandtrains announcer")
-Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | NorwayLCAndTrains", {
+Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains", {
     -- Announcer starting files
     ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
@@ -653,7 +653,33 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | NorwayLCAndTrains", {
 )
 
 print("RMDT Announcer loader: Now loading pysco_annoucements announcer")
-
-print("RMDT Announcer loader: Now loading tankict_announcer announcer")
-
+-- Waits for new files.
+--[[
+Metrostroi.AddANSPAnnouncer("[ENG + FIN] LVP announcer 1995 | pysco_annoucements", {
+    -- Announcer starting files
+    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
+    click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
+    -- Doors closing
+    dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
+    --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
+    --drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
+    -- Normal Announcer files
+    market = {"subway_announcers/v3_announcers/pysco_annoucements/station - market street.mp3",},
+    -- Special announcers
+    },
+    {
+        {
+            LED = {1,2,3,4,5,6},
+            Name = "Line M52 MS - RL",
+            Loop = false,
+            spec_last = {"ann_start","click"},
+            spec_wait = {"ann_start","click"},
+        {
+            900, "Market Street",
+            arrlast = 
+            dep = 
+        }
+        }
+    }
+--]]
 print("RMDT Announcer loader: RPM Announcer has now loadded fully.")
