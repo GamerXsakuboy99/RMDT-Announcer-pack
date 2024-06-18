@@ -1,20 +1,38 @@
 local Map = game.GetMap():lower() or ""
 
 if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_snow") then
-    Metrostroi.PlatformMap = "ruralline_v29"
-    Metrostroi.CurrentMap = "ruralline_v29"
+    Metrostroi.PlatformMap = "ruralline_old"
+    Metrostroi.CurrentMap = "ruralline_old"
+    --print("=======SUPPORT FOR V29 HAS BEEN DROPPED=======")
+    --print("=======ruralline_legacy_v3_ansp.lua file only supports V3 map anymore=======")
+    print("=======TEMP V29 SUPPORT, DISABLED WHEN V3 IS RELEASED=======")
+    print("=======!!! Station IDS dont match, Announcer version V1 is updated for V3 version of the map!!!=======")
+elseif Map:find("gm_metro_ruralline_v3") then
+    Metrostroi.PlatformMap = "ruralline_legacy"
+    Metrostroi.CurrentMap = "ruralline_legacy"
+    print("Legacy version of the ruralline.")
+elseif Map:find("gm_metro_ruralline_v4") then
+    print("=======ruralline_legacy_v3_ansp.lua does not support the V4 map of the rurralline=======")
+    print("=======if you don't have announcers on the V4 then something has gone wrong======= ")
 else
     return
 end
---[[
-    Global door alarms duration times.
 
-    - doors_closing_alarm(bell).mp3 2.19
-    - announcer-starting.mp3 2.27
+--[[
+    Global Door alars duration times.
+    miero_gong_01 : 1.24
+    rri-click : 0.31
+    old-doors (1995) : 4.54
+    futr-doors (2005) : 2.40
+    tape-doors  : 4.25
+    
+    GLobal way of code:
+    Left side:  Market street ---> Rocklake
+    Right side: Rocklake ----> Market Street
 
 ]]--
 
-Metrostroi.SetRRIAnnouncer({
+Metrostroi.SetRRIAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
     gong = {"subway_announcers/v29_announcers/valentin_announcer/sarmat_upo/mireo_gong_01.mp3",1.31},
     click_start = {"subway_announcers/v29_announcers/global-sounds/rri-click.mp3", 0.2},
     click_end = {"subway_announcers/v29_announcers/global-sounds/rri-click.mp3", 0.2},

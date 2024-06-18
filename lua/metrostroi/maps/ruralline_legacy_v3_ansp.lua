@@ -682,4 +682,164 @@ Metrostroi.AddANSPAnnouncer("[ENG + FIN] LVP announcer 1995 | pysco_annoucements
         }
     }
 --]]
+
+print("RMDT Announcer loader: Now loading Tankict announcer")
+Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
+    -- Announcer starting files
+    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
+    click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
+    -- Doors closing
+    dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
+    --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
+    --drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
+    -- Normal Announcer files (english)
+    market = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/market_street_eng.mp3",1.47},
+    aviation = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/aviation_university_eng.mp3",2.44},
+    city = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/lakeview_city_hall_eng.mp3",1.77},
+    white = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/white_forest_eng.mp3",1.54},
+    urban = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/urban_park_eng.mp3",2.10},
+    rock = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/rocklake_eng.mp3",1.44},
+    -- Special announcers (English)
+    train_goes = {"subway_announcers/v3_announcers/tankict_announcer/en/special/train_goes_to_eng.mp3",2.38},
+    nxt_st = {"subway_announcers/v3_announcers/tankict_announcer/en/special/next_station_eng.mp3",3.80},
+    mind_gap = {"subway_announcers/v3_announcers/tankict_announcer/en/special/mind_the_gap_eng.mp3",3.37},
+    st_end = {"subway_announcers/v3_announcers/tankict_announcer/en/special/end_station_eng.mp3",3.72},
+    stuff = {"subway_announcers/v3_announcers/tankict_announcer/en/special/dont_forget_your_stuff_eng.mp3",4.57},
+    polite = {"subway_announcers/v3_announcers/tankict_announcer/en/special/be_mutually_polite_eng.mp3",8.51},
+    arrival_end = {"subway_announcers/v3_announcers/tankict_announcer/en/special/arrival_to_end_eng.mp3",8.56},
+    arrival = {"subway_announcers/v3_announcers/tankict_announcer/en/special/arrival_eng.mp3",0.80},
+    -- Normal Announcer files (Russian)
+    market_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/market_street.mp3",1.73},
+    aviation_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/aviation_university.mp3",2.77},
+    city_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/lakeview_city_hall.mp3",2.32},
+    white_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/white_forest.mp3",1.71},
+    urban_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/urban_park.mp3",},
+    rock_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/rocklake.mp3",1.64},
+    -- Special announcers (Russian)
+    train_goes_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/special/train_goes_to.mp3",2.79},
+    nxt_st_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/special/next_station.mp3",3.56},
+    mind_gap_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/special/mind_the_gap.mp3",5.13},
+    st_end_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/special/end_station.mp3",8.17},
+    stuff_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/special/dont_forget_your_stuff.mp3",4.68},
+    polite_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/special/be_mutually_polite.mp3",8.41},
+    arrival_end_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/special/arrival_to_end.mp3",8.35},
+    arrival_ru = {"subway_announcers/v3_announcers/tankict_announcer/en/special/arrival.mp3",1.14},
+    },
+    {
+        {
+            LED = {1,2,3,4,5,6},
+            Name = "Line M52 MS - RL",
+            Loop = false,
+            spec_last = {"ann_start","st_end","st_end_ru","click"},
+            spec_wait = {"ann_start","click"},
+        {
+            900, "Market Street",
+            arrlast = {{nil},{"ann_start","arrival_end","market",0.5,"arrival_end_ru","market_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","rock",0.3,"nxt_st","aviation",0.5,"train_goes_ru","rock_ru",0.3,"nxt_st_ru","aviation_ru",0.3,"click"},{nil}},
+        },
+        {
+            902, "Aviation Uni.",
+            arr = {{"ann_start","arrival","aviation","mind_gap",0.5,"arrival_ru","aviation_ru","mind_gap_ru"},{"ann_start","arrival","aviation","mind_gap",0.5,"arrival_ru","aviation_ru","mind_gap_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","rock",0.3,"nxt_st","city",0.5,"train_goes_ru","rock_ru",0.3,"nxt_st_ru","city_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","market",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","market_ru",0.3,"click"}},
+        },
+        {
+            903, "Lakeview City Hall",
+            arr = {{"ann_start","arrival","city","mind_gap",0.5,"arrival_ru","city_ru","mind_gap_ru"},{"ann_start","arrival","city","mind_gap",0.5,"arrival_ru","city_ru","mind_gap_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","rock",0.3,"nxt_st","white",0.5,"train_goes_ru","rock_ru",0.3,"nxt_st_ru","white_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","aviation",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","aviation_ru",0.3,"click"}},
+        },
+        {
+            904, "White Forest",
+            arr = {{"ann_start","arrival","white","mind_gap",0.5,"arrival_ru","white_ru","mind_gap_ru"},{"ann_start","arrival","white","mind_gap",0.5,"arrival_ru","white_ru","mind_gap_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","rock",0.3,"nxt_st","urban",0.5,"train_goes_ru","rock_ru",0.3,"nxt_st_ru","city_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","city",0.5,"train_goes_ru","city_ru",0.3,"nxt_st_ru","market_ru",0.3,"click"}},
+        },
+        {
+            905, "Urban Park",
+            arr = {{"ann_start","arrival","urban","mind_gap",0.5,"arrival_ru","urban_ru","mind_gap_ru"},{"ann_start","arrival","urban","mind_gap",0.5,"urban_ru","aviation_ru","mind_gap_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","rock",0.3,"nxt_st","rock",0.5,"train_goes_ru","rock_ru",0.3,"nxt_st_ru","rock_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","white",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","white_ru",0.3,"click"}},
+        },
+        {
+            906, "Rocklake",
+            arrlast = {{"ann_start","arrival_end","rock","mind_gap",0.5,"arrival_end_ru","rock_ru","mind_gap_ru"},{nil}},
+            dep = {{nil},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","urban",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","urban_ru",0.3,"click"}},
+        },
+        },
+        {
+            LED = {1,2,3,4,5,6},
+            Name = "Line M52A MS - WF",
+            Loop = false,
+            spec_last = {"ann_start","st_end","st_end_ru","click"},
+            spec_wait = {"ann_start","click"},
+        {
+            900, "Market Street",
+            arrlast = {{nil},{"ann_start","arrival_end","market",0.5,"arrival_end_ru","market_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","white",0.3,"nxt_st","aviation",0.5,"train_goes_ru","white_ru",0.3,"nxt_st_ru","white_ru",0.3,"click"},{nil}},
+        },
+        {
+            902, "Aviation Uni.",
+            arr = {{"ann_start","arrival","aviation","mind_gap",0.5,"arrival_ru","aviation_ru","mind_gap_ru"},{"ann_start","arrival","aviation","mind_gap",0.5,"arrival_ru","aviation_ru","mind_gap_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","white",0.3,"nxt_st","city",0.5,"train_goes_ru","white_ru",0.3,"nxt_st_ru","city_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","market",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","market_ru",0.3,"click"}},
+        },
+        {
+            903, "Lakeview City Hall",
+            arr = {{"ann_start","arrival","city","mind_gap",0.5,"arrival_ru","city_ru","mind_gap_ru"},{"ann_start","arrival","city","mind_gap",0.5,"arrival_ru","city_ru","mind_gap_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","white",0.3,"nxt_st","white",0.5,"train_goes_ru","white_ru",0.3,"nxt_st_ru","white_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","aviation",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","aviation_ru",0.3,"click"}},
+        },
+        {
+            904, "White Forest",
+            arrlast = {{"ann_start","arrival_end","white","mind_gap",0.5,"arrival_end_ru","white_ru","mind_gap_ru"},{nil}},
+            dep = {{nil},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","city",0.5,"train_goes_ru","city_ru",0.3,"nxt_st_ru","market_ru",0.3,"click"}},
+        },
+        },
+        {
+            LED = {1,2,3,4,5,6},
+            Name = "Line M52B WF - RL",
+            Loop = false,
+            spec_last = {"ann_start","st_end","st_end_ru","click"},
+            spec_wait = {"ann_start","click"},
+        {
+            904, "White Forest",
+            arrlast = {{nil},{"ann_start","arrival_end","white","mind_gap",0.5,"arrival_end_ru","white_ru","mind_gap_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","rock",0.3,"nxt_st","urban",0.5,"train_goes_ru","rock_ru",0.3,"nxt_st_ru","city_ru",0.3,"click"},{nil}},
+        },
+        {
+            905, "Urban Park",
+            arr = {{"ann_start","arrival","urban","mind_gap",0.5,"arrival_ru","urban_ru","mind_gap_ru"},{"ann_start","arrival","urban","mind_gap",0.5,"urban_ru","aviation_ru","mind_gap_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","rock",0.3,"nxt_st","rock",0.5,"train_goes_ru","rock_ru",0.3,"nxt_st_ru","rock_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","white",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","white_ru",0.3,"click"}},
+        },
+        {
+            906, "Rocklake",
+            arrlast = {{"ann_start","arrival_end","rock","mind_gap",0.5,"arrival_end_ru","rock_ru","mind_gap_ru"},{nil}},
+            dep = {{nil},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","urban",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","urban_ru",0.3,"click"}},
+        },
+        },
+        {
+            LED = {1,2,3,4,5,6},
+            Name = "Line M52C AV - UP",
+            Loop = false,
+            spec_last = {"ann_start","st_end","st_end_ru","click"},
+            spec_wait = {"ann_start","click"},
+        {
+            902, "Aviation Uni.",
+            arrlast = {{nil},{"ann_start","arrival_end","aviation","mind_gap",0.5,"arrival_end_ru","aviation_ru","mind_gap_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","urban",0.3,"nxt_st","city",0.5,"train_goes_ru","urban_ru",0.3,"nxt_st_ru","city_ru",0.3,"click"},{nil}},
+        },
+        {
+            903, "Lakeview City Hall",
+            arr = {{"ann_start","arrival","city","mind_gap",0.5,"arrival_ru","city_ru","mind_gap_ru"},{"ann_start","arrival","city","mind_gap",0.5,"arrival_ru","city_ru","mind_gap_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","urban",0.3,"nxt_st","white",0.5,"train_goes_ru","urban_ru",0.3,"nxt_st_ru","white_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","aviation",0.3,"nxt_st","aviation",0.5,"train_goes_ru","aviation_ru",0.3,"nxt_st_ru","aviation_ru",0.3,"click"}},
+        },
+        {
+            904, "White Forest",
+            arr = {{"ann_start","arrival","white","mind_gap",0.5,"arrival_ru","white_ru","mind_gap_ru"},{"ann_start","arrival","white","mind_gap",0.5,"arrival_ru","white_ru","mind_gap_ru"}},
+            dep = {{"dro_cls",0.5,"train_goes","urban",0.3,"nxt_st","urban",0.5,"train_goes_ru","urban_ru",0.3,"nxt_st_ru","urban_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","city",0.5,"train_goes_ru","city_ru",0.3,"nxt_st_ru","aviation_ru",0.3,"click"}},
+        },
+        {
+            905, "Urban Park",
+            arrlast = {{"ann_start","arrival","urban","mind_gap",0.5,"arrival_ru","urban_ru","mind_gap_ru"},{"ann_start","arrival","urban","mind_gap",0.5,"urban_ru","aviation_ru","mind_gap_ru"}},
+            dep = {{nil},{"dro_cls",0.5,"train_goes","aviation",0.3,"nxt_st","white",0.5,"train_goes_ru","aviation_ru",0.3,"nxt_st_ru","white_ru",0.3,"click"}},
+        },
+        },
+    }
+)
+
 print("RMDT Announcer loader: RPM Announcer has now loadded fully.")
