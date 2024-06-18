@@ -17,7 +17,6 @@ Download stable/released version from the Release Branch.
 | gm_metro_ruralline | V29 - V3 | Lakeview transport (LVP) (1954 - 1999) | 1995 | -
 | gm_metro_ruralline | V4 | Rockport Metropolitan (RPM) [2000 - today] | 2001 | -
 
-
 ### Current voices.
 | Announcer voice actor | Supported maps | Language | Last updated | Notes
 | -- | :--: | :--: | -- | --
@@ -30,22 +29,10 @@ Download stable/released version from the Release Branch.
 | Pyscowicz | V29, V29_snow, V3 | Eng + Fin | V1 | -
 | NorwayLCAndTrains | V29, V29_snow, V3, V4 | Eng + PL | V1 | -
 
-#### Station List + Station ID
-- Market Street + 900
-- Ravenholm + 901
-- Aviation University + 902
-- Lakeview city Hall  + 903
-- White Forest (V4 White Forest East) + 904
-- Urban Park (V4 Urban Park North) + 905
-- Rocklake + 906
-- April Point + 907
-- Saddle valley station + 908
-- Rockport central + 909
 
-##### Training track
-- Depot station + 300
-- Rocklake Passing + 301
-- Rocklake East + 302
+### Check wiki for the map specified information.
+- Station ID's
+- Routes
 
 # Fixed bugs
 > Bugs list cleared as this update is first Full release

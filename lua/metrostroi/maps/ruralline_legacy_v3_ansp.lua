@@ -13,7 +13,7 @@ elseif Map:find("gm_metro_ruralline_v3") then
     print("Legacy version of the ruralline.")
 elseif Map:find("gm_metro_ruralline_v4") then
     print("=======ruralline_legacy_v3_ansp.lua does not support the V4 map of the rurralline=======")
-    print("=======if you don't have announcers on the V4 then something has one wrong======= ")
+    print("=======if you don't have announcers on the V4 then something has gone wrong======= ")
 else
     return
 end
@@ -33,7 +33,7 @@ end
 ]]--
 
 print("=========================================================")
-print("========RMDT Announcer loader: ruralline_legacy_v1-v3-ansp Lua code Loading.========")
+print("========RMDT Announcer loader: ruralline_legacy_v3_ansp Lua code Loading.========")
 print("========        Script Version: V1         ========")
 print("=========================================================")
 
