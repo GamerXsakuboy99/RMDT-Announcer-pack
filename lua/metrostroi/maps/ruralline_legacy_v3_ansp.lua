@@ -44,6 +44,9 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
     -- Announcer starting files
     ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
+    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
+    click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
+    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
     dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
     --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
@@ -140,7 +143,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
         {
             157,"Rocklake",
             --arr = {{"ann_start","ths","white","doors_right","mind_gap_step",1.0,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger",0.7,"rri_click"}},  -Not possible in V29 / V3
-            dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dorcl",5.0,"welc_lvp","nx_st","urban","platform_right",0.5,"welc_lvp_ger","nx_st_ger","urban_ger","platform_right_ger",0.7,"rri_click"}},
+            dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dro_cls",5.0,"welc_lvp","nx_st","urban","platform_right",0.5,"welc_lvp_ger","nx_st_ger","urban_ger","platform_right_ger",0.7,"click"}},
             arrlast = {{"ann_start","ths","rocklake","doors_right","trhm",0.5,"ths_ger","rocklake_ger","doors_right_ger","trhm_ger",0.7,"click"},{nil}},
         },
         },
