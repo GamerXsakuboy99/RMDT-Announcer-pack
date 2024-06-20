@@ -49,7 +49,7 @@ Update B7
 Announcer pack is getting a new rewirte later, due current way how it's done is very unstable and junk.
 
 ### Update: 11 Jul, 2021 @ 7:04pm
-Update V7.5 | rewrite of the ANSP
+Update B7.5 | rewrite of the ANSP
 - Rebuild the ANSP code fully.
 - Added all terminal announcers where it's possible right now. (v29 stops)
 - Added two new destination boards.
@@ -68,7 +68,7 @@ Fixed concord's announcer & updated the description.
 ### Update: 16 Mar @ 3:54pm
 Removed capitals & removed unused content. (Final update) Newer version coming later.
 
-V7.6
+B7.6
 
 ### Update: 26 Mar @ 5:24am
 Updated announcer to support old V29 version & added new turn around points to the announcers.
@@ -86,4 +86,9 @@ forgot few symbols... -_-
 - Fixed Lowercase station name from RRI.
 - Added Sarmat announcer.
 
-V7.9
+B7.9
+
+### Update
+V1 (Full Release)
+- Removed Support for old ruralline version, (gm_mnetro_ruralline_v29_old). Only Legacy announcer supports all versions anymore.
+- 
