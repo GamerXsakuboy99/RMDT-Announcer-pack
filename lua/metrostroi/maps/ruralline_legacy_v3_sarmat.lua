@@ -39,7 +39,7 @@ Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic",{
 	st_cm = {"subway_announcers/global-sounds/announcer-play.mp3", 2.27},
 },{
     { --МАРШРУТ
-        LED = {3,8,5,5,4,5},
+        LED = {4,7,6,5,5,5},
         {
             900,"Market Street",
             arr_last = {nil,{"THIIS","MAR","TERHE"}},

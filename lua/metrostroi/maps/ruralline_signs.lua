@@ -101,8 +101,8 @@ Metrostroi.AddPassSchemeTex("720","Ruralline_2005",{
 })
 
 Metrostroi.AddPassSchemeTex("722","Ruralline_1999",{
-    "metrostroi_skins/81-722_schemes/ruralline_left",
-    "metrostroi_skins/81-722_schemes/ruralline_right",
+    "metrostroi_skins/81-722_schemes/ruralline_1995r",
+    "metrostroi_skins/81-722_schemes/ruralline-1995",
 })
 
 Metrostroi.TickerAdverts = {
