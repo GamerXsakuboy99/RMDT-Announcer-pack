@@ -236,6 +236,9 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
     -- Announcer starting files
     ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
+    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
+    click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
+    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
     dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
     --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
@@ -376,6 +379,9 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
     -- Announcer starting files
     ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
+    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
+    click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
+    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
     --dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
     --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
@@ -397,7 +403,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
     },
     {
         {
-            LED = {1,2,3,4,5,6},
+            LED = {3,8,5,5,4,5},
             Name = "M52 MS - RL",
             Loop = false,
             spec_last = {"terminal","click"},
@@ -434,7 +440,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
         },
         },
         {
-            LED = {1,2,3,4},
+            LED = {3,8,5,5,4,5},
             Name = "M52A MS - WF",
             Loop = false,
             spec_last = {"terminal","click"},
@@ -461,7 +467,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
         },
         },
         {
-            LED = {4,5,6},
+            LED = {3,8,5,5,4,5},
             Name = "M52B WF - RL",
             Loop = false,
             spec_last = {"terminal","click"},
@@ -483,7 +489,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
         },
         },
         {
-            LED = {2,3,4,5},
+            LED = {3,8,5,5,4,5},
             Name = "M52C AV - UP",
             Loop = false,
             spec_last = {"terminal","click"},
@@ -519,6 +525,9 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
     -- Announcer starting files
     ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
+    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
+    click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
+    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
     dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
     --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
@@ -691,6 +700,9 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
     -- Announcer starting files
     ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
+    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
+    click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
+    announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
     dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
     --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
@@ -730,7 +742,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
     },
     {
         {
-            LED = {1,2,3,4,5,6},
+            LED = {3,8,5,5,4,5},
             Name = "Line M52 MS - RL",
             Loop = false,
             spec_last = {"ann_start","st_end","st_end_ru","click"},
@@ -767,7 +779,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
         },
         },
         {
-            LED = {1,2,3,4,5,6},
+            LED = {3,8,5,5,4,5},
             Name = "Line M52A MS - WF",
             Loop = false,
             spec_last = {"ann_start","st_end","st_end_ru","click"},
@@ -794,7 +806,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
         },
         },
         {
-            LED = {1,2,3,4,5,6},
+            LED = {3,8,5,5,4,5},
             Name = "Line M52B WF - RL",
             Loop = false,
             spec_last = {"ann_start","st_end","st_end_ru","click"},
@@ -816,7 +828,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
         },
         },
         {
-            LED = {1,2,3,4,5,6},
+            LED = {3,8,5,5,4,5},
             Name = "Line M52C AV - UP",
             Loop = false,
             spec_last = {"ann_start","st_end","st_end_ru","click"},
