@@ -126,7 +126,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
             dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.2,"nx_st_ger","city_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","market","platform_right",0.2,"ravenholm_closed",0.5,"nx_st_ger","market_ger","platform_right_ger",0.2,"ravenholm_closed_ger","click"}},
         },
         {
-            903,"City Hall",
+            903,"Lakeview City Hall",
             arr = {{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"}},
             dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","white","platform_right",0.2,"nx_st_ger","white_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","aviation","platform_right",0.2,"nx_st_ger","aviation_ger","platform_right_ger","click"}},
         },
@@ -164,7 +164,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
             dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","market","platform_right",0.2,"ravenholm_closed",0.5,"nx_st_ger","market_ger","platform_right_ger",0.2,"ravenholm_closed_ger","click"}},
         },
         {
-            903,"City Hall",
+            903,"Lakeview City Hall",
             arr = {{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"}},
             dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","aviation","platform_right",0.5,"nx_st_ger","aviation_ger","platform_right_ger","click"}},
         },
@@ -185,7 +185,6 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
             904,"White Forest",
             dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","urban","platform_right",0.5,"nx_st_ger","urban_ger","platform_right_ger","click"},{nil}},
             arrlast = {{nil},{"ann_start","ths","white","doors_right","trhm",0.5,"ths_ger","white_ger","doors_right_ger","trhm_ger","click"}},
-            ignorelast = true,
         },
         {
             905,"Urban Park",
@@ -210,7 +209,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
             arrlast = {{nil},{"ann_start","ths","aviation","doors_right","trhm",0.5,"ths_ger","aviation_ger","doors_right_ger","trhm_ger"}},
         },
         {
-            903,"City Hall",
+            903,"Lakeview City Hall",
             arr = {{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"}},
             dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","aviation","platform_right",0.5,"nx_st_ger","aviation_ger","platform_right_ger","click"}},
         },
@@ -319,6 +318,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
             904, "White Forest",
             dep = {{nil},{"ann_start","dro_cls",0.5,"next_st","city","click"}},
             arrlast = {{"ann_start","tis","white","eol","spec1","click"},{nil}},
+            ignorelast = true,
         },
         },
         {
@@ -464,6 +464,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
             902, "White Forest",
             dep = {{nil},{"chime","drc_cls","click"}},
             arrlast = {{"chime","white","drc_rh","click"},{nil}},
+            ignorelast = true,
         },
         },
         {
@@ -610,6 +611,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
             904, "White Forest",
             arrlast = {{"ann_start","white","click"},{nil}},
             dep = {{nil},{"dro_cls",0.5,"ann_start","nxt_city","click"}},
+            ignorelast = true,
         },
         },
         {
@@ -803,6 +805,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
             904, "White Forest",
             arrlast = {{"ann_start","arrival_end","white","mind_gap",0.5,"arrival_end_ru","white_ru","mind_gap_ru"},{nil}},
             dep = {{nil},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","city",0.5,"train_goes_ru","city_ru",0.3,"nxt_st_ru","market_ru",0.3,"click"}},
+            ignorelast = true,
         },
         },
         {
