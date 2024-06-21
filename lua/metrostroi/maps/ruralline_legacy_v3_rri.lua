@@ -41,8 +41,8 @@ Metrostroi.SetRRIAnnouncer({
     announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
     --dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
-    --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
+    dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
     -- Special announcer files
     doors_both = {"subway_announcers/v3_announcers/valentin_announcer/special/doors_both.mp3",2.50},
     doors_both_ger = {"subway_announcers/v3_announcers/valentin_announcer/special/doors_both_ger.mp3",2.25},

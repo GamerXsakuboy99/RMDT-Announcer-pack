@@ -49,8 +49,8 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
     announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
     dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
-    --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    --drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
     -- Special announcer files
     doors_both = {"subway_announcers/v3_announcers/valentin_announcer/special/doors_both.mp3",2.50},
     doors_both_ger = {"subway_announcers/v3_announcers/valentin_announcer/special/doors_both_ger.mp3",2.25},
@@ -240,8 +240,8 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
     announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
     dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
-    --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    --drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
     -- Normal Announcer files
     spc1 = {"subway_announcers/legacy_announcers_v29/trocki_announcer/special_1.mp3",4.15},
     fault = {"subway_announcers/legacy_announcers_v29/trocki_announcer/special_2.mp3",4.60},
@@ -384,8 +384,8 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
     announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
     --dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
-    --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    --drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
     -- Normal Announcer files
     market = {"subway_announcers/v3_announcers/marius_mustang_announcer/normal/marketstreet.mp3",9.49},
     aviation = {"subway_announcers/v3_announcers/marius_mustang_announcer/normal/aviationuniversity.mp3",4.41},
@@ -531,8 +531,8 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
     announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
     dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
-    --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    --drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
     -- Normal Announcer files
     market = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/station - market street.mp3",12.10},
     aviation = {"subway_announcers/v3_announcers/norwaylcandtrains_announcer/station - aviation university.mp3",5.48},
@@ -675,8 +675,8 @@ Metrostroi.AddANSPAnnouncer("[ENG + FIN] LVP announcer 1995 | pysco_annoucements
     click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
     -- Doors closing
     dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
-    --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    --drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
     -- Normal Announcer files
     market = {"subway_announcers/v3_announcers/pysco_annoucements/station - market street.mp3",},
     -- Special announcers
@@ -707,8 +707,8 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
     announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
     dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
-    --drn_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    --drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
+    --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
     -- Normal Announcer files (english)
     market = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/market_street_eng.mp3",1.47},
     aviation = {"subway_announcers/v3_announcers/tankict_announcer/en/stations/aviation_university_eng.mp3",2.44},
