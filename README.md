@@ -1,11 +1,7 @@
 # Announcer for Rockport Metropolitan maps.
-### Workshop version: V1 First Full version.
+### Workshop version: V1.1.
 ### Update log
-- Finalized V29's announcers.
-- Fixed timing issues.
-- Fixed things what can be fixed.
-- Globalized announcer pack for all legacy ruralline maps. (V1 - V4)
-- V29's support dropped mostly, Using V3's announcers now.
+- Fixed Norways announcer.
 
 ### Announcer pack supported maps
 | Map name | Versions | Owner of the line | Set in (year) | Notes
@@ -31,5 +27,4 @@
 - Routes
 
 # Fixed bugs
-> Bugs list cleared as this update is first Full release
-- No bugs, Yey!
+- FIxed Norways silent & trible announcement start chimes from departure ano.
