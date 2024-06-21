@@ -88,7 +88,21 @@ forgot few symbols... -_-
 
 B7.9
 
-### Update
-V1 (Full Release)
-- Removed Support for old ruralline version, (gm_mnetro_ruralline_v29_old). Only Legacy announcer supports all versions anymore.
-- 
+### Update : 20 Jun @ 1.56pm
+Marjor Update: V1
+Finalized V29's announcers.
+Fixed timing issues.
+Fixed things what can be fixed.
+Globalized announcer pack for all legacy ruralline maps. (V1 - V4)
+V29's support dropped mostly, Using V3's announcers now.
+
+The announcer pack is V3 ready, but due map takes time, Announcers support V29 for now.
+
+### Update : 21 Jun @ 10:22am
+R-V1.1
+Fixed muiltple issues on Norway's announcer.
+Check GitHub for more detailed changelog.
+
+### Update : 
+R-V1.2
+- Fixed more broken things.
