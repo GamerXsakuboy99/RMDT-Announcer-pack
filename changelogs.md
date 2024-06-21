@@ -80,7 +80,7 @@ isn't the name change a file change?
 ### Update: 26 Mar @ 1:57pm
 forgot few symbols... -_-
 
-### Update: 28 Mar @ 1:30pm
+### Update: 28 Mar @ 
 - Fixed Concords announcer.
 - Remove Ignore-last settings from all stations expect White Forest.
 - Fixed Lowercase station name from RRI.
@@ -88,7 +88,7 @@ forgot few symbols... -_-
 
 B7.9
 
-### Update: 20 Jun @ 1:56pm
+### Update : 20 Jun @ 1.56pm
 Marjor Update: V1
 Finalized V29's announcers.
 Fixed timing issues.
@@ -97,3 +97,12 @@ Globalized announcer pack for all legacy ruralline maps. (V1 - V4)
 V29's support dropped mostly, Using V3's announcers now.
 
 The announcer pack is V3 ready, but due map takes time, Announcers support V29 for now.
+
+### Update : 21 Jun @ 10:22am
+R-V1.1
+Fixed muiltple issues on Norway's announcer.
+Check GitHub for more detailed changelog.
+
+### Update : 
+R-V1.2
+- Fixed more broken things.
