@@ -568,7 +568,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
         {
             903, "Lakeview City Hall",
             arr = {{"ann_start","city","click"},{"ann_start","city","click"}},
-            dep = {{"dro_cls",1.0,"nex_white","click"},{"dro_cls",1.0,"nxt_aviation","click"}},
+            dep = {{"dro_cls",1.0,"nxt_white","click"},{"dro_cls",1.0,"nxt_aviation","click"}},
         },
         {
             904, "White Forest",
@@ -605,7 +605,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
         {
             903, "Lakeview City Hall",
             arr = {{"ann_start","city","click"},{"ann_start","city","click"}},
-            dep = {{"dro_cls",1.0,"nex_white","click"},{"dro_cls",1.0,"nxt_aviation","click"}},
+            dep = {{"dro_cls",1.0,"nxt_white","click"},{"dro_cls",1.0,"nxt_aviation","click"}},
         },
         {
             904, "White Forest",
@@ -650,7 +650,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
         {
             903, "Lakeview City Hall",
             arr = {{"ann_start","city","click"},{"ann_start","city","click"}},
-            dep = {{"dro_cls",1.0,"nex_white","click"},{"dro_cls",1.0,"nxt_aviation","click"}},
+            dep = {{"dro_cls",1.0,"nx_white","click"},{"dro_cls",1.0,"nxt_aviation","click"}},
         },
         {
             904, "White Forest",
