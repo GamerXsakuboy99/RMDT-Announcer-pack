@@ -7,11 +7,11 @@ if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_snow")
     --print("=======ruralline_legacy_v3_ansp.lua file only supports V3 map anymore=======")
     print("=======TEMP V29 SUPPORT, DISABLED WHEN V3 IS RELEASED=======")
     print("=======!!! Station IDS dont match, Announcer version V1 is updated for V3 version of the map!!!=======")
-elseif Map:find("gm_metro_ruralline_v3") then
+elseif Map:find("gm_metro_ruralline_v3") or Map:find("gm_metro_ruralline_v3_gmv") then
     Metrostroi.PlatformMap = "ruralline_legacy"
     Metrostroi.CurrentMap = "ruralline_legacy"
     print("Legacy version of the ruralline.")
-elseif Map:find("gm_metro_ruralline_v4") then
+elseif Map:find("gm_metro_ruralline_v4") or Map:find("gm_metro_ruralline_v4_gmv") then
     print("=======ruralline_legacy_v3_ansp.lua does not support the V4 map of the rurralline=======")
     print("=======if you don't have announcers on the V4 then something has gone wrong======= ")
 else
@@ -42,8 +42,8 @@ Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic",{
         LED = {4,7,6,5,5,5},
         {
             900,"Market Street",
-            arr_last = {nil,{"THIIS","MAR","TERHE"}},
             dep = {{"NEXIS","AVI",0.5,"st_cm"},nil},
+			arrlast = {nil,{"THIIS","MAR","TERHE"}},
             right_doors = true,
           },
           {
@@ -72,8 +72,8 @@ Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic",{
           },
           {
             906,"Rocklake",
-            arr_last = {{"THIIS","ROC","TERHE"},{nil}},
             dep = {nil,{"NEXIS","URB",0.2,"st_cm"}},
+			arrlast = {{"THIIS","ROC","TERHE"},{nil}},
             right_doors = true,
           },
         }
@@ -102,8 +102,8 @@ Metrostroi.SetUPOAnnouncer({
 },{
     {
 	  151,"Market Street",
-	  arr_last = {nil,{"THIIS","MAR","TERHE"}},
 	  dep = {{"NEXIS","AVI",0.5,"st_cm"},nil},
+	  arrlast = {nil,{"THIIS","MAR","TERHE"}},
 	},
 	{
 	  153,"Aviation University",
@@ -127,7 +127,7 @@ Metrostroi.SetUPOAnnouncer({
 	},
 	{
 	  157,"Rocklake",
-	  arr_last = {{"THIIS","ROC","TERHE"},{nil}},
 	  dep = {nil,{"NEXIS","URB",0.2,"st_cm"}},
+	  arrlast = {{"THIIS","ROC","TERHE"},{nil}},
 	},
 })
