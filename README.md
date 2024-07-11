@@ -1,7 +1,5 @@
 # Announcer for Rockport Metropolitan maps.
-### Workshop version: V1.1.
-### Update log
-- Fixed Norways announcer.
+### Workshop version: R-V1.4
 
 ### Announcer pack supported maps
 | Map name | Versions | Owner of the line | Set in (year) | Notes
@@ -25,6 +23,3 @@
 ### Check wiki for the map specified information.
 - Station ID's
 - Routes
-
-# Fixed bugs
-- FIxed Norways silent & trible announcement start chimes from departure ano.
