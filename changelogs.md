@@ -103,6 +103,10 @@ R-V1.1
 Fixed muiltple issues on Norway's announcer.
 Check GitHub for more detailed changelog.
 
-### Update : 
+### Update: 21 Jun @ 10:09pm
 R-V1.2
 - Fixed more broken things.
+
+### Update: 21 Jun @ 10:56pm
+R-V1.3
+- Fixed more typos and bugs.

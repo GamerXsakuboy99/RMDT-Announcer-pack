@@ -9,7 +9,7 @@ end
 
 print("=========================================================")
 print("======== RMDT Announcer loader: Legacy Announcer ========")
-print("========   Script Version: V1 Release version    ========")
+print("========   Script Version: V1 Release version  DUCK   ========")
 print("=========================================================")
 
 Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Concord", {
@@ -21,19 +21,19 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
     announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     drt_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
     -- Station sounds
-    arr_market_street = {"subway_announcers/legacy_announcers_v29/arr_market_street.mp3", 1.827000},
-    next_market_street = {"subway_announcers/legacy_announcers_v29/next_market_street.mp3", 2.583900},
-    arr_aviation_university = {"subway_announcers/legacy_announcers_v29/arr_aviation_university.mp3", 2.322900},
-    next_aviation_university = {"subway_announcers/legacy_announcers_v29/next_aviation_university.mp3", 3.053700},
-    arr_city_hall = {"subway_announcers/legacy_announcers_v29/arr_city_hall.mp3", 1.696500},
-    next_city_hall = {"subway_announcers/legacy_announcers_v29/next_city_hall.mp3", 2.427300},
-    arr_white_forest = {"subway_announcers/legacy_announcers_v29/arr_white_forest.mp3", 1.983600},
-    arr_white_forest_last = {"subway_announcers/legacy_announcers_v29/arr_white_forest_last.mp3", 4.071600},
-    next_white_forest = {"subway_announcers/legacy_announcers_v29/next_white_forest.mp3", 2.714400},
-    arr_urban_park = {"subway_announcers/legacy_announcers_v29/arr_urban_park.mp3", 1.827000},
-    next_urban_park = {"subway_announcers/legacy_announcers_v29/next_urban_park.mp3", 2.557800},
-    arr_rocklake = {"subway_announcers/legacy_announcers_v29/arr_rocklake.mp3", 3.915000},
-    next_rocklake = {"subway_announcers/legacy_announcers_v29/next_rocklake.mp3", 2.583900},
+    arr_market_street = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_market_street.mp3", 1.827000},
+    next_market_street = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_market_street.mp3", 2.583900},
+    arr_aviation_university = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_aviation_university.mp3", 2.322900},
+    next_aviation_university = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_aviation_university.mp3", 3.053700},
+    arr_city_hall = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_city_hall.mp3", 1.696500},
+    next_city_hall = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_city_hall.mp3", 2.427300},
+    arr_white_forest = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_white_forest.mp3", 1.983600},
+    arr_white_forest_last = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_white_forest_last.mp3", 4.071600},
+    next_white_forest = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_white_forest.mp3", 2.714400},
+    arr_urban_park = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_urban_park.mp3", 1.827000},
+    next_urban_park = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_urban_park.mp3", 2.557800},
+    arr_rocklake = {"subway_announcers/legacy_announcers_v29/concord-announcer/arr_rocklake.mp3", 3.915000},
+    next_rocklake = {"subway_announcers/legacy_announcers_v29/concord-announcer/next_rocklake.mp3", 2.583900},
 }, {
     {
         LED = {3,8,5,5,4,5},
@@ -105,7 +105,6 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
                 {nil,},
                 {"drt_cls",0.5,"next_urban_park"}
             },
-            ignorelast = true,
         }
     }
 })
