@@ -1,11 +1,10 @@
 local Map = game.GetMap():lower() or ""
-if Map:find("gm_metro_ruralline_v3") then
+if Map:find("gm_metro_ruralline_v29") then
 	Metrostroi.PlatformMap = "ruralline_legacy"
 	Metrostroi.CurrentMap = "ruralline_legacy"
 	print("Legacy version of the ruralline.")
-elseif Map:find("gm_metro_ruralline_v4") then
-	print("=======ruralline_legacy_v3_ansp.lua does not support the V4 map of the rurralline=======")
-	print("=======if you don't have announcers on the V4 then something has gone wrong======= ")
+elseif Map:find("gm_metro_ruralline_v4") or Map:find("gm_metro_ruralline_v3") then
+	print("=======V29 sarmat is not supported on V3.=======")
 else
 	return
 end
@@ -35,7 +34,7 @@ Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic", {
 		LED = {4, 7, 6, 5, 5, 5},
 		name = "[UPO] Rockport metropolitan | Ballistic",
 		{
-			900,
+			151,
 			"Market Street",
 			dep = {{"NEXIS", "AVI", 0.5, "st_cm"}, nil},
 			arrlast = {nil, {"THIIS", "MAR", "TERHE"}},
@@ -43,14 +42,15 @@ Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic", {
 			right_doors = true,
 		},
 		{
-			902,
+			153,
 			"Aviation University",
 			arr = {{"THIIS", "AVI"}, {"THIIS", "AVI"}},
 			dep = {{"NEXIS", "CIT", 0.2, "st_cm"}, {"NEXIS", "MAR", 0.2, "st_cm"}},
 			odz = "odz", dist = 75,
+			right_doors = true,
 		},
 		{
-			903,
+			154,
 			"City Hall",
 			arr = {{"THIIS", "CIT"}, {"THIIS", "CIT"}},
 			dep = {{"NEXIS", "WHI", 0.2, "st_cm"}, {"NEXIS", "AVI", 0.2, "st_cm"}},
@@ -58,7 +58,7 @@ Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic", {
 			right_doors = true,
 		},
 		{
-			904,
+			155,
 			"White Forest",
 			arr = {{"THIIS", "WHI"}, {"THIIS", "WHI"}},
 			dep = {{"NEXIS", "URB", 0.2, "st_cm"}, {"NEXIS", "CIT", 0.2, "st_cm"}},
@@ -66,7 +66,7 @@ Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic", {
 			right_doors = true,
 		},
 		{
-			905,
+			156,
 			"Urban Park",
 			arr = {{"THIIS", "URB"}, {"THIIS", "URB"}},
 			dep = {{"NEXIS", "ROC", 0.2, "st_cm"}, {"NEXIS", "WHI", 0.2, "st_cm"}},
@@ -74,7 +74,7 @@ Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic", {
 			right_doors = true,
 		},
 		{
-			906,
+			157,
 			"Rocklake",
 			dep = {nil, {"NEXIS", "URB", 0.2, "st_cm"}},
 			arrlast = {{"THIIS", "ROC", "TERHE"}, {nil}},
