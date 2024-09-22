@@ -111,6 +111,6 @@ R-V1.2
 R-V1.3
 - Fixed more typos and bugs.
 
-### Update: 22 Sep @ 7.30am
-R-V1.4
-- Removed unused files from announcer.
+### Update: 11 Jul @ 1:54pm
+R-1.4
+Fixed wrong filepaths and added back alt-routes on main route.
