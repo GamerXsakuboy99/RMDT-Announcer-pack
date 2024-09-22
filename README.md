@@ -1,5 +1,5 @@
 # Announcer for Rockport Metropolitan maps.
-### Workshop version: R-V1.4
+### Workshop version: R-V1.5
 
 ### Announcer pack supported maps
 | Map name | Versions | Owner of the line | Set in (year) | Notes
@@ -21,6 +21,7 @@
 
 ### Removed announcers
 | Announcer voice actor | Used to be supported on | Language | last updated | Notes
+| -- | :--: | -- | :--: | --
 | Pyscowicz | n/a | Eng + Fin | V1 | Removed due announcer never got it's missing audio file.
 
 ### Check wiki for the map specified information.
