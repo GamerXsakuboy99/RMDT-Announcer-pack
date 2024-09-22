@@ -110,3 +110,7 @@ R-V1.2
 ### Update: 21 Jun @ 10:56pm
 R-V1.3
 - Fixed more typos and bugs.
+
+### Update: 11 Jul @ 1:54pm
+R-1.4
+Fixed wrong filepaths and added back alt-routes on main route.

@@ -16,11 +16,11 @@ Metrostroi.AddCISConfig("LVP Route map 1995", {
 		Line = 1,
 		Color = Color(134, 99, 64),
 		English = true,
-		{900, "Market street",},
-		{902, "Aviation university",},
-		{903, "City hall",},
-		{904, "White forest",},
-		{905, "Urban park",},
-		{906, "Rocklake",},
+		{900, "Market street"},
+		{902, "Aviation university"},
+		{903, "Lakeview City hall"},
+		{904, "White forest"},
+		{905, "Urban park"},
+		{906, "Rocklake"},
 	}
 })
