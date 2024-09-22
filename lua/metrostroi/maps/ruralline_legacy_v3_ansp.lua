@@ -599,37 +599,6 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
     }
 )
 
-print("RMDT Announcer loader: Now loading pysco_annoucements announcer")
-print("------ OUT OF ACTION: WAITS FOR RE-RECORD------------")
---[[
-Metrostroi.AddANSPAnnouncer("[ENG + FIN] LVP announcer 1995 | pysco_annoucements", {
-    -- Announcer starting files
-    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
-    click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
-    -- Doors closing
-    dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
-    --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-    --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
-    -- Normal Announcer files
-    market = {"subway_announcers/v3_announcers/pysco_annoucements/station - market street.mp3",},
-    -- Special announcers
-    },
-    {
-        {
-            LED = {1,2,3,4,5,6},
-            Name = "Line M52 MS - RL",
-            Loop = false,
-            spec_last = {"ann_start","click"},
-            spec_wait = {"ann_start","click"},
-        {
-            900, "Market Street",
-            arrlast = 
-            dep = 
-        }
-        }
-    }
---]]
-
 print("RMDT Announcer loader: Now loading Tankict announcer")
 Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict",
     {

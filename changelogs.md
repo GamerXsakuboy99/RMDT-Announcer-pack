@@ -110,3 +110,7 @@ R-V1.2
 ### Update: 21 Jun @ 10:56pm
 R-V1.3
 - Fixed more typos and bugs.
+
+### Update: 22 Sep @ 7.30am
+R-V1.4
+- Removed unused files from announcer.
