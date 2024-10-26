@@ -5,7 +5,11 @@
 | Map name | Versions | Owner of the line | Set in (year) | Notes
 | -- | :--: | -- | :--: | --
 | gm_metro_ruralline | V29 - V3 | Lakeview transport (LVP) (1954 - 1999) | 1995 | -
-| gm_metro_ruralline | V4 | Rockport Metropolitan (RPM) [2000 - today] | 2001 | -
+
+#### Future maps/Versions
+| Map name | Versions | Owner of the line | Set in (year) | Notes
+| -- | :--: | -- | :--: | --
+| gm_metro_ruralline | V4 | Rockport Metropolitan (RPM) [2000 - today] | 2001 | Supported if gets released..
 
 ### Current voices.
 | Announcer voice actor | Supported maps | Language | Last updated | Notes

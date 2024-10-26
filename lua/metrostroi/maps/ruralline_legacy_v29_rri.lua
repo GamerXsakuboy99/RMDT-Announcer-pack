@@ -1,12 +1,11 @@
 local Map = game.GetMap():lower() or ""
 
-if Map:find("gm_metro_ruralline_v3") or Map:find("gm_metro_ruralline_v3_") then
+if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_snow") then
     Metrostroi.PlatformMap = "ruralline_legacy"
     Metrostroi.CurrentMap = "ruralline_legacy"
     print("Legacy version of the ruralline.")
-elseif Map:find("gm_metro_ruralline_v4") then
-    print("=======ruralline_legacy_v3_ansp.lua does not support the V4 map of the rurralline=======")
-    print("=======if you don't have announcers on the V4 then something has gone wrong======= ")
+elseif Map:find("gm_metro_ruralline_v3") or Map:find("gm_metro_ruralline_v4") then
+    print("=======ruralline_legacy_v29_rri.lua does not support the V4 map of the rurralline=======")
 else
     return
 end
