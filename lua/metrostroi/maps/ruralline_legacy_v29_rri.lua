@@ -1,11 +1,10 @@
 local Map = game.GetMap():lower() or ""
 
-if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v29_snow") then
+if Map:find("gm_metro_ruralline_v29") then
     Metrostroi.PlatformMap = "ruralline_legacy"
     Metrostroi.CurrentMap = "ruralline_legacy"
-    print("Legacy version of the ruralline.")
-elseif Map:find("gm_metro_ruralline_v3") or Map:find("gm_metro_ruralline_v4") then
-    print("=======ruralline_legacy_v29_rri.lua does not support the V4 map of the rurralline=======")
+elseif Map:find("gm_metro_ruralline_v3") or Map:find("gm_metro_ruralline_v4") or Map:find("gm_metro_ruralline_v29_old") then
+    print("ruralline_legacy_v29_rri.lua: Does not support map versions: V1, V2, V25-V28, Old-V29,V3,V4.")
 else
     return
 end
@@ -26,9 +25,9 @@ end
 
 Metrostroi.SetRRIAnnouncer({
     -- Announcer starting files
-    ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
-    click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
-    click1 = {"subway_announcers/asnp/click.mp3", 0.30},
+    --ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
+    click_start = {"subway_announcers/global-sounds/rri-click.mp3",0.31},
+    click_end = {"subway_announcers/asnp/click.mp3", 0.30},
     click2 = {"subway_announcers/asnp/click2.mp3", 0.10},
     announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     -- Doors closing
@@ -93,96 +92,87 @@ Metrostroi.SetRRIAnnouncer({
     },
     {
         {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52 MS-RL",
+            LED = {4,8,4,5,5,4},
+            Name = "Line MT-4 Market Street Line",
             Loop = false,
-            spec_last = {"ann_start", "dro_cls"},
+            spec_last = {"click_start","dro_cls"},
             spec_wait = {"unss",0.5,"unss_ger"},
             {
             900,"Market Street",
-                arrlast = {{nil},{"ann_start","ths","market","doors_right","trhm",0.5,"ths_ger","market_ger","doors_right_ger","trhm_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"welc_lvp","nx_st","aviation","platform_left",0.1,"ravenholm_closed",0.5,"welc_lvp_ger","nx_st_ger","aviation_ger","platform_left_ger",0.1,"ravenholm_closed_ger","click"},{nil}},
+                arrlast = {
+                    {nil},
+                    {"ths","market","doors_right","trhm",0.5,"ths_ger","market_ger","doors_right_ger","trhm_ger"}
+                },
+                dep = {
+                    {"doors_closing","doors_closing_ger","dro_cls",1.0,"welc_lvp","nx_st","aviation","platform_right",0.1,"ravenholm_closed",0.5,"welc_lvp_ger","nx_st_ger","aviation_ger","platform_right_ger",0.1,"ravenholm_closed_ger"},
+                    {nil}},
                 have_inrerchange = true,
             },
             {
                 902,"Aviation university",
-                arr = {{"ann_start","ths","aviation","doors_left","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_left_ger","mind_gap_step_ger","click"},{"ann_start","ths","aviation","doors_left","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_left_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.2,"nx_st_ger","city_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","market","platform_right",0.2,"ravenholm_closed",0.5,"nx_st_ger","market_ger","platform_right_ger",0.2,"ravenholm_closed_ger","click"}},
-                arrlast = {{"ann_start","ths","aviation","doors_left","trhm",0.5,"ths_ger","aviation_ger","doors_left_ger","trhm_ger"},{"ann_start","ths","aviation","doors_left","trhm",0.5,"ths_ger","aviation_ger","doors_left_ger","trhm_ger"}},
+                arr = {
+                    {"ths","aviation","doors_right","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger"},
+                    {"ths","aviation","doors_right","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger"}
+                },
+                dep = {
+                    {"doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.2,"nx_st_ger","city_ger","platform_right_ger"},
+                    {"doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","market","platform_right",0.2,"ravenholm_closed",0.5,"nx_st_ger","market_ger","platform_right_ger",0.2,"ravenholm_closed_ger"}
+                },
+                arrlast = {
+                    {"ths","aviation","doors_right","trhm",0.5,"ths_ger","aviation_ger","doors_right_ger","trhm_ger"},
+                    {"ths","aviation","doors_right","trhm",0.5,"ths_ger","aviation_ger","doors_right_ger","trhm_ger"}
+                },
             },
             {
-                903,"Lakeview City Hall",
-                arr = {{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","white","platform_right",0.2,"nx_st_ger","white_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","aviation","platform_left",0.2,"nx_st_ger","aviation_ger","platform_left_ger","click"}},
+                903,"Lakev. cityhall",
+                arr = {
+                    {"ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger"},
+                    {"ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger"}
+                },
+                dep = {
+                    {"doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","white","platform_right",0.2,"nx_st_ger","white_ger","platform_right_ger"},
+                    {"doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","aviation","platform_right",0.2,"nx_st_ger","aviation_ger","platform_right_ger"}
+                },
             },
             {
                 904,"White Forest",
-                arr = {{"ann_start","ths","white","doors_right","mind_gap_step",0.5,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","white","doors_right","mind_gap_step",0.5,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","urban","platform_right",0.2,"nx_st_ger","urban_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.2,"nx_st_ger","city_ger","platform_right_ger","click"}},
-                arrlast = {{"ann_start","ths","white","doors_both","trhm",0.5,"ths_ger","white_ger","doors_both_ger","trhm_ger","click"},{"ann_start","ths","white","doors_right","trhm",0.5,"ths_ger","white_ger","doors_right_ger","trhm_ger","click"}},
+                arr = {
+                    {"ths","white","doors_right","mind_gap_step",0.5,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger"},
+                    {"ths","white","doors_right","mind_gap_step",0.5,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger"}
+                },
+                dep = {
+                    {"doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","urban","platform_right",0.2,"nx_st_ger","urban_ger","platform_right_ger"},
+                    {"doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.2,"nx_st_ger","city_ger","platform_right_ger"}
+                },
+                arrlast = {
+                    {"ths","white","doors_both","trhm",0.5,"ths_ger","white_ger","doors_both_ger","trhm_ger"},
+                    {"ths","white","doors_right","trhm",0.5,"ths_ger","white_ger","doors_right_ger","trhm_ger"}
+                },
             },
             {
                 905,"Urban Park",
-                arr = {{"ann_start","ths","urban","doors_right","mind_gap_step",0.5,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","urban","doors_right","mind_gap_step",0.5,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","rocklake","platform_right",0.2,"nx_st_ger","rocklake_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","white","platform_right",0.2,"nx_st_ger","white_ger","platform_right_ger","click"}},
-                arrlast = {{"ann_start","ths","urban","doors_right","trhm",0.5,"ths_ger","urban_ger","doors_right_ger","trhm_ger","click"},{"ann_start","ths","urban","doors_right","trhm",0.5,"ths_ger","urban_ger","doors_right_ger","trhm_ger","click"}},
+                arr = {
+                    {"ths","urban","doors_right","mind_gap_step",0.5,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger"},
+                    {"ths","urban","doors_right","mind_gap_step",0.5,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger"}
+                },
+                dep = {
+                    {"doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","rocklake","platform_right",0.2,"nx_st_ger","rocklake_ger","platform_right_ger"},
+                    {"doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","white","platform_right",0.2,"nx_st_ger","white_ger","platform_right_ger"}
+                },
+                arrlast = {
+                    {"ths","urban","doors_right","trhm",0.5,"ths_ger","urban_ger","doors_right_ger","trhm_ger"},
+                    {"ths","urban","doors_right","trhm",0.5,"ths_ger","urban_ger","doors_right_ger","trhm_ger"}
+                },
             },
             {
                 906,"Rocklake",
-                arrlast = {{"ann_start","ths","rocklake","doors_right","trhm",0.5,"ths_ger","rocklake_ger","doors_right_ger","trhm_ger","click"},{nil}},
-                dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"welc_lvp","nx_st","urban","platform_right",0.2,"welc_lvp_ger","nx_st_ger","urban_ger","platform_right_ger","click"}},
-                have_inrerchange = true,
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52A MS-WF",
-            Loop = false,
-            spec_last = {"ann_start", "dro_cls"},
-            spec_wait = {"unss",0.5,"unss_ger"},
-            {
-                900,"Market Street",
-                arrlast = {{nil},{"ann_start","ths","market","doors_right","trhm",0.2,"ths_ger","market_ger","doors_right_ger","trhm_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"welc_lvp","nx_st","aviation","platform_left",0.2,"ravenholm_closed",0.5,"welc_lvp_ger","nx_st_ger","aviation_ger","platform_left_ger",0.2,"ravenholm_closed_ger","click"},{nil}},
-                have_inrerchange = true,
-            },
-            {
-                902,"Aviation university",
-                arr = {{"ann_start","ths","aviation","doors_left","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_left_ger","mind_gap_step_ger","click"},{"ann_start","ths","aviation","doors_left","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_left_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","market","platform_right",0.2,"ravenholm_closed",0.5,"nx_st_ger","market_ger","platform_right_ger",0.2,"ravenholm_closed_ger","click"}},
-            },
-            {
-                903,"Lakeview City Hall",
-                arr = {{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","aviation","platform_left",0.5,"nx_st_ger","aviation_ger","platform_left_ger","click"}},
-            },
-            {
-                904,"White Forest",
-                arrlast = {{"ann_start","ths","white","doors_both","trhm",0.5,"ths_ger","white_ger","doors_both_ger","trhm_ger","click"},{nil}},
-                dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger","click"}},
-                ignorelast = true,
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52B WF-RL",
-            Loop = false,
-            spec_last = {"ann_start", "dro_cls"},
-            spec_wait = {"unss",0.5,"unss_ger"},
-            {
-                904,"White Forest",
-                arrlast = {{nil},{"ann_start","ths","white","doors_right","trhm",0.5,"ths_ger","white_ger","doors_right_ger","trhm_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","urban","platform_right",0.5,"nx_st_ger","urban_ger","platform_right_ger","click"},{nil}},
-            },
-            {
-                905,"Urban Park",
-                arr = {{"ann_start","ths","urban","doors_right","mind_gap_step",0.5,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","urban","doors_right","mind_gap_step",0.5,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","rocklake","platform_left",0.5,"nx_st_ger","rocklake_ger","platform_left_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger","click"}},
-            },
-            {
-                906,"Rocklake",
-                arrlast = {{"ann_start","ths","rocklake","doors_right","trhm",0.5,"ths_ger","rocklake_ger","doors_right_ger","trhm_ger","click"},{nil}},
-                dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"welc_lvp","nx_st","urban","platform_right",0.5,"welc_lvp_ger","nx_st_ger","urban_ger","platform_right_ger","click"}},
+                arrlast = {
+                    {"ths","rocklake","doors_right","trhm",0.5,"ths_ger","rocklake_ger","doors_right_ger","trhm_ger"},
+                    {nil}},
+                dep = {
+                    {nil},
+                    {"doors_closing","doors_closing_ger","dro_cls",1.0,"welc_lvp","nx_st","urban","platform_right",0.2,"welc_lvp_ger","nx_st_ger","urban_ger","platform_right_ger"}
+                },
                 have_inrerchange = true,
             }
         }

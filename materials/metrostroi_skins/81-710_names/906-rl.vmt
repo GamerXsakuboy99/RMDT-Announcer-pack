@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "metrostroi_skins/destination_and_maps/E-types/906-rl"
+	"$model" "1"
+	"$alphatest" "1"
+  	"$allowalphatocoverage" "1"
+}

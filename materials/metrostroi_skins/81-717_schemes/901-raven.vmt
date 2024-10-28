@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "metrostroi_skins/destination_and_maps/901-raven"
+	"$model" "1"
+	"$alphatest" "1"
+  	"$allowalphatocoverage" "1"
+}

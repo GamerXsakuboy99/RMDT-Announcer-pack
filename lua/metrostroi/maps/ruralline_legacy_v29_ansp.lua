@@ -106,7 +106,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin",
     },
     {
         {
-            LED = {3,8,5,5,4,5},
+            LED = {4,8,4,5,5,4},
             Name = "Line MT-4 Market Street Line",
             Loop = false,
             spec_last = {"ann_start", "dro_cls"},
@@ -115,10 +115,10 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin",
                 900,"Market Street",
                 arrlast = {
                     {nil},
-                    {"ann_start","ths","market","doors_right","trhm",0.5,"ths_ger","market_ger","doors_right_ger","trhm_ger","click"}
+                    {"ann_start","ths","market","doors_right","trhm",0.6,"ths_ger","market_ger","doors_right_ger","trhm_ger","click"}
                 },
                 dep = {
-                    {"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"welc_lvp","nx_st","aviation","platform_right",0.1,"ravenholm_closed",0.5,"welc_lvp_ger","nx_st_ger","aviation_ger","platform_right_ger",0.1,"ravenholm_closed_ger","click"},
+                    {"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"welc_lvp","nx_st","aviation","platform_right",0.2,"ravenholm_closed",0.6,"welc_lvp_ger","nx_st_ger","aviation_ger","platform_right_ger",0.2,"ravenholm_closed_ger","click"},
                     {nil}},
             },
             {
@@ -134,7 +134,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin",
                 arrlast = {{nil},{"ann_start","ths","aviation","doors_right","trhm",0.5,"ths_ger","aviation_ger","doors_right_ger","trhm_ger"}},
             },
             {
-                903,"Lakeview City Hall",
+                903,"Lakev. cityhall",
                 arr = {
                     {"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"},
                     {"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"}
@@ -220,13 +220,13 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki",
     },
     {
         {
-            LED = {3,8,5,5,4,5},
+            LED = {4,8,4,5,5,4},
             Name = "Line MT-4 Market Street Line",
             Loop = false,
             spec_last = {"ann_start", "click"},
             spec_wait = {"ann_start", "fault"},
             {
-                900, "Market Park",
+                900, "Market Street",
                 arrlast = {
                     {nil},
                     {"ann_start","tis","market","eol","spec1","click"}
@@ -252,7 +252,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki",
                 },
             },
             {
-                903, "Lakeview city Hall",
+                903, "Lakev. cityhall",
                 arr = {
                     {"ann_start","tis","city","click"},
                     {"ann_start","tis","city","click"}
@@ -338,7 +338,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius",
     },
     {
         {
-            LED = {3,8,5,5,4,5},
+            LED = {4,8,4,5,5,4},
             Name = "Line MT-4 Market Street Line",
             Loop = false,
             spec_last = {"terminal","click"},
@@ -357,20 +357,20 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius",
             {
                 902, "Aviation Uni.",
                 arr = {
-                    {"chime","aviation","drc_lf","click"},
-                    {"chime","aviation","drc_lf","click"}
+                    {"chime","aviation","drc_rh","click"},
+                    {"chime","aviation","drc_rh","click"}
                 },
                 dep = {
                     {"chime","drc_cls","click"},
                     {"chime","drc_cls","click"}
                 },
                 arrlast = {
-                    {"chime","aviation","terminal","drc_lf","click"},
-                    {"chime","aviation","terminal","drc_lf","click"}
+                    {"chime","aviation","terminal","drc_rh","click"},
+                    {"chime","aviation","terminal","drc_rh","click"}
                 },
             },
             {
-                903, "Lakeview City Hall",
+                903, "Lakev. cityhall",
                 arr = {
                     {"chime","city","drc_rh","click"},
                     {"chime","city","drc_rh","click"}
@@ -458,7 +458,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
     },
     {
         {
-            LED = {3,8,5,5,4,5},
+            LED = {4,8,4,5,5,4},
             Name = "Line MT-4 Market Street Line",
             Loop = false,
             spec_last = {"ann_start", "click"},
@@ -490,7 +490,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
                 },
             },
             {
-                903, "Lakeview City Hall",
+                903, "Lakev. cityhall",
                 arr = {
                     {"ann_start","city","click"},
                     {"ann_start","city","click"}
@@ -593,7 +593,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict",
     },
     {
         {
-            LED = {3,8,5,5,4,5},
+            LED = {4,8,4,5,5,4},
             Name = "Line MT-4 Market Street Line",
             Loop = false,
             spec_last = {"ann_start","st_end","st_end_ru","click"},
@@ -625,7 +625,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict",
                 },
             },
             {
-                903, "Lakeview City Hall",
+                903, "Lakev. cityhall",
                 arr = {
                     {"ann_start","arrival","city","mind_gap",0.5,"arrival_ru","city_ru","mind_gap_ru"},
                     {"ann_start","arrival","city","mind_gap",0.5,"arrival_ru","city_ru","mind_gap_ru"}
