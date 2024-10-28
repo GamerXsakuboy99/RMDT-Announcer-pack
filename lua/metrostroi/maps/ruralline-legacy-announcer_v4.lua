@@ -1,18 +1,18 @@
 local Map = game.GetMap():lower() or ""
 
-if Map:find("gm_metro_ruralline_v29") or Map:find("gm_metro_ruralline_v3") then
-    Metrostroi.PlatformMap = "ruralline_legacy_v29"
-    Metrostroi.CurrentMap = "ruralline_legacy_v29"
+if Map:find("gm_metro_ruralline_v4") then
+    Metrostroi.PlatformMap = "ruralline_old"
+    Metrostroi.CurrentMap = "ruralline_old"
 else
     return
 end
 
 print("=========================================================")
 print("======== RMDT Announcer loader: Legacy Announcer ========")
-print("========   Script Version: V1 Release version.   ========")
+print("========   Script Version: V1 Release version  DUCK   ========")
 print("=========================================================")
 
-Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Concord", {
+Metrostroi.AddANSPAnnouncer("[ENG]LVP Historical Announcer| Legacy announcer by Concord", {
     -- Global sounds
     ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
     click = {"subway_announcers/global-sounds/rri-click.mp3",0.31},

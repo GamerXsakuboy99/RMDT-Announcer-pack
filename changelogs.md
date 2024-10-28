@@ -114,3 +114,10 @@ R-V1.3
 ### Update: 11 Jul @ 1:54pm
 R-1.4
 Fixed wrong filepaths and added back alt-routes on main route.
+
+### Update: 
+R-V2
+- In general cleaning and formatting the codes.
+- Fixed more bugs.
+- Updated the Saloon maps.
+- Updated Destination Boards for all trains.

@@ -1,6 +1,6 @@
 "VertexLitGeneric"
 {
-	"$basetexture" "metrostroi_skins/81-720_schemes/720-linemap-ruralline-v3-left"
+	"$basetexture" "metrostroi_skins/81-720_schemes/720-linemap-ruralline-v3-right"
 	"$model" 1
 	"$phong" 1
 	"$phongboost"				1
