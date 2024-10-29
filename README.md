@@ -1,5 +1,5 @@
 # Announcer for Rockport Metropolitan maps.
-### Workshop version: R-V2
+## GitHub / Workshop version number: R-V2.1
 
 ### Announcer pack supported maps
 | Map name | Versions | Owner of the line | Set in (year) | Notes
