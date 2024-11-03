@@ -9,10 +9,10 @@ else
     return
 end
 
-Metrostroi.SetUPOAnnouncer({
+Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic", {
 	--Announcer Startup
-	name = "UPO ruralline",
-	tone = {"subway_announcers/upo_treschev/tone.mp3", 1.1},
+	tone = {"subway_announcers/ru_treschev/tone.mp3", 1.1},
+	odz = {"subway_announcers/ru_treschev/upo_odz.mp3", 2.520},
 	click1 = {"subway_announcers/upo/click1.mp3", 0.3},
 	click2 = {"subway_announcers/upo/click2.mp3", 0.1},
 	--Stations
@@ -28,49 +28,54 @@ Metrostroi.SetUPOAnnouncer({
 	TERHE = {"subway_announcers/ballistic_announcer/special-files/this_train_terminates_here.mp3", 2.22},
 	--Warning Bell
 	st_cm = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3", 4.54},
-	},
+	}, 
 	{
 		{
-			151, "Market Street",
-			arrlast = {{nil},{"THIIS", "MAR", "TERHE"}},
-			dep = {{"NEXIS", "AVI", 0.5, "st_cm"},{nil}},
-			noises = {1, 2, 3},noiserandom = 0.2,
-			right_doors = true,
-		},
-		{
-			153,"Aviation University",
-			arr = {{"THIIS", "AVI"},{"THIIS", "AVI"}},
-			dep = {{"NEXIS", "CIT", 0.2, "st_cm"},{"NEXIS", "MAR", 0.2, "st_cm"}},
-			noises = {1, 2, 3},noiserandom = 0.2,
-			right_doors = true,
-		},
-		{
-			154,"Lakeview City Hall",
-			arr = {{"THIIS", "CIT"}, {"THIIS", "CIT"}},
-			dep = {{"NEXIS", "WHI", 0.2, "st_cm"}, {"NEXIS", "AVI", 0.2, "st_cm"}},
-			noises = {1, 2, 3},noiserandom = 0.2,
-			right_doors = true,
-		},
-		{
-			155,"White Forest",
-			arr = {{"THIIS", "WHI"}, {"THIIS", "WHI"}},
-			dep = {{"NEXIS", "URB", 0.2, "st_cm"}, {"NEXIS", "CIT", 0.2, "st_cm"}},
-			noises = {1, 2, 3},noiserandom = 0.2,
-			right_doors = true,
-		},
-		{
-			156,"Urban Park",
-			arr = {{"THIIS", "URB"}, {"THIIS", "URB"}},
-			dep = {{"NEXIS", "ROC", 0.2, "st_cm"}, {"NEXIS", "WHI", 0.2, "st_cm"}},
-			noises = {1, 2, 3},noiserandom = 0.2,
-			right_doors = true,
-		},
-		{
-			157,"Rocklake",
-			arrlast = {{"THIIS", "ROC", "TERHE"}, {nil}},
-			dep = {{nil}, {"NEXIS", "URB", 0.2, "st_cm"}},
-			noises = {1, 2, 3},noiserandom = 0.2,
-			right_doors = true,
+			--МАРШРУТ
+			LED = {4, 7, 6, 5, 5, 5},
+			name = "[UPO] Rockport metropolitan | Ballistic",
+			{
+				151,"Market Street",
+				arrlast = {{nil},{"THIIS", "MAR", "TERHE"}},
+				dep = {{"NEXIS", "AVI", 0.5, "st_cm"},{nil}},
+				odz = "odz",
+				right_doors = true,
+			},
+			{
+				153,"Aviation University",
+				arr = {{"THIIS", "AVI"}, {"THIIS", "AVI"}},
+				dep = {{"NEXIS", "CIT", 0.2, "st_cm"}, {"NEXIS", "MAR", 0.2, "st_cm"}},
+				odz = "odz",
+				right_doors = true,
+			},
+			{
+				154,"Lakeview City Hall",
+				arr = {{"THIIS", "CIT"}, {"THIIS", "CIT"}},
+				dep = {{"NEXIS", "WHI", 0.2, "st_cm"}, {"NEXIS", "AVI", 0.2, "st_cm"}},
+				odz = "odz",
+				right_doors = true,
+			},
+			{
+				155,"White Forest",
+				arr = {{"THIIS", "WHI"}, {"THIIS", "WHI"}},
+				dep = {{"NEXIS", "URB", 0.2, "st_cm"}, {"NEXIS", "CIT", 0.2, "st_cm"}},
+				odz = "odz",
+				right_doors = true,
+			},
+			{
+				156,"Urban Park",
+				arr = {{"THIIS", "URB"}, {"THIIS", "URB"}},
+				dep = {{"NEXIS", "ROC", 0.2, "st_cm"}, {"NEXIS", "WHI", 0.2, "st_cm"}},
+				odz = "odz",
+				right_doors = true,
+			},
+			{
+				157,"Rocklake",
+				arrlast = {{"THIIS", "ROC", "TERHE"}, {nil}},
+				dep = {{nil}, {"NEXIS", "URB", 0.2, "st_cm"}},
+				odz = "odz",
+				right_doors = true,
+			}
 		}
 	}
 )
