@@ -3,6 +3,7 @@ local Map = game.GetMap():lower() or ""
 if Map:find("gm_metro_ruralline") then
     Metrostroi.PlatformMap = "ruralline_legacy"
     Metrostroi.CurrentMap = "ruralline_legacy"
+
 else
     return
 end

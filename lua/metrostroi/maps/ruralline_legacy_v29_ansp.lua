@@ -2,8 +2,10 @@ local Map = game.GetMap():lower() or ""
 if Map:find("gm_metro_ruralline_v29") then
     Metrostroi.PlatformMap = "ruralline_legacy"
     Metrostroi.CurrentMap = "ruralline_legacy"
+
 elseif Map:find("gm_metro_ruralline_v3") or Map:find("gm_metro_ruralline_v4") or Map:find("gm_metro_ruralline_v29_old") then
     print("ruralline_legacy_v29_ansp.lua: Does not support map versions: V1, V2, V25-V28, Old-V29,V3,V4.")
+
 else
     return
 end
@@ -32,6 +34,7 @@ print("========RMDT Announcer loader: ruralline_legacy_v29_ansp Lua code Loading
 print("========        Script Version: V1         ========")
 print("=========================================================")
 print("RMDT Announcer loader: Valentin's announcer & routes (V3)")
+
 Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
     -- Announcer starting files
     ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
@@ -93,8 +96,12 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
     urban_ger = {"subway_announcers/v3_announcers/valentin_announcer/stations/urban_park_ger.mp3", 1.04},
     rocklake = {"subway_announcers/v3_announcers/valentin_announcer/stations/rocklake.mp3", 0.97},
     rocklake_ger = {"subway_announcers/v3_announcers/valentin_announcer/stations/rocklake_ger.mp3", 1.16},
-}, --aprilpoint = {"subway_announcers/v3_announcers/valentin_announcer/stations/april_point.mp3",1.14},  V4 announcer --svs = {"subway_announcers/v3_announcers/valentin_announcer/stations/saddle_valley.mp3,1.13}, V4 announcer --svs_ger = {"subway_announcers/v3_announcers/valentin_announcer/stations/saddle_valley_ger.mp3,1.20}, V4 announcer --rpc = {"subway_announcers/v3_announcers/valentin_announcer/stations/}, V4 announcer --rpc_ger = {"subway_announcers/v3_announcers/valentin_announcer/stations/}, V4 announcer
-    {
+    --aprilpoint = {"subway_announcers/v3_announcers/valentin_announcer/stations/april_point.mp3",1.14},  V4 announcer
+    --svs = {"subway_announcers/v3_announcers/valentin_announcer/stations/saddle_valley.mp3,1.13}, V4 announcer
+    --svs_ger = {"subway_announcers/v3_announcers/valentin_announcer/stations/saddle_valley_ger.mp3,1.20}, V4 announcer
+    --rpc = {"subway_announcers/v3_announcers/valentin_announcer/stations/}, V4 announcer 
+    --rpc_ger = {"subway_announcers/v3_announcers/valentin_announcer/stations/}, V4 announcer
+},{
     {
         LED = {4, 8, 4, 5, 5, 4},
         Name = "Line MT-4 Market Street Line",
