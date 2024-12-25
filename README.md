@@ -21,6 +21,7 @@
 | Concord | Eng | Pre-announcer pack release. | Old announcer, Pre-V29.
 | tankict | Eng + Rus | V1 | n/a
 | NorwayLCAndTrains | Eng + PL | V1 | n/a
+| Rekrut Kurbel | V3 | EN | V2.3 | ASNP only
 
 ### Removed announcers
 | Announcer voice actor | Used to be supported on | Language | last updated | Notes
@@ -37,6 +38,7 @@
 | Concord | Yes | No
 | tankict | Yes | No
 | NorwayLCAndTrains | Yes | No
+| Rekrut Kurbel | Yes | No
 
 ### Check wiki for the map specified information.
 - Station ID's
