@@ -1,5 +1,12 @@
 # Announcer for Rockport Metropolitan maps.
-## GitHub / Workshop version number: R-V2.3
+## GitHub / Workshop version number: -
+
+## Drop support for V29 on this branch, DO NOT PUSH TO THE LIVE UNTIL RELEASE DATE FOR V3 IS KNOWN.
+> This is a future update what is gets pushed sametime with the V3 release.
+- Drop support for V29 fully. []
+- Tweak & Fine-tune all announcers (expect RK's as it's new.) []
+- Other QOL-Updates.[]
+- Fucking ask @MrBallistic101 & @Pyscowicz Now finally to provided their updated files.... []
 
 ### Announcer pack supported maps
 | Map name | Map version(s) Supported | Owner of the line | Set in (year) | Notes
