@@ -1,4 +1,5 @@
 local Map = game.GetMap():lower() or ""
+
 if Map:find("gm_metro_ruralline_v29") then
     Metrostroi.PlatformMap = "ruralline_legacy"
     Metrostroi.CurrentMap = "ruralline_legacy"
@@ -92,41 +93,41 @@ Metrostroi.SetRRIAnnouncer({
         spec_last = {"click_start", "dro_cls"},
         spec_wait = {"unss", 0.5, "unss_ger"},
         {
-            900,
+            151,
             "Market Street",
             arrlast = {{nil}, {"ths", "market", "doors_right", "trhm", 0.5, "ths_ger", "market_ger", "doors_right_ger", "trhm_ger"}},
             dep = {{"doors_closing", "doors_closing_ger", "dro_cls", 1.0, "welc_lvp", "nx_st", "aviation", "platform_right", 0.1, "ravenholm_closed", 0.5, "welc_lvp_ger", "nx_st_ger", "aviation_ger", "platform_right_ger", 0.1, "ravenholm_closed_ger"}, {nil}},
             have_inrerchange = true,
         },
         {
-            902,
+            153,
             "Aviation university",
             arr = {{"ths", "aviation", "doors_right", "mind_gap_step", 0.5, "ths_ger", "aviation_ger", "doors_right_ger", "mind_gap_step_ger"}, {"ths", "aviation", "doors_right", "mind_gap_step", 0.5, "ths_ger", "aviation_ger", "doors_right_ger", "mind_gap_step_ger"}},
             dep = {{"doors_closing", "doors_closing_ger", "dro_cls", 1.0, "nx_st", "city", "platform_right", 0.2, "nx_st_ger", "city_ger", "platform_right_ger"}, {"doors_closing", "doors_closing_ger", "dro_cls", 1.0, "nx_st", "market", "platform_right", 0.2, "ravenholm_closed", 0.5, "nx_st_ger", "market_ger", "platform_right_ger", 0.2, "ravenholm_closed_ger"}},
             arrlast = {{"ths", "aviation", "doors_right", "trhm", 0.5, "ths_ger", "aviation_ger", "doors_right_ger", "trhm_ger"}, {"ths", "aviation", "doors_right", "trhm", 0.5, "ths_ger", "aviation_ger", "doors_right_ger", "trhm_ger"}},
         },
         {
-            903,
+            154,
             "Lakev. cityhall",
             arr = {{"ths", "city", "doors_right", "mind_gap_step", 0.5, "ths_ger", "city_ger", "doors_right_ger", "mind_gap_step_ger"}, {"ths", "city", "doors_right", "mind_gap_step", 0.5, "ths_ger", "city_ger", "doors_right_ger", "mind_gap_step_ger"}},
             dep = {{"doors_closing", "doors_closing_ger", "dro_cls", 1.0, "nx_st", "white", "platform_right", 0.2, "nx_st_ger", "white_ger", "platform_right_ger"}, {"doors_closing", "doors_closing_ger", "dro_cls", 1.0, "nx_st", "aviation", "platform_right", 0.2, "nx_st_ger", "aviation_ger", "platform_right_ger"}},
         },
         {
-            904,
+            155,
             "White Forest",
             arr = {{"ths", "white", "doors_right", "mind_gap_step", 0.5, "ths_ger", "white_ger", "doors_right_ger", "mind_gap_step_ger"}, {"ths", "white", "doors_right", "mind_gap_step", 0.5, "ths_ger", "white_ger", "doors_right_ger", "mind_gap_step_ger"}},
             dep = {{"doors_closing", "doors_closing_ger", "dro_cls", 1.0, "nx_st", "urban", "platform_right", 0.2, "nx_st_ger", "urban_ger", "platform_right_ger"}, {"doors_closing", "doors_closing_ger", "dro_cls", 1.0, "nx_st", "city", "platform_right", 0.2, "nx_st_ger", "city_ger", "platform_right_ger"}},
             arrlast = {{"ths", "white", "doors_both", "trhm", 0.5, "ths_ger", "white_ger", "doors_both_ger", "trhm_ger"}, {"ths", "white", "doors_right", "trhm", 0.5, "ths_ger", "white_ger", "doors_right_ger", "trhm_ger"}},
         },
         {
-            905,
+            156,
             "Urban Park",
             arr = {{"ths", "urban", "doors_right", "mind_gap_step", 0.5, "ths_ger", "urban_ger", "doors_right_ger", "mind_gap_step_ger"}, {"ths", "urban", "doors_right", "mind_gap_step", 0.5, "ths_ger", "urban_ger", "doors_right_ger", "mind_gap_step_ger"}},
             dep = {{"doors_closing", "doors_closing_ger", "dro_cls", 1.0, "nx_st", "rocklake", "platform_right", 0.2, "nx_st_ger", "rocklake_ger", "platform_right_ger"}, {"doors_closing", "doors_closing_ger", "dro_cls", 1.0, "nx_st", "white", "platform_right", 0.2, "nx_st_ger", "white_ger", "platform_right_ger"}},
             arrlast = {{"ths", "urban", "doors_right", "trhm", 0.5, "ths_ger", "urban_ger", "doors_right_ger", "trhm_ger"}, {"ths", "urban", "doors_right", "trhm", 0.5, "ths_ger", "urban_ger", "doors_right_ger", "trhm_ger"}},
         },
         {
-            906,
+            157,
             "Rocklake",
             arrlast = {{"ths", "rocklake", "doors_right", "trhm", 0.5, "ths_ger", "rocklake_ger", "doors_right_ger", "trhm_ger"}, {nil}},
             dep = {{nil}, {"doors_closing", "doors_closing_ger", "dro_cls", 1.0, "welc_lvp", "nx_st", "urban", "platform_right", 0.2, "welc_lvp_ger", "nx_st_ger", "urban_ger", "platform_right_ger"}},

@@ -3,8 +3,7 @@ local Map = game.GetMap() or ""
 if Map:find("gm_metro_ruralline_v29") then
 	Metrostroi.PlatformMap = "gm_metro_ruralline_v29"
 	Metrostroi.CurrentMap = "gm_metro_ruralline_v29"
-elseif Map:find("gm_metro_ruralline_v29_snow") or Map:find("gm_metro_ruralline_v3") or Map:find("gm_metro_ruralline_v4") then
-	print("Non-supported ruralline_version.")
+	
 else
 	return
 end
