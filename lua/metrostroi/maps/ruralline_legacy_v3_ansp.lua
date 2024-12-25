@@ -740,7 +740,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict",
 print("RMDT Announcer loader: Rekrut Kurbel's custom announcer & routes")
 Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel",
     {
-		asnp = true
+		asnp = true,
 		
 		click1 = {"subway_announcers/asnp/boiko_new/click1.mp3",0.5},
 		click2 = {"subway_announcers/asnp/boiko_new/click2.mp3",0.3},
