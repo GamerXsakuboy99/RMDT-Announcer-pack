@@ -2,7 +2,7 @@
 ## GitHub / Workshop version number: R-V2.3
 
 ### Announcer pack supported maps
-| Map name | Versions | Owner of the line | Set in (year) | Notes
+| Map name | Map version(s) Supported | Owner of the line | Set in (year) | Notes
 | -- | :--: | -- | :--: | --
 | gm_metro_ruralline | V29 - V3 | Lakeview transport (LVP) (1954 - 1999) | 1995 | -
 
@@ -11,24 +11,35 @@
 | -- | :--: | -- | :--: | --
 | gm_metro_ruralline | V4 | Rockport Metropolitan (RPM) [2000 - today] | 2001 | Supported if gets released..
 
-### Current voices.
-| Announcer voice actor | Supported maps | Language | Last updated | Notes
-| -- | :--: | :--: | -- | --
-| Valentin [DE/EN] | V29, V29_snow, V3 | Eng + Ger | V1 | -
-| ☭Papa Trocki☭ | V29, V29_snow, V3 | Eng | B7 | -
-| Marius_Mustang | V29, V29_snow, V3 | Eng | V1 | -
-| Mr Ballistic101 | V29, V29_snow | Eng | B7 | Only supported on UPO/Sarmat due few audio file count.
-| Concord | V29, V29_snow, V3 | Eng | - | Last update was long time ago....
-| tankict | V29, V29_snow, V3 | Eng + Rus | V1 | -
-| NorwayLCAndTrains | V29, V29_snow, V3, V4 | Eng + PL | V1 | -
-| Rekrut Kurbel | V3 | EN | V2.3 | ASNP only
-
+### Current Announcers
+| Announcer voice actor | Language | Last updated (Announcer pack version) | Notes
+| -- | :--: | :--: | :--
+| Valentin [DE/EN] | Eng + Ger | V1 | n/a
+| ☭Papa Trocki☭ | Eng | B7 | n/a
+| Marius_Mustang | Eng | V1 | n/a
+| Mr Ballistic101 | Eng | B7 | Only supported on UPO due few audio file count.
+| Concord | Eng | Pre-announcer pack release. | Old announcer, Pre-V29.
+| tankict | Eng + Rus | V1 | n/a
+| NorwayLCAndTrains | Eng + PL | V1 | n/a
+| Rekrut Kurbel | EN | V2.3 | ASNP only
 
 ### Removed announcers
 | Announcer voice actor | Used to be supported on | Language | last updated | Notes
 | -- | :--: | -- | :--: | --
 | Pyscowicz | n/a | Eng + Fin | V1 | Removed due announcer never got it's missing audio file.
 
+### Supported map per announcer.
+| Announcer voice actor | Ruralline (V29 - V3) | Ruralline (V4)
+| -- | :-: | :-:
+| Valentin [DE/EN] | Yes | No
+| ☭Papa Trocki☭ | Yes | No
+| Marius_Mustang | Yes | No
+| Mr Ballistic101 | Yes | No
+| Concord | Yes | No
+| tankict | Yes | No
+| NorwayLCAndTrains | Yes | No
+| Rekrut Kurbel | Yes | No
+
 ### Check wiki for the map specified information.
 - Station ID's
-- Routes
+- Small history.
