@@ -28,7 +28,7 @@ Metrostroi.AddSarmatUPOAnnouncer("[UPO] Rockport metropolitan | Ballistic", {
 	TERHE = {"subway_announcers/ballistic_announcer/special-files/this_train_terminates_here.mp3", 2.22},
 	--Warning Bell
 	st_cm = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3", 4.54},
-	}, 
+	},
 	{
 		{
 			--МАРШРУТ
