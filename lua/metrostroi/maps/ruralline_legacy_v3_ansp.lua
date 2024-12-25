@@ -737,4 +737,95 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict",
     }
 )
 
+print("RMDT Announcer loader: Rekrut Kurbel's custom announcer & routes")
+Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel",
+    {
+		asnp = true
+		
+		click1 = {"subway_announcers/asnp/boiko_new/click1.mp3",0.5},
+		click2 = {"subway_announcers/asnp/boiko_new/click2.mp3",0.3},
+		click3 = {"subway_announcers/asnp/boiko_new/click3.mp3",0.3},
+		
+        announcer_ready = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_announcer_ready.wav", 3.657},
+        doors_closing = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_doors_closing.wav", 2.612},
+		next_station = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_next_station.wav", 1.405},
+		station = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_station.wav", 1.033},
+		platformL = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_platformL.wav", 1.985},
+		platformR = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_platformR.wav", 1.939},
+		terminates_at = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_terminates_at.wav", 1.788},
+		terminates_here = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_terminates_here.wav", 4.287},
+		spec_belongings = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_spec_belongings.wav", 4.941},
+		spec_belongings2 = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_spec_belongings2.wav", 3.681},
+		spec_emergency = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_spec_emergency.wav", 9.120},
+		spec_handrails = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_spec_handrails.wav", 3.902},
+		spec_terminus = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_spec_terminus.wav", 4.271},
+		spec_train_depart = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_spec_train_depart.wav", 6.005},
+		spec_train_stop = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_spec_train_stop.wav", 7.226},
+		RL = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_RL.wav", 1.010},
+		UP = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_UP.wav", 1.114},
+		WF = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_WF.wav", 1.033},
+		CH = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_CH.wav", 0.894},
+		AV = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_AV.wav", 1.800},
+		MS = {"subway_announcers/v3_announcers/rk_announcer/RL_RK_MS.wav", 1.149},
+		
+    },
+    {
+        {
+            LED = {3,8,5,5,4,5},
+            Name = "Market Street line",
+            Loop = false,
+			spec_last = {"spec_terminus",0.1,"spec_belongings2"},
+			spec_wait = {{"spec_train_stop"},{"spec_train_depart"}},
+			BlockDoors = true,
+            {
+                900, "Market St.",
+                arrlast = {{nil},{"station","MS","platformR","terminates_here",0.1,"spec_belongings"}, "MS"},
+                dep = {{"doors_closing","next_station","AV",0.1,"spec_handrails"},{nil}},
+				have_inrerchange = true,
+				right_doors=true,
+            },
+            {
+                902, "Aviation Uni.",
+                arr = {{"station","AV","platformL"},{"station","AV","platformL"}},
+                dep = {{"doors_closing","next_station","CH"},{"doors_closing","next_station","MS",0.1,"spec_handrails"}},
+                arrlast = {{"station","AV","platformL","terminates_here",0.1,"spec_belongings"},{"station","AV","platformL","terminates_here",0.1,"spec_belongings"}, "AV"},
+				not_last = {2, "terminates_at", "AV"},
+				have_inrerchange = true,
+            },
+            {
+                903, "City Hall",
+                arr = {{"station","CH","platformR",0.1,"spec_belongings"},{"station","CH","platformR",0.1,"spec_belongings"}},
+                dep = {{"doors_closing","next_station","WF",0.1,"spec_emergency"},{"doors_closing","next_station","AV"}},
+				have_inrerchange = true,
+				right_doors=true,
+            },
+            {
+                904, "White Forest",
+                arr = {{"station","WF","platformR"},{"station","WF","platformR"}},
+                dep = {{"doors_closing","next_station","UP"},{"doors_closing","next_station","CH",0.1,"spec_emergency"}},
+                arrlast = {{"station","WF","platformR","terminates_here",0.1,"spec_belongings"},{"station","WF","platformR","terminates_here",0.1,"spec_belongings"}, "WF"},
+				not_last = {2, "terminates_at", "WF"},
+				have_inrerchange = true,
+				right_doors=true,
+            },
+            {
+                905, "Urban Park",
+                arr = {{"station","UP","platformR"},{"station","UP","platformR"}},
+                dep = {{"doors_closing","next_station","RL",0.1,"spec_handrails"},{"doors_closing","next_station","WF"}},
+                arrlast = {{"station","UP","platformR","terminates_here",0.1,"spec_belongings"},{"station","UP","platfromR","terminates_here",0.1,"spec_belongings"}, "UP"},
+				not_last = {2, "terminates_at", "UP"},
+				have_inrerchange = true,
+				right_doors=true,
+            },
+            {
+                906, "Rocklake",
+                arrlast = {{"station","RL","platformR","terminates_here",0.1,"spec_belongings"},{nil}, "RL"},
+                dep = {{nil},{"doors_closing","next_station","UP",0.1,"spec_handrails"}},
+				have_inrerchange = true,
+				right_doors=true,
+            },
+        },
+    }
+)
+
 print("RMDT Announcer loader: RPM Announcer has now loadded fully.")
