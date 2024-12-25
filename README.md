@@ -1,5 +1,5 @@
 # Announcer for Rockport Metropolitan maps.
-## GitHub / Workshop version number: R-V2.1
+## GitHub / Workshop version number: R-V2.3
 
 ### Announcer pack supported maps
 | Map name | Versions | Owner of the line | Set in (year) | Notes
@@ -21,6 +21,7 @@
 | Concord | V29, V29_snow, V3 | Eng | - | Last update was long time ago....
 | tankict | V29, V29_snow, V3 | Eng + Rus | V1 | -
 | NorwayLCAndTrains | V29, V29_snow, V3, V4 | Eng + PL | V1 | -
+| Rekrut Kurbel | V3 | EN | V2.3 | ASNP only
 
 
 ### Removed announcers
