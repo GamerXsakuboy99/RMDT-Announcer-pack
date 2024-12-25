@@ -3,7 +3,7 @@ local Map = game.GetMap():lower() or ""
 if Map:find("gm_metro_ruralline_v3") then
     Metrostroi.PlatformMap = "ruralline_legacy"
     Metrostroi.CurrentMap = "ruralline_legacy"
-    print("Legacy version of the ruralline.")
+    print("V3-Of Ruralline.")
 
 else
     return
@@ -35,7 +35,6 @@ print("=========================================================")
 
 
 print("RMDT Announcer loader: Valentin's announcer & routes (V3)")
-
 Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin",
     {
         -- Announcer starting files
@@ -46,8 +45,6 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin",
         announcer_ready = {"subway_announcers/global-sounds/mireo_gong_01.mp3",1.24},
         -- Doors closing
         dro_cls = {"subway_announcers/global-sounds/doors_closing/old-doors.mp3",4.54},
-        --dro_cls = {"subway_announcers/global-sounds/doors_closing/futr-doors.mp3",2.40},
-        --dro_cls = {"subway_announcers/global-sounds/doors_closing/tape-doors.mp3",4.25},
         -- Special announcer files
         doors_both = {"subway_announcers/v3_announcers/valentin_announcer/special/doors_both.mp3",2.50},
         doors_both_ger = {"subway_announcers/v3_announcers/valentin_announcer/special/doors_both_ger.mp3",2.25},
@@ -98,16 +95,11 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin",
         urban_ger = {"subway_announcers/v3_announcers/valentin_announcer/stations/urban_park_ger.mp3",1.04},
         rocklake = {"subway_announcers/v3_announcers/valentin_announcer/stations/rocklake.mp3",0.97},
         rocklake_ger = {"subway_announcers/v3_announcers/valentin_announcer/stations/rocklake_ger.mp3",1.16},
-        --aprilpoint = {"subway_announcers/v3_announcers/valentin_announcer/stations/april_point.mp3",1.14},  V4 announcer
-        --svs = {"subway_announcers/v3_announcers/valentin_announcer/stations/saddle_valley.mp3,1.13}, V4 announcer
-        --svs_ger = {"subway_announcers/v3_announcers/valentin_announcer/stations/saddle_valley_ger.mp3,1.20}, V4 announcer
-        --rpc = {"subway_announcers/v3_announcers/valentin_announcer/stations/}, V4 announcer
-        --rpc_ger = {"subway_announcers/v3_announcers/valentin_announcer/stations/}, V4 announcer
     },
     {
         {
             LED = {3,8,5,5,4,5},
-            Name = "Line M52 MS-RL",
+            Name = "MT-4 Market St. Line",
             Loop = false,
             spec_last = {"ann_start", "dro_cls"},
             spec_wait = {"unss",0.5,"unss_ger"},
@@ -143,84 +135,6 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin",
                 906,"Rocklake",
                 arrlast = {{"ann_start","ths","rocklake","doors_right","trhm",0.5,"ths_ger","rocklake_ger","doors_right_ger","trhm_ger","click"},{nil}},
                 dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"welc_lvp","nx_st","urban","platform_right",0.2,"welc_lvp_ger","nx_st_ger","urban_ger","platform_right_ger","click"}},
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52A MS-WF",
-            Loop = false,
-            spec_last = {"ann_start", "dro_cls"},
-            spec_wait = {"unss",0.5,"unss_ger"},
-            {
-                900,"Market Street",
-                arrlast = {{nil},{"ann_start","ths","market","doors_right","trhm",0.2,"ths_ger","market_ger","doors_right_ger","trhm_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"welc_lvp","nx_st","aviation","platform_left",0.2,"ravenholm_closed",0.5,"welc_lvp_ger","nx_st_ger","aviation_ger","platform_left_ger",0.2,"ravenholm_closed_ger","click"},{nil}},
-            },
-            {
-                902,"Aviation Uni.",
-                arr = {{"ann_start","ths","aviation","doors_left","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_left_ger","mind_gap_step_ger","click"},{"ann_start","ths","aviation","doors_left","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_left_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","market","platform_right",0.2,"ravenholm_closed",0.5,"nx_st_ger","market_ger","platform_right_ger",0.2,"ravenholm_closed_ger","click"}},
-            },
-            {
-                903,"Lakeview City Hall",
-                arr = {{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","aviation","platform_left",0.5,"nx_st_ger","aviation_ger","platform_left_ger","click"}},
-            },
-            {
-                904,"White Forest",
-                arrlast = {{"ann_start","ths","white","doors_both","trhm",0.5,"ths_ger","white_ger","doors_both_ger","trhm_ger","click"},{nil}},
-                dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger","click"}},
-                ignorelast = true,
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52B WF-RL",
-            Loop = false,
-            spec_last = {"ann_start", "dro_cls"},
-            spec_wait = {"unss",0.5,"unss_ger"},
-            {
-                904,"White Forest",
-                arrlast = {{nil},{"ann_start","ths","white","doors_right","trhm",0.5,"ths_ger","white_ger","doors_right_ger","trhm_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","urban","platform_right",0.5,"nx_st_ger","urban_ger","platform_right_ger","click"},{nil}},
-            },
-            {
-                905,"Urban Park",
-                arr = {{"ann_start","ths","urban","doors_right","mind_gap_step",0.5,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","urban","doors_right","mind_gap_step",0.5,"ths_ger","urban_ger","doors_right_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","rocklake","platform_left",0.5,"nx_st_ger","rocklake_ger","platform_left_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dorcl",5.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger","click"}},
-            },
-            {
-                906,"Rocklake",
-                arrlast = {{"ann_start","ths","rocklake","doors_right","trhm",0.5,"ths_ger","rocklake_ger","doors_right_ger","trhm_ger","click"},{nil}},
-                dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"welc_lvp","nx_st","urban","platform_right",0.5,"welc_lvp_ger","nx_st_ger","urban_ger","platform_right_ger","click"}},
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52C Custom",
-            Loop = false,
-            spec_last = {"ann_start", "dro_cls"},
-            spec_wait = {"unss",0.5,"unss_ger"},
-            {
-                902,"Aviation Uni.",
-                --arr = {{"ann_start","ths","aviation","doors_right","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","aviation","doors_right","mind_gap_step",0.5,"ths_ger","aviation_ger","doors_right_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger","click"},{nil}},
-                arrlast = {{nil},{"ann_start","ths","aviation","doors_left","trhm",0.5,"ths_ger","aviation_ger","doors_left_ger","trhm_ger"}},
-            },
-            {
-                903,"Lakeview City Hall",
-                arr = {{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","city","doors_right","mind_gap_step",0.5,"ths_ger","city_ger","doors_right_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","aviation","platform_left",0.5,"nx_st_ger","aviation_ger","platform_left_ger","click"}},
-            },
-            {
-                904,"White Forest",
-                arr = {{"ann_start","ths","white","doors_right","mind_gap_step",0.5,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger","click"},{"ann_start","ths","white","doors_right","mind_gap_step",0.5,"ths_ger","white_ger","doors_right_ger","mind_gap_step_ger","click"}},
-                dep = {{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","urban","platform_right",0.5,"nx_st_ger","urban_ger","platform_right_ger","click"},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","city","platform_right",0.5,"nx_st_ger","city_ger","platform_right_ger","click"}},
-            },
-            {
-                905,"Urban Park",
-                arrlast = {{"ann_start","ths","urban","doors_right","trhm",0.5,"ths_ger","urban_ger","doors_right_ger","trhm_ger","click"},{nil}},
-                dep = {{nil},{"ann_start","doors_closing","doors_closing_ger","dro_cls",1.0,"nx_st","white","platform_right",0.5,"nx_st_ger","white_ger","platform_right_ger","click"}},
             }
         }
     }
@@ -258,7 +172,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki",
     {
         {
             LED = {3,8,5,5,4,5},
-            Name = "Line M52 MS-RL",
+            Name = "MT-4 Market St. Line",
             Loop = false,
             spec_last = {"ann_start", "click"},
             spec_wait = {"ann_start", "fault"},
@@ -289,56 +203,6 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki",
                 arr = {{"ann_start","tis","urban","click"},{"ann_start","tis","urban","click"}},
                 dep = {{"ann_start","dro_cls",0.5,"next_st","rocklake","click"},{"ann_start","dro_cls",0.5,"next_st","white","click"}},
                 arrlast = {{"ann_start","tis","urban","eol","spec1","click"},{"ann_start","tis","urban","eol","spec1","click"}},
-            },
-            {
-                906, "Rocklake",
-                arrlast = {{"ann_start","tis","rocklake","eol","spec1","click"},{nil}},
-                dep = {{nil},{"ann_start","dro_cls",0.5,"next_st","urban","click"}},
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52A MS-WF",
-            Loop = false,
-            spec_last = {"ann_start", "click"},
-            spec_wait = {"ann_start", "fault"},
-            {
-                900, "Market Park",
-                arrlast = {{nil},{"ann_start","tis","market","eol","spec1","click"}},
-                dep = {{"ann_start","dro_cls",0.5,"next_st","aviation","click"},{nil}},
-            },
-            {
-                902, "Aviation Uni.",
-                arr = {{"ann_start","tis","aviation","click"},{"ann_start","tis","aviation","click"}},
-                dep = {{"ann_start","dro_cls",0.5,"next_st","city","click"},{"ann_start","dro_cls",0.5,"next_st","market","click"}},
-            },
-            {
-                903, "Lakeview city Hall",
-                arr = {{"ann_start","tis","city","click"},{"ann_start","tis","city","click"}},
-                dep = {{"ann_start","dro_cls",0.5,"next_st","white","click"},{"ann_start","dro_cls",0.5,"next_st","aviation","click"}},
-            },
-            {
-                904, "White Forest",
-                arrlast = {{"ann_start","tis","white","eol","spec1","click"},{nil}},
-                dep = {{nil},{"ann_start","dro_cls",0.5,"next_st","city","click"}},
-                ignorelast = true,
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52B WF - RL",
-            Loop = false,
-            spec_last = {"ann_start", "click"},
-            spec_wait = {"ann_start", "fault"},
-            {
-                904, "White Forest",
-                arrlast = {{nil},{"ann_start","tis","white","eol","spec1","click"}},
-                dep = {{"ann_start","dro_cls",0.5,"next_st","urban","click"},{nil}},
-            },
-            {
-                905, "Urban Park",
-                arr = {{"ann_start","tis","urban","click"},{"ann_start","tis","urban","click"}},
-                dep = {{"ann_start","dro_cls",0.5,"next_st","rocklake","click"},{"ann_start","dro_cls",0.5,"next_st","white","click"}},
             },
             {
                 906, "Rocklake",
@@ -381,7 +245,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius",
     {
         {
             LED = {3,8,5,5,4,5},
-            Name = "M52 MS - RL",
+            Name = "MT-4 Market St. Line",
             Loop = false,
             spec_last = {"terminal","click"},
             spec_wait = {"terminal","click"},
@@ -412,56 +276,6 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius",
                 arr = {{"chime","urban","drc_rh","click"},{"chime","urban","drc_rh","click"}},
                 dep = {{"chime","drc_cls","click"},{"chime","drc_cls","click"}},
                 arrlast = {{"chime","urban","terminal","drc_rh","click"},{"chime","urban","terminal","drc_rh","click"}},
-            },
-            {
-                902, "Rocklake",
-                arrlast = {{"chime","rocklake","terminal","drc_rh","click"},{nil}},
-                dep = {{nil},{"chime","drc_cls","click"}},
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "M52A MS - WF",
-            Loop = false,
-            spec_last = {"terminal","click"},
-            spec_wait = {"terminal","click"},
-            {
-                900, "Market Street",
-                arrlast = {{nil},{"chime","market","terminal","drc_rh","click"}},
-                dep = {{"chime","drc_cls",1.0,"chime","rh_pass","click"},{nil}},
-            },
-            {
-                902, "Aviation Uni.",
-                arr = {{"chime","aviation","drc_lf","click"},{"chime","aviation","drc_lf","click"}},
-                dep = {{"chime","drc_cls","click"},{"chime","drc_cls","click"}},
-            },
-            {
-                903, "Lakeview City Hall",
-                arr = {{"chime","city","drc_rh","click"},{"chime","city","drc_rh","click"}},
-                dep = {{"chime","drc_cls","click"},{"chime","drc_cls","click"}},
-            },
-            {
-                902, "White Forest",
-                arrlast = {{"chime","white","terminal","drc_rh","click"},{nil}},
-                dep = {{nil},{"chime","drc_cls","click"}},
-                ignorelast = true,
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "M52B WF - RL",
-            Loop = false,
-            spec_last = {"terminal","click"},
-            spec_wait = {"terminal","click"},
-            {
-                902, "White Forest",
-                arrlast = {{nil},{"chime","white","terminal","drc_rh","click"}},
-                dep = {{"chime","drc_cls","click"},{nil}},
-            },
-            {
-                902, "Urban Park",
-                arr = {{"chime","urban","drc_rh","click"},{"chime","urban","drc_rh","click"}},
-                dep = {{"chime","drc_cls","click"},{"chime","drc_cls","click"}},
             },
             {
                 902, "Rocklake",
@@ -506,7 +320,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
     {
         {
             LED = {3,8,5,5,4,5},
-            Name = "Line M52 MS-RL",
+            Name = "MT-4 Market St. Line",
             Loop = false,
             spec_last = {"ann_start", "click"},
             spec_wait = {"ann_start", "click"},
@@ -537,56 +351,6 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
                 arr = {{"ann_start","urban","click"},{"ann_start","urban","click"}},
                 dep = {{"dro_cls",1.0,"nxt_rock","click"},{"dro_cls",1.0,"next_white","click"}},
                 arrlast = {{"ann_start","urban","click"},{"ann_start","urban","click"}},
-            },
-            {
-                906, "Rocklake",
-                arrlast = {{"ann_start","rocklake","click"},{nil}},
-                dep = {{nil},{"dro_cls",1.0,"nxt_urban","click"}},
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52A MS-WF",
-            Loop = false,
-            spec_last = {"ann_start", "click"},
-            spec_wait = {"ann_start", "click"},
-            {
-                900, "Market Street",
-                arrlast = {{nil},{"ann_start","market",0.3,"click"}},
-                dep = {{"dro_cls",1.0,"nxt_aviation","click"},{nil}},
-            },
-            {
-                902, "Aviation Uni.",
-                arr = {{"ann_start","aviation","click"},{"ann_start","aviation","click"}},
-                dep = {{"dro_cls",1.0,"nxt_city","click"},{"dro_cls",1.0,"nxt_market","click"}},
-            },
-            {
-                903, "Lakeview City Hall",
-                arr = {{"ann_start","city","click"},{"ann_start","city","click"}},
-                dep = {{"dro_cls",1.0,"nxt_white","click"},{"dro_cls",1.0,"nxt_aviation","click"}},
-            },
-            {
-                904, "White Forest",
-                arrlast = {{"ann_start","white","click"},{nil}},
-                dep = {{nil},{"dro_cls",1.0,"nxt_city","click"}},
-                ignorelast = true,
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52B WF-RL",
-            Loop = false,
-            spec_last = {"ann_start", "click"},
-            spec_wait = {"ann_start", "click"},
-            {
-                904, "White Forest",
-                arrlast = {{nil},{"ann_start","white","click"}},
-                dep = {{"dro_cls",1.0,"nxt_urban","click"},{nil}},
-            },
-            {
-                905, "Urban Park",
-                arr = {{"ann_start","urban","click"},{"ann_start","urban","click"}},
-                dep = {{"dro_cls",1.0,"nxt_rock","click"},{"dro_cls",1.0,"next_white","click"}},
             },
             {
                 906, "Rocklake",
@@ -682,56 +446,6 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict",
                 906, "Rocklake",
                 arrlast = {{"ann_start","arrival_end","rock","mind_gap",0.5,"arrival_end_ru","rock_ru","mind_gap_ru"},{nil}},
                 dep = {{nil},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","urban",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","urban_ru",0.3,"click"}},
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52A MS - WF",
-            Loop = false,
-            spec_last = {"ann_start","st_end","st_end_ru","click"},
-            spec_wait = {"ann_start","click"},
-            {
-                900, "Market Street",
-                arrlast = {{nil},{"ann_start","arrival_end","market",0.5,"arrival_end_ru","market_ru"}},
-                dep = {{"dro_cls",0.5,"train_goes","white",0.3,"nxt_st","aviation",0.5,"train_goes_ru","white_ru",0.3,"nxt_st_ru","white_ru",0.3,"click"},{nil}},
-            },
-            {
-                902, "Aviation Uni.",
-                arr = {{"ann_start","arrival","aviation","mind_gap",0.5,"arrival_ru","aviation_ru","mind_gap_ru"},{"ann_start","arrival","aviation","mind_gap",0.5,"arrival_ru","aviation_ru","mind_gap_ru"}},
-                dep = {{"dro_cls",0.5,"train_goes","white",0.3,"nxt_st","city",0.5,"train_goes_ru","white_ru",0.3,"nxt_st_ru","city_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","market",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","market_ru",0.3,"click"}},
-            },
-            {
-                903, "Lakeview City Hall",
-                arr = {{"ann_start","arrival","city","mind_gap",0.5,"arrival_ru","city_ru","mind_gap_ru"},{"ann_start","arrival","city","mind_gap",0.5,"arrival_ru","city_ru","mind_gap_ru"}},
-                dep = {{"dro_cls",0.5,"train_goes","white",0.3,"nxt_st","white",0.5,"train_goes_ru","white_ru",0.3,"nxt_st_ru","white_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","aviation",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","aviation_ru",0.3,"click"}},
-            },
-            {
-                904, "White Forest",
-                arrlast = {{"ann_start","arrival_end","white","mind_gap",0.5,"arrival_end_ru","white_ru","mind_gap_ru"},{nil}},
-                dep = {{nil},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","city",0.5,"train_goes_ru","city_ru",0.3,"nxt_st_ru","market_ru",0.3,"click"}},
-                ignorelast = true,
-            },
-        },
-        {
-            LED = {3,8,5,5,4,5},
-            Name = "Line M52B WF - RL",
-            Loop = false,
-            spec_last = {"ann_start","st_end","st_end_ru","click"},
-            spec_wait = {"ann_start","click"},
-            {
-                904, "White Forest",
-                arrlast = {{nil},{"ann_start","arrival_end","white","mind_gap",0.5,"arrival_end_ru","white_ru","mind_gap_ru"}},
-                dep = {{"dro_cls",0.5,"train_goes","rock",0.3,"nxt_st","urban",0.5,"train_goes_ru","rock_ru",0.3,"nxt_st_ru","city_ru",0.3,"click"},{nil}},
-            },
-            {
-                905, "Urban Park",
-                arr = {{"ann_start","arrival","urban","mind_gap",0.5,"arrival_ru","urban_ru","mind_gap_ru"},{"ann_start","arrival","urban","mind_gap",0.5,"urban_ru","aviation_ru","mind_gap_ru"}},
-                dep = {{"dro_cls",0.5,"train_goes","rock",0.3,"nxt_st","rock",0.5,"train_goes_ru","rock_ru",0.3,"nxt_st_ru","rock_ru",0.3,"click"},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","white",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","white_ru",0.3,"click"}},
-            },
-            {
-                906, "Rocklake",
-                arrlast = {{"ann_start","arrival_end","rock","mind_gap",0.5,"arrival_end_ru","rock_ru","mind_gap_ru"},{nil}},
-                dep = {{nil},{"dro_cls",0.5,"train_goes","market",0.3,"nxt_st","urban",0.5,"train_goes_ru","market_ru",0.3,"nxt_st_ru","urban_ru",0.3,"click"}},
             }
         }
     }
@@ -772,7 +486,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel",
     {
         {
             LED = {3,8,5,5,4,5},
-            Name = "Market Street line",
+            Name = "MT-4 Market St. Line",
             Loop = false,
 			spec_last = {"spec_terminus",0.1,"spec_belongings2"},
 			spec_wait = {{"spec_train_stop"},{"spec_train_depart"}},
@@ -823,8 +537,8 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel",
                 dep = {{nil},{"doors_closing","next_station","UP",0.1,"spec_handrails"}},
 				have_inrerchange = true,
 				right_doors=true,
-            },
-        },
+            }
+        }
     }
 )
 
