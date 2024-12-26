@@ -13,7 +13,7 @@ Metrostroi.SetUPOAnnouncer	(
 	{
 		--Announcer Startup
 		name = "UPO ruralline",
-		tone = {"subway_announcers/upo_treschev/tone.mp3", 1.1},
+		tone = {"subway_announcers/sarmat_upo/tone.mp3", 1.1},
 		click1 = {"subway_announcers/upo/click1.mp3", 0.3},
 		click2 = {"subway_announcers/upo/click2.mp3", 0.1},
 		--Stations
