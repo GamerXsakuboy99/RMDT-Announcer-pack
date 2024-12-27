@@ -85,21 +85,21 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
         {
             900,
             "Market St.",
-            arrlast = {{nil}, {"ann_start", "ths", "market", "doors_right", "trhm", 0.5, "ths_ger", "market_ger", "doors_right_ger", "trhm_ger", "click"}},
-            dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "welc_lvp", "nx_st", "aviation", "platform_left", 0.5, "welc_lvp_ger", "nx_st_ger", "aviation_ger", "platform_left_ger", 2.0, "ravenholm_closed", 0.5, "ravenholm_closed_ger", "click"}, {nil}},
+            arrlast = {{nil}, {"ann_start", "ths", "market", "doors_right", "trhm", 0.2, "ths_ger", "market_ger", "doors_right_ger", "trhm_ger", "click"}},
+            dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "welc_lvp", "nx_st", "aviation", "platform_left", 0.5, "welc_lvp_ger", "nx_st_ger", "aviation_ger", "platform_left_ger", 1.0, "ravenholm_closed", 0.5, "ravenholm_closed_ger", "click"}, {nil}},
         },
         {
             902,
             "Aviation Uni.",
-            arr = {{"ann_start", "ths", "aviation", "doors_left", "mind_gap_step", 0.5, "ths_ger", "aviation_ger", "doors_left_ger", "mind_gap_step_ger", "click"}, {"ann_start", "ths", "aviation", "doors_left", "mind_gap_step", 0.5, "ths_ger", "aviation_ger", "doors_left_ger", "mind_gap_step_ger", "click"}},
-            dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "nx_st", "city", "platform_right", 0.2, "nx_st_ger", "city_ger", "platform_right_ger", "click"}, {"ann_start", "doors_closing", "doors_closing_ger", "dro_cls", 1.0, "nx_st", "market", "platform_right", 0.2, "ravenholm_closed", 0.5, "nx_st_ger", "market_ger", "platform_right_ger", 0.2, "ravenholm_closed_ger", "click"}},
-            arrlast = {{nil}, {"ann_start", "ths", "aviation", "doors_left", "trhm", 0.5, "ths_ger", "aviation_ger", "doors_left_ger", "trhm_ger"}},
+            arr = {{"ann_start", "ths", "aviation", "doors_left", "mind_gap_step", 0.2, "ths_ger", "aviation_ger", "doors_left_ger", "mind_gap_step_ger", "click"}, {"ann_start", "ths", "aviation", "doors_left", "mind_gap_step", 0.2, "ths_ger", "aviation_ger", "doors_left_ger", "mind_gap_step_ger", "click"}},
+            dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "nx_st", "city", "platform_right", 0.2, "nx_st_ger", "city_ger", "platform_right_ger", "click"}, {"doors_closing",0.2, "doors_closing_ger",0.5,"dro_cls", 2.0, "nx_st", "market", "platform_right", 0.2, "nx_st_ger", "market_ger", "platform_right_ger", 2.0, "ravenholm_closed", 0.5 ,"ravenholm_closed_ger", "click"}},
+            arrlast = {{nil}, {"ths", "aviation", "doors_left", "trhm", 0.2, "ths_ger", "aviation_ger", "doors_left_ger", "trhm_ger"}},
         },
         {
             903,
             "Lakeview City Hall",
             arr = {{"ann_start", "ths", "city", "doors_right", "mind_gap_step", 0.5, "ths_ger", "city_ger", "doors_right_ger", "mind_gap_step_ger", "click"}, {"ann_start", "ths", "city", "doors_right", "mind_gap_step", 0.5, "ths_ger", "city_ger", "doors_right_ger", "mind_gap_step_ger", "click"}},
-            dep = {{"ann_start", "doors_closing", "doors_closing_ger", "dro_cls", 1.0, "nx_st", "white", "platform_right", 0.2, "nx_st_ger", "white_ger", "platform_right_ger", "click"}, {"ann_start", "doors_closing", "doors_closing_ger", "dro_cls", 1.0, "nx_st", "aviation", "platform_left", 0.2, "nx_st_ger", "aviation_ger", "platform_left_ger", "click"}},
+            dep = {{"doors_closing", 0.2,"doors_closing_ger", 0.5,"dro_cls", 1.0, "nx_st", "white", "platform_right", 0.2, "nx_st_ger", "white_ger", "platform_right_ger", "click"}, {"doors_closing", 0.2,"doors_closing_ger", 1.0,"dro_cls", 2.0, "nx_st", "aviation", "platform_left", 0.2, "nx_st_ger", "aviation_ger", "platform_left_ger", "click"}},
         },
         {
             904,
