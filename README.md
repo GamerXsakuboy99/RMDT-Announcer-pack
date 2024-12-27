@@ -11,7 +11,7 @@
 ### Announcer pack supported maps
 | Map name | Map version(s) Supported | Owner of the line | Set in (year) | Notes
 | -- | :--: | -- | :--: | --
-| gm_metro_ruralline | V29 - V3 | Lakeview transport (LVP) (1954 - 1999) | 1995 | -
+| gm_metro_ruralline | V3 | Lakeview transport (LVP) (1954 - 1999) | 1995 | V29 support dropped on (version).
 
 #### Future maps/Versions
 | Map name | Versions | Owner of the line | Set in (year) | Notes
@@ -36,16 +36,16 @@
 | Pyscowicz | n/a | Eng + Fin | V1 | Removed due announcer never got it's missing audio file.
 
 ### Supported map per announcer.
-| Announcer voice actor | Ruralline (V29 - V3) | Ruralline (V4)
+| Announcer voice actor | gm_metro_ruralline_v3
 | -- | :-: | :-:
-| Valentin [DE/EN] | Yes | No
-| ☭Papa Trocki☭ | Yes | No
-| Marius_Mustang | Yes | No
-| Mr Ballistic101 | Yes | No
-| Concord | Yes | No
-| tankict | Yes | No
-| NorwayLCAndTrains | Yes | No
-| Rekrut Kurbel | Yes | No
+| Valentin [DE/EN] | Yes
+| ☭Papa Trocki☭ | Yes
+| Marius_Mustang | Yes
+| Mr Ballistic101 | Yes
+| Concord | Yes
+| tankict | Yes
+| NorwayLCAndTrains | Yes
+| Rekrut Kurbel | Yes
 
 ### Check wiki for the map specified information.
 - Station ID's

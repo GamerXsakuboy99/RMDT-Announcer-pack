@@ -125,3 +125,8 @@ R-V2
 ### Update: 29 Oct @ 8.15am
 R-V2.1
 - De-capitalized files.
+
+### Update: 
+R-V3
+- QOL changes.
+- 
