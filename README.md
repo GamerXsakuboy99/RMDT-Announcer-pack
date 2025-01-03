@@ -28,7 +28,7 @@
 | Concord | Eng | Pre-announcer pack release. | Old announcer, Pre-V29.
 | tankict | Eng + Rus | V1 | n/a
 | NorwayLCAndTrains | Eng + PL | V1 | n/a
-| Rekrut Kurbel | EN | V2.3 | ASNP only
+| Rekrut Kurbel | EN | V2.3 | ASNP + RIU
 
 ### Removed announcers
 | Announcer voice actor | Used to be supported on | Language | last updated | Notes
