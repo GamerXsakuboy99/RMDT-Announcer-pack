@@ -10,6 +10,14 @@ Left side:  Market street ---> Rocklake
 Right side: Rocklake ----> Market Street
 
 !! Station lines !!!!
-rrlast / Arr = arrival announcer.
-dep = Departure
-arrlast = Alt terminal
+- rrlast / Arr = arrival announcer.
+- dep = Departure
+- arrlast = Alt terminal
+- have_inrerchange = Interchange to other transport types?
+- right_doors = Open right doors only.
+- not_last = {2, "terminates_at", "UP"}, = s, audio, audio
+
+#### Whole Announcer settings:
+- asnp =, ASNP announcer only.
+- riu =, Tape announcer only.
+- BlockDoors = true, = Is ASNP door blocker active?
