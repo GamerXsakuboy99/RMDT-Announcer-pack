@@ -98,7 +98,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
             "Aviation Uni.",
             arr = {{"ann_start", "ths", "aviation", "doors_left", 0.2, "ths_ger", "aviation_ger", "doors_left_ger", 0.1, "click"}, {"ann_start", "ths", "aviation", "doors_left", 0.2, "ths_ger", "aviation_ger", "doors_left_ger", 0.1, "click"}},
             dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "nx_st", "city", "platform_right", 0.2, "nx_st_ger", "city_ger", "platform_right_ger", 0.1, "click"}, {"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 2.0, "nx_st", "market", "platform_right", 0.2, "nx_st_ger", "market_ger", "platform_right_ger", 2.0, "ravenholm_closed", 0.5, "ravenholm_closed_ger", 0.1, "click"}},
-            arrlast = {{"ann_start", "ths", "aviation", "doors_left", 0.2, "ths_ger", "aviation_ger", "doors_left_ger", 0.2, "trhm", 0.2, "trhm_ger", 0.1, "click"}, {"ann_start", "ths", "aviation", "doors_left", 0.2, "ths_ger", "aviation_ger", "doors_left_ger", 0.2, "trhm", 0.2, "trhm_ger", 0.1, "click"}},
+            arrlast = {{nil}, {"ann_start", "ths", "aviation", "doors_left", 0.2, "ths_ger", "aviation_ger", "doors_left_ger", 0.2, "trhm", 0.2, "trhm_ger", 0.1, "click"}},
             not_last = {2, "trhm", 0.2, "trhm_ger", "aviation"},
         },
         {
@@ -186,7 +186,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
             "Aviation Uni.",
             arr = {{"chime", "aviation", "drc_lf", 1.0, "click"}, {"chime", "aviation", "drc_lf", 1.0, "click"}},
             dep = {{"drc_cls", 1.0,"click"}, {"drc_cls", 1.0,"click"}},
-            arrlast = {{"chime", "aviation", "terminal", "drc_lf", 1.0, "click"}, {"chime", "aviation", "terminal", "drc_lf", 1.0, "click"}},
+            arrlast = {{nil}, {"chime", "aviation", "terminal", "drc_lf", 1.0, "click"}},
             not_last = {2, "terminal", "aviation", 1.0, "click"},
         },
         {
@@ -273,7 +273,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
             "Aviation Uni.",
             arr = {{"ann_start", "aviation", "click"}, {"ann_start", "aviation", "click"}},
             dep = {{"dro_cls", 1.0, "nxt_city", "click"}, {"dro_cls", 1.0, "nxt_market", "click"}},
-            arrlast = {{"ann_start", "aviation", "click"}, {"ann_start", "aviation", "click"}},
+            arrlast = {{nil}, {"ann_start", "aviation", "click"}},
             not_last = {2, "terminal", "urban", 1.0, "click"},
         },
         {
@@ -313,8 +313,9 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
     }
 })
 
-print("RMDT Announcer loader: Now loading Tankict announcer")
+-- Tankict announcer
 Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
+    asnp = true,
     -- Announcer starting files
     ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
     click = {"subway_announcers/global-sounds/rri-click.mp3", 0.31},
@@ -364,49 +365,61 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
         Loop = false,
         spec_last = {"ann_start", "st_end", "st_end_ru", "click"},
         spec_wait = {"ann_start", "click"},
+        BlockDoors = true,
         {
             900,
             "Market St.",
-            arrlast = {{nil}, {"ann_start", "arrival_end", "market", 0.5, "arrival_end_ru", "market_ru"}},
-            dep = {{"dro_cls", 0.5, "train_goes", "rock", 0.3, "nxt_st", "aviation", 0.5, "train_goes_ru", "rock_ru", 0.3, "nxt_st_ru", "aviation_ru", 0.3, "click"}, {nil}},
+            arrlast = {{nil}, {"ann_start", "arrival_end", "market", 0.5, "arrival_end_ru", "market_ru", 0.3, "click"}},
+            dep = {{"dro_cls", 0.5, "nxt_st", "aviation", 0.3, "nxt_st_ru", "aviation_ru", 0.5, "train_goes", "rock", 0.3, "train_goes_ru", "rock_ru", 0.3, "click"}, {nil}},
+            have_inrerchange = true,
+            right_doors = true,
         },
         {
             902,
             "Aviation Uni.",
-            arr = {{"ann_start", "arrival", "aviation", "mind_gap", 0.5, "arrival_ru", "aviation_ru", "mind_gap_ru"}, {"ann_start", "arrival", "aviation", "mind_gap", 0.5, "arrival_ru", "aviation_ru", "mind_gap_ru"}},
-            dep = {{"dro_cls", 0.5, "train_goes", "rock", 0.3, "nxt_st", "city", 0.5, "train_goes_ru", "rock_ru", 0.3, "nxt_st_ru", "city_ru", 0.3, "click"}, {"dro_cls", 0.5, "train_goes", "market", 0.3, "nxt_st", "market", 0.5, "train_goes_ru", "market_ru", 0.3, "nxt_st_ru", "market_ru", 0.3, "click"}},
-            arrlast = {{"ann_start", "arrival_end", "aviation", "mind_gap", 0.5, "arrival_end_ru", "aviation_ru", "mind_gap_ru"}, {"ann_start", "arrival_end", "aviation", "mind_gap", 0.5, "arrival_end_ru", "aviation_ru", "mind_gap_ru"}},
+            arr = {{"ann_start", "arrival", "aviation", 0.5, "arrival_ru", "aviation_ru", 0.3, "click"}, {"ann_start", "arrival", "aviation", 0.5, "arrival_ru", "aviation_ru", 0.3, "click"}},
+            dep = {{"dro_cls", 0.5, "nxt_st", "city", 0.3, "nxt_st_ru", "city_ru", 0.3, "click"}, {"dro_cls", 0.5, "nxt_st", "market", 0.3, "nxt_st_ru", "market_ru", 0.3, "click"}},
+            arrlast = {{nil}, {"ann_start", "arrival_end", "aviation", 0.3, "arrival_end_ru", "aviation_ru", 0.3, "click"}},
+            not_last = {2, "st_end", "aviation", 0.3, "st_end_ru", "aviation_ru", 0.3, "click"},
         },
         {
             903,
             "Lakeview City Hall",
-            arr = {{"ann_start", "arrival", "city", "mind_gap", 0.5, "arrival_ru", "city_ru", "mind_gap_ru"}, {"ann_start", "arrival", "city", "mind_gap", 0.5, "arrival_ru", "city_ru", "mind_gap_ru"}},
-            dep = {{"dro_cls", 0.5, "train_goes", "rock", 0.3, "nxt_st", "white", 0.5, "train_goes_ru", "rock_ru", 0.3, "nxt_st_ru", "white_ru", 0.3, "click"}, {"dro_cls", 0.5, "train_goes", "market", 0.3, "nxt_st", "aviation", 0.5, "train_goes_ru", "market_ru", 0.3, "nxt_st_ru", "aviation_ru", 0.3, "click"}},
+            arr = {{"ann_start", "arrival", "city", 0.3, "arrival_ru", "city_ru", 0.3, "click"}, {"ann_start", "arrival", "city", 0.3, "arrival_ru", "city_ru", 0.3, "click"}},
+            dep = {{"dro_cls", 0.5, "nxt_st", "white", 0.3, "nxt_st_ru", "white_ru", 0.3, "click"}, {"dro_cls", 0.3, "nxt_st", "aviation", 0.3, "nxt_st_ru", "aviation_ru", 0.3, "click"}},
+            right_doors = true,
         },
         {
             904,
             "White Forest",
-            arr = {{"ann_start", "arrival", "white", "mind_gap", 0.5, "arrival_ru", "white_ru", "mind_gap_ru"}, {"ann_start", "arrival", "white", "mind_gap", 0.5, "arrival_ru", "white_ru", "mind_gap_ru"}},
-            dep = {{"dro_cls", 0.5, "train_goes", "rock", 0.3, "nxt_st", "urban", 0.5, "train_goes_ru", "rock_ru", 0.3, "nxt_st_ru", "city_ru", 0.3, "click"}, {"dro_cls", 0.5, "train_goes", "market", 0.3, "nxt_st", "city", 0.5, "train_goes_ru", "city_ru", 0.3, "nxt_st_ru", "market_ru", 0.3, "click"}},
-            arrlast = {{"ann_start", "arrival_end", "white", "mind_gap", 0.5, "arrival_end_ru", "white_ru", "mind_gap_ru"}, {"ann_start", "arrival_end", "white", "mind_gap", 0.5, "arrival_end_ru", "white_ru", "mind_gap_ru"}},
+            arr = {{"ann_start", "arrival", "white", "arrival_ru", "white_ru", 0.3, "click"}, {"ann_start", "arrival", "white", "arrival_ru", "white_ru", 0.3, "click"}},
+            dep = {{"dro_cls", 0.5, "nxt_st", "urban", 0.3, "nxt_st_ru", "city_ru", 0.3, "train_goes", "rock", 0.3, "train_goes_ru", "rock_ru", 0.3, "click"}, {"dro_cls", 0.5, "nxt_st", "city", 0.3, "next_st", "city_ru", 0.3, "train_goes", "market", 0.3, "train_goes_ru", "market_ru", 0.3,"click"}},
+            arrlast = {{"ann_start", "arrival_end", "white", 0.3, "arrival_end_ru", "white_ru", 0.3, "click"}, {"ann_start", "arrival_end", "white", 0.3, "arrival_end_ru", "white_ru", 0.3, "click"}},
+            not_last = {2, "st_end", "white", 0.3, "st_end_ru", "white_ru", 0.3, "click"},
+            right_doors = true,
         },
         {
             905,
             "Urban Park",
-            arr = {{"ann_start", "arrival", "urban", "mind_gap", 0.5, "arrival_ru", "urban_ru", "mind_gap_ru"}, {"ann_start", "arrival", "urban", "mind_gap", 0.5, "urban_ru", "aviation_ru", "mind_gap_ru"}},
-            dep = {{"dro_cls", 0.5, "train_goes", "rock", 0.3, "nxt_st", "rock", 0.5, "train_goes_ru", "rock_ru", 0.3, "nxt_st_ru", "rock_ru", 0.3, "click"}, {"dro_cls", 0.5, "train_goes", "market", 0.3, "nxt_st", "white", 0.5, "train_goes_ru", "market_ru", 0.3, "nxt_st_ru", "white_ru", 0.3, "click"}},
-            arrlast = {{"ann_start", "arrival", "urban", "mind_gap", 0.5, "arrival_ru", "urban_ru", "mind_gap_ru"}, {"ann_start", "arrival", "urban", "mind_gap", 0.5, "urban_ru", "aviation_ru", "mind_gap_ru"}},
+            arr = {{"ann_start", "arrival", "urban", 0.3, "arrival_ru", "urban_ru", 0.3, "click"}, {"ann_start", "arrival", "urban", 0.3, "urban_ru", "aviation_ru", 0.3, "click"}},
+            dep = {{"dro_cls", 0.5, "nxt_st", "rock", 0.3, "nxt_st_ru", "rock_ru", 0.3, "click"}, {"dro_cls", 0.5, "nxt_st", "white", 0.3, "nxt_st_ru", "white_ru", 0.3, "click"}},
+            arrlast = {{"ann_start", "arrival", "urban", 0.3, "arrival_ru", "urban_ru", 0.3, "click"}, {nil}},
+            not_last = {2, "st_end", "urban", 0.3, "st_end_ru", "urban_ru", 0.3, "click"},
+            have_inrerchange = true,
+            right_doors = true,
         },
         {
             906,
             "Rocklake",
-            arrlast = {{"ann_start", "arrival_end", "rock", "mind_gap", 0.5, "arrival_end_ru", "rock_ru", "mind_gap_ru"}, {nil}},
-            dep = {{nil}, {"dro_cls", 0.5, "train_goes", "market", 0.3, "nxt_st", "urban", 0.5, "train_goes_ru", "market_ru", 0.3, "nxt_st_ru", "urban_ru", 0.3, "click"}},
+            arrlast = {{"ann_start", "arrival_end", "rock", 0.3, "arrival_end_ru", "rock_ru"}, {nil}},
+            dep = {{nil}, {"dro_cls", 0.5, "nxt_st", "urban", 0.3, "nxt_st_ru", "urban_ru", 0.3, "train_goes", "market", 0.3,  "train_goes_ru", "market_ru", 0.3, "click"}},
+            have_inrerchange = true,
+            right_doors = true,
         }
     }
 })
 
-print("RMDT Announcer loader: Rekrut Kurbel's custom announcer & routes")
+-- Rekrut Kurbel's custom announcer & routes
 Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
     asnp = true,
     -- Announcer ready sounds
@@ -458,16 +471,14 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
             "Aviation Uni.",
             arr = {{"station", "AV", "platformL"}, {"station", "AV", "platformL"}},
             dep = {{"doors_closing", "next_station", "CH"}, {"doors_closing", "next_station", "MS", 0.1, "spec_handrails"}},
-            arrlast = {{"station", "AV", "platformL", "terminates_here", 0.1, "spec_belongings"}, {"station", "AV", "platformL", "terminates_here", 0.1, "spec_belongings"}, "AV"},
+            arrlast = {{nil}, {"station", "AV", "platformL", "terminates_here", 0.1, "spec_belongings"}, "AV"},
             not_last = {2, "terminates_at", "AV"},
-            have_inrerchange = true,
         },
         {
             903,
             "Lakeview City Hall",
             arr = {{"station", "CH", "platformR", 0.1, "spec_belongings"}, {"station", "CH", "platformR", 0.1, "spec_belongings"}},
             dep = {{"doors_closing", "next_station", "WF", 0.1, "spec_emergency"}, {"doors_closing", "next_station", "AV"}},
-            have_inrerchange = true,
             right_doors = true,
         },
         {
@@ -477,7 +488,6 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
             dep = {{"doors_closing", "next_station", "UP"}, {"doors_closing", "next_station", "CH", 0.1, "spec_emergency"}},
             arrlast = {{"station", "WF", "platformR", "terminates_here", 0.1, "spec_belongings"}, {"station", "WF", "platformR", "terminates_here", 0.1, "spec_belongings"}, "WF"},
             not_last = {2, "terminates_at", "WF"},
-            have_inrerchange = true,
             right_doors = true,
         },
         {
@@ -485,7 +495,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
             "Urban Park",
             arr = {{"station", "UP", "platformR"}, {"station", "UP", "platformR"}},
             dep = {{"doors_closing", "next_station", "RL", 0.1, "spec_handrails"}, {"doors_closing", "next_station", "WF"}},
-            arrlast = {{"station", "UP", "platformR", "terminates_here", 0.1, "spec_belongings"}, {"station", "UP", "platfromR", "terminates_here", 0.1, "spec_belongings"}, "UP"},
+            arrlast = {{"station", "UP", "platformR", "terminates_here", 0.1, "spec_belongings"}, {nil}},
             not_last = {2, "terminates_at", "UP"},
             have_inrerchange = true,
             right_doors = true,
@@ -504,6 +514,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
 -- Old / Legacy versions (semi-supportive of V3)
 -- trocki_announcer
 Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
+    asnp = true,
     -- Announcer starting files
     ann_start = {"subway_announcers/global-sounds/mireo_gong_01.mp3", 1.24},
     click = {"subway_announcers/global-sounds/rri-click.mp3", 0.31},
@@ -533,44 +544,56 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
         Loop = false,
         spec_last = {"ann_start", "click"},
         spec_wait = {"ann_start", "fault"},
+        BlockDoors = true,
         {
             900,
             "Market St.",
-            arrlast = {{nil}, {"ann_start", "tis", "market", "eol", "spec1", "click"}},
-            dep = {{"ann_start", "dro_cls", 0.5, "next_st", "aviation", "click"}, {nil}},
+            arrlast = {{nil}, {"ann_start", "tis", "market", 0.3,"eol", 0.3,"spec1", "click"}},
+            dep = {{"ann_start", "dro_cls", 1.0, "next_st", "aviation", "click"}, {nil}},
+            have_inrerchange = true,
+            right_doors = true,
         },
         {
             902,
             "Aviation Uni.",
             arr = {{"ann_start", "tis", "aviation", "click"}, {"ann_start", "tis", "aviation", "click"}},
-            dep = {{"ann_start", "dro_cls", 0.5, "next_st", "city", "click"}, {"ann_start", "dro_cls", 0.5, "next_st", "market", "click"}},
+            dep = {{"ann_start", "dro_cls", 1.0, "next_st", "city", "click"}, {"ann_start", "dro_cls", 1.0, "next_st", "market", "click"}},
             arrlast = {{"ann_start", "tis", "aviation", "eol", "spec1", "click"}, {"ann_start", "tis", "aviation", "eol", "spec1", "click"}},
+            not_last = {2, "eol", "aviation"},
         },
         {
             903,
             "Lakeview city Hall",
             arr = {{"ann_start", "tis", "city", "click"}, {"ann_start", "tis", "city", "click"}},
             dep = {{"ann_start", "dro_cls", 0.5, "next_st", "white", "click"}, {"ann_start", "dro_cls", 0.5, "next_st", "aviation", "click"}},
+            right_doors = true,
         },
         {
             904,
             "White Forest",
             arr = {{"ann_start", "tis", "white", "click"}, {"ann_start", "tis", "white", "click"}},
-            dep = {{"ann_start", "dro_cls", 0.5, "next_st", "urban", "click"}, {"ann_start", "dro_cls", 0.5, "next_st", "city", "click"}},
-            arrlast = {{"ann_start", "tis", "white", "eol", "spec1", "click"}, {"ann_start", "tis", "white", "eol", "spec1", "click"}},
+            dep = {{"ann_start", "dro_cls", 1.0, "next_st", "urban", "click"}, {"ann_start", "dro_cls", 1.0, "next_st", "city", "click"}},
+            arrlast = {{"ann_start", "tis", "white",0.3,"eol",0.3,"spec1", "click"}, {"ann_start", "tis", "white",0.3,"eol",0.3,"spec1", "click"}},
+            not_last = {2, "eol", "white"},
+            right_doors = true,
         },
         {
             905,
             "Urban Park",
             arr = {{"ann_start", "tis", "urban", "click"}, {"ann_start", "tis", "urban", "click"}},
             dep = {{"ann_start", "dro_cls", 0.5, "next_st", "rocklake", "click"}, {"ann_start", "dro_cls", 0.5, "next_st", "white", "click"}},
-            arrlast = {{"ann_start", "tis", "urban", "eol", "spec1", "click"}, {"ann_start", "tis", "urban", "eol", "spec1", "click"}},
+            arrlast = {{"ann_start", "tis", "urban",0.3,"eol",0.3,"spec1", "click"}, {"ann_start","tis", "urban",0.3,"eol",0.3,"spec1", "click"}},
+            not_last = {2, "eol", "urban"},
+            have_inrerchange = true,
+            right_doors = true,
         },
         {
             906,
             "Rocklake",
             arrlast = {{"ann_start", "tis", "rocklake", "eol", "spec1", "click"}, {nil}},
             dep = {{nil}, {"ann_start", "dro_cls", 0.5, "next_st", "urban", "click"}},
+            have_inrerchange = true,
+            right_doors = true,
         }
     }
 })
