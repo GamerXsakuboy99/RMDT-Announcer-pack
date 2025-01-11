@@ -103,7 +103,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + GER] LVP announcer 1995 | Valentin", {
         },
         {
             903,
-            "Lakeview City Hall",
+            "Lakeview Cth",
             arr = {{"ann_start", "ths", "city", "doors_right", 0.2, "ths_ger", "city_ger", "doors_right_ger", 0.1, "click"}, {"ann_start", "ths", "city", "doors_right", 0.2, "ths_ger", "city_ger", "doors_right_ger", 0.1, "click"}},
             dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "nx_st", "white", "platform_right", 0.2, "nx_st_ger", "white_ger", "platform_right_ger", 0.1, "click"}, {"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "nx_st", "aviation", "platform_left", 0.2, "nx_st_ger", "aviation_ger", "platform_left_ger", 0.1, "click"}},
             right_doors = true,
@@ -191,7 +191,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Marius", {
         },
         {
             903,
-            "Lakeview City Hall",
+            "Lakeview Cth",
             arr = {{"chime", "city", "drc_rh", 1.0, "click"}, {"chime", "city", "drc_rh", 1.0, "click"}},
             dep = {{"drc_cls", 1.0, "click"}, {"drc_cls", 1.0, "click"}},
             right_doors = true,
@@ -278,7 +278,7 @@ Metrostroi.AddANSPAnnouncer("[PL + ENG] LVP announcer 1995 | NorwayLCAndTrains",
         },
         {
             903,
-            "Lakeview City Hall",
+            "Lakeview Cth",
             arr = {{"ann_start", "city", "click"}, {"ann_start", "city", "click"}},
             dep = {{"dro_cls", 1.0, "nxt_white", "click"}, {"dro_cls", 1.0, "nxt_aviation", "click"}},
             right_doors = true,
@@ -384,7 +384,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
         },
         {
             903,
-            "Lakeview City Hall",
+            "Lakeview Cth",
             arr = {{"ann_start", "arrival", "city", 0.3, "arrival_ru", "city_ru", 0.3, "click"}, {"ann_start", "arrival", "city", 0.3, "arrival_ru", "city_ru", 0.3, "click"}},
             dep = {{"dro_cls", 0.5, "nxt_st", "white", 0.3, "nxt_st_ru", "white_ru", 0.3, "click"}, {"dro_cls", 0.3, "nxt_st", "aviation", 0.3, "nxt_st_ru", "aviation_ru", 0.3, "click"}},
             right_doors = true,
@@ -476,7 +476,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
         },
         {
             903,
-            "Lakeview City Hall",
+            "Lakeview Cth",
             arr = {{"station", "CH", "platformR", 0.1, "spec_belongings"}, {"station", "CH", "platformR", 0.1, "spec_belongings"}},
             dep = {{"doors_closing", "next_station", "WF", 0.1, "spec_emergency"}, {"doors_closing", "next_station", "AV"}},
             right_doors = true,
@@ -563,7 +563,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Trocki", {
         },
         {
             903,
-            "Lakeview city Hall",
+            "Lakeview Cth",
             arr = {{"ann_start", "tis", "city", "click"}, {"ann_start", "tis", "city", "click"}},
             dep = {{"ann_start", "dro_cls", 0.5, "next_st", "white", "click"}, {"ann_start", "dro_cls", 0.5, "next_st", "aviation", "click"}},
             right_doors = true,
@@ -643,7 +643,7 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
         -- //TODO mb add from other announcer a support here....
         {
             903,
-            "Lakeview City Hall",
+            "Lakeview Cth",
             arr = {{"arr_city_hall"}, {"arr_city_hall"}},
             dep = {{"drt_cls", 0.5, "next_white_forest"}, {"drt_cls", 0.5, "next_aviation_university"}},
         },
@@ -732,7 +732,7 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel (Tape)", {
         },
         {
             903,
-            "Lakeview City Hall",
+            "Lakeview Cth",
             arr = {{"station", "CH", "platformR", 0.1, "spec_belongings"}, {"station", "CH", "platformR", 0.1, "spec_belongings"}},
             dep = {{"doors_closing", "next_station", "WF", 0.1, "spec_emergency"}, {"doors_closing", "next_station", "AV"}},
             have_inrerchange = true,
@@ -854,7 +854,7 @@ Metrostroi.SetRRIAnnouncer({
         },
         {
             903,
-            "Lakeview City Hall",
+            "Lakeview Cth",
             arr = {{"ann_start", "ths", "city", "doors_right", 0.2, "ths_ger", "city_ger", "doors_right_ger", 0.1, "click"}, {"ann_start", "ths", "city", "doors_right", 0.2, "ths_ger", "city_ger", "doors_right_ger", 0.1, "click"}},
             dep = {{"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "nx_st", "white", "platform_right", 0.2, "nx_st_ger", "white_ger", "platform_right_ger", 0.1, "click"}, {"doors_closing", 0.2, "doors_closing_ger", 0.5, "dro_cls", 1.0, "nx_st", "aviation", "platform_left", 0.2, "nx_st_ger", "aviation_ger", "platform_left_ger", 0.1, "click"}},
             right_doors = true,
@@ -929,7 +929,7 @@ Metrostroi.SetUPOAnnouncer	(
 			noises = {1, 2, 3}, noiserandom = 0.2,
 		},
 		{
-			903, "Lakeview City Hall",
+			903, "Lakeview Cth",
 			arr = {{"THIIS", "CIT"}, {"THIIS", "CIT"}},
 			dep = {{"NEXIS", "WHI", 0.2, "st_cm"}, {"NEXIS", "AVI", 0.2, "st_cm"}},
 			tone = "tone", dist = 50,
