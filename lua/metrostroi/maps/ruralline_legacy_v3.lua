@@ -353,7 +353,7 @@ Metrostroi.AddANSPAnnouncer("[ENG + RU] LVP announcer 1995 | Tankict", {
     -- Special announcers (Russian)
     train_goes_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/train_goes_to.mp3", 2.79},
     nxt_st_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/next_station_ru.mp3", 1.42},
-    doors_closing_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/doors_closing_ru.mp3", 2.13},
+    doors_close_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/doors_closing_ru.mp3", 2.13},
     mind_gap_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/mind_the_gap.mp3", 5.13},
     st_end_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/end_station.mp3", 8.17},
     stuff_ru = {"subway_announcers/v3_announcers/tankict_announcer/ru/special/dont_forget_your_stuff.mp3", 4.68},
