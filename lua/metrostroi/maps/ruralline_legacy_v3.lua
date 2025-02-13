@@ -945,6 +945,18 @@ Metrostroi.SetUPOAnnouncer({
 })
 
 -- Station texture plates.
+-- 81-700 A type destination boards
+Metrostroi.AddLastStationTex("700", 999, "metrostroi_skins/destination_am/999-blank") -- Blank Texture.
+Metrostroi.AddLastStationTex("700", 998, "metrostroi_skins/destination_am/998-ofs") -- Not in service
+Metrostroi.AddLastStationTex("700", 997, "metrostroi_skins/destination_am/997-museumtr") -- museum train
+Metrostroi.AddLastStationTex("700", 998, "metrostroi_skins/destination_am/996-worktrain") -- 
+Metrostroi.AddLastStationTex("700", 906, "metrostroi_skins/destination_am/906-rl") -- Market street
+Metrostroi.AddLastStationTex("700", 905, "metrostroi_skins/destination_am/905-up") -- Ravenholm
+Metrostroi.AddLastStationTex("700", 904, "metrostroi_skins/destination_am/904-wf") -- Aviation university
+Metrostroi.AddLastStationTex("700", 902, "metrostroi_skins/destination_am/902-avi") -- White forest
+Metrostroi.AddLastStationTex("700", 901, "metrostroi_skins/destination_am/901-raven") -- Urban park
+Metrostroi.AddLastStationTex("700", 900, "metrostroi_skins/destination_am/900-ms") -- rocklake
+
 -- 702 D Types destination boards.
 Metrostroi.AddLastStationTex("702", 999, "metrostroi_skins/81-702_names/999-nis-d") -- Not in service
 Metrostroi.AddLastStationTex("702", 998, "metrostroi_skins/81-702_names/998-blank-d") -- Blank Texture.
