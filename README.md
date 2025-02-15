@@ -1,10 +1,18 @@
 # Announcer for Rockport Metropolitan maps.
-## GitHub / Workshop version number: R-V2.3
+## GitHub / Workshop version number: -
+
+## Drop support for V29 on this branch, DO NOT PUSH TO THE LIVE UNTIL RELEASE DATE FOR V3 IS KNOWN.
+> This is a future update what is gets pushed sametime with the V3 release.
+- Drop support for V29 fully. [X]
+- Tweak & Fine-tune all announcers (expect RK's as it's new.) [X]
+- Other QOL-Updates.[X]
+- Fucking ask @MrBallistic101 & @Pyscowicz Now finally to provided their updated files.... []
+> or just drop the support fully....
 
 ### Announcer pack supported maps
 | Map name | Map version(s) Supported | Owner of the line | Set in (year) | Notes
 | -- | :--: | -- | :--: | --
-| gm_metro_ruralline | V29 - V3 | Lakeview transport (LVP) (1954 - 1999) | 1995 | -
+| gm_metro_ruralline | V3 | Lakeview transport (LVP) (1954 - 1999) | 1995 | V29 support dropped on (version).
 
 #### Future maps/Versions
 | Map name | Versions | Owner of the line | Set in (year) | Notes
@@ -21,7 +29,7 @@
 | Concord | Eng | Pre-announcer pack release. | Old announcer, Pre-V29.
 | tankict | Eng + Rus | V1 | n/a
 | NorwayLCAndTrains | Eng + PL | V1 | n/a
-| Rekrut Kurbel | EN | V2.3 | ASNP only
+| Rekrut Kurbel | EN | V2.3 | ASNP + RIU
 
 ### Removed announcers
 | Announcer voice actor | Used to be supported on | Language | last updated | Notes
@@ -29,17 +37,17 @@
 | Pyscowicz | n/a | Eng + Fin | V1 | Removed due announcer never got it's missing audio file.
 
 ### Supported map per announcer.
-| Announcer voice actor | Ruralline (V29 - V3) | Ruralline (V4)
+| Announcer voice actor | gm_metro_ruralline_v29 | gm_metro_ruralline_v3
 | -- | :-: | :-:
-| Valentin [DE/EN] | Yes | No
-| ☭Papa Trocki☭ | Yes | No
-| Marius_Mustang | Yes | No
-| Mr Ballistic101 | Yes | No
-| Concord | Yes | No
-| tankict | Yes | No
-| NorwayLCAndTrains | Yes | No
-| Rekrut Kurbel | Yes | No
-
+| Valentin [DE/EN] | No | Yes
+| ☭Papa Trocki☭ | Yes | *Yes
+| Marius_Mustang | No | Yes
+| Mr Ballistic101 | No | Yes (UPO only)
+| Concord | Yes | *Yes
+| tankict | No | Yes
+| NorwayLCAndTrains | No | Yes
+| Rekrut Kurbel | Yes | Yes
+> * Announcer only supports V3 as Full route and does not have any Alt-Routes or Is using old V29 announcer files and does have missing / mistakes in.
 ### Check wiki for the map specified information.
 - Station ID's
 - Small history.

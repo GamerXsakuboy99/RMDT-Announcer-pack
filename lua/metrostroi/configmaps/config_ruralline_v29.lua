@@ -1,8 +1,8 @@
 local Map = game.GetMap() or ""
 
 if Map:find("gm_metro_ruralline_v29") then
-	Metrostroi.PlatformMap = "gm_metro_ruralline_v29"
-	Metrostroi.CurrentMap = "gm_metro_ruralline_v29"
+	Metrostroi.PlatformMap = "ruralline_legacy"
+	Metrostroi.CurrentMap = "ruralline_legacy"
 	
 else
 	return
