@@ -1,4 +1,5 @@
 local Map = game.GetMap():lower() or ""
+
 if Map:find("gm_metro_ruralline_v3") then
     Metrostroi.PlatformMap = "ruralline_new"
     Metrostroi.CurrentMap = "ruralline_new"
@@ -7,7 +8,7 @@ else
     return
 end
 
-Metrostroi.AddCISConfig("LVP Route map 1995", {
+Metrostroi.AddCISConfig("Lakeview Transport MT-4", {
 	{
 		LED = {4, 4, 4, 2, 4, 4},
 		Name = "Market street - Rocklake",
