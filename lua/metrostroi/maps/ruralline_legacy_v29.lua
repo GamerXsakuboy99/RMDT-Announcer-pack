@@ -49,8 +49,6 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
             arr = {{"arr_aviation_university"}, {"arr_aviation_university"}},
             dep = {{"drt_cls", 0.5, "next_city_hall"}, {"drt_cls", 0.5, "next_market_street"}},
         },
-        --arrlast = No support as back then turning around at AV was not possible.
-        -- //TODO mb add from other announcer a support here....
         {
             903,
             "Lakeview Cth",
@@ -71,8 +69,6 @@ Metrostroi.AddANSPAnnouncer("[ENG]LVP Announcer 1989 | Legacy announcer by Conco
             arr = {{"arr_urban_park"}, {"arr_urban_park"}},
             dep = {{"drt_cls", 0.5, "next_rocklake"}, {"drt_cls", 0.5, "next_white_forest"}},
         },
-        --arrlast = No support as back then turning around at AV was not possible.
-        -- //TODO mb add from other announcer a support here....
         {
             906,
             "Rocklake",
@@ -216,9 +212,9 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel", {
         {
             902,
             "Aviation Uni.",
-            arr = {{"station", "AV", "platformL"}, {"station", "AV", "platformL"}},
+            arr = {{"station", "AV", "platformR"}, {"station", "AV", "platformR"}},
             dep = {{"doors_closing", 0.25, "next_station", "CH"}, {"doors_closing", 0.25, "next_station", "MS", 0.1, "spec_handrails"}},
-            arrlast = {{nil}, {"station", "AV", "platformL", "terminates_here", 0.1, "spec_belongings"}, "AV"},
+            arrlast = {{nil}, {"station", "AV", "platformR", "terminates_here", 0.1, "spec_belongings"}, "AV"},
             not_last = {2, "terminates_at", "AV"},
         },
         {
@@ -399,9 +395,9 @@ Metrostroi.AddANSPAnnouncer("[ENG] LVP announcer 1995 | Rekrut Kurbel (Tape)", {
         {
             902,
             "Aviation Uni.",
-            arr = {{"station", "AV", "platformL"}, {"station", "AV", "platformL"}},
+            arr = {{"station", "AV", "platformR"}, {"station", "AV", "platformR"}},
             dep = {{"doors_closing", 0.25, "next_station", "CH"}, {"doors_closing", 0.25, "next_station", "MS", 0.1, "spec_handrails"}},
-            arrlast = {{"station", "AV", "platformL", "terminates_here", 0.1, "spec_belongings"}, {"station", "AV", "platformL", "terminates_here", 0.1, "spec_belongings"}, "AV"},
+            arrlast = {{"station", "AV", "platformR", "terminates_here", 0.1, "spec_belongings"}, {"station", "AV", "platformR", "terminates_here", 0.1, "spec_belongings"}, "AV"},
             not_last = {2, "terminates_at", "AV"},
             have_inrerchange = true,
         },
@@ -488,9 +484,9 @@ Metrostroi.SetRRIAnnouncer({
         {
             902,
             "Aviation Uni.",
-            arr = {{"station", "AV", "platformL"}, {"station", "AV", "platformL"}},
+            arr = {{"station", "AV", "platformR"}, {"station", "AV", "platformR"}},
             dep = {{"doors_closing", 0.25, "next_station", "CH"}, {"doors_closing", 0.25, "next_station", "MS", 0.1, "spec_handrails"}},
-            arrlast = {{"station", "AV", "platformL", "terminates_here", 0.1, "spec_belongings"}, {"station", "AV", "platformL", "terminates_here", 0.1, "spec_belongings"}, "AV"},
+            arrlast = {{"station", "AV", "platformR", "terminates_here", 0.1, "spec_belongings"}, {"station", "AV", "platformR", "terminates_here", 0.1, "spec_belongings"}, "AV"},
             not_last = {2, "terminates_at", "AV"},
             have_inrerchange = true,
         },
