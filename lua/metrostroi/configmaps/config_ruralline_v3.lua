@@ -8,7 +8,7 @@ else
     return
 end
 
-Metrostroi.AddCISConfig("LVP Route map 1995", {
+Metrostroi.AddCISConfig("Lakeview Transport MT-4", {
 	{
 		LED = {4, 4, 4, 2, 4, 4},
 		Name = "Market street - Rocklake",

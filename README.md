@@ -37,17 +37,17 @@
 | Pyscowicz | n/a | Eng + Fin | V1 | Removed due announcer never got it's missing audio file.
 
 ### Supported map per announcer.
-| Announcer voice actor | gm_metro_ruralline_v3
-| -- | :-:
-| Valentin [DE/EN] | Yes
-| ☭Papa Trocki☭ | Yes
-| Marius_Mustang | Yes
-| Mr Ballistic101 | Yes (UPO only)
-| Concord | Yes
-| tankict | Yes
-| NorwayLCAndTrains | Yes
-| Rekrut Kurbel | Yes
-
+| Announcer voice actor | gm_metro_ruralline_v29 | gm_metro_ruralline_v3
+| -- | :-: | :-:
+| Valentin [DE/EN] | No | Yes
+| ☭Papa Trocki☭ | Yes | *Yes
+| Marius_Mustang | No | Yes
+| Mr Ballistic101 | No | Yes (UPO only)
+| Concord | Yes | *Yes
+| tankict | No | Yes
+| NorwayLCAndTrains | No | Yes
+| Rekrut Kurbel | Yes | Yes
+> * Announcer only supports V3 as Full route and does not have any Alt-Routes or Is using old V29 announcer files and does have missing / mistakes in.
 ### Check wiki for the map specified information.
 - Station ID's
 - Small history.
