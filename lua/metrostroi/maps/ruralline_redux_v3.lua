@@ -1,7 +1,7 @@
 local Map = game.GetMap():lower() or ""
 if Map:find("gm_metro_ruralline_v3") then
-    Metrostroi.PlatformMap = "ruralline_legacy"
-    Metrostroi.CurrentMap = "ruralline_legacy"
+    Metrostroi.PlatformMap = "ruralline_redux"
+    Metrostroi.CurrentMap = "ruralline_redux"
     print("======Loaded announcers for Ruralline_v3======")
 else
     return
@@ -956,7 +956,6 @@ Metrostroi.AddLastStationTex("700", 904, "metrostroi_skins/destination_am/904-wf
 Metrostroi.AddLastStationTex("700", 902, "metrostroi_skins/destination_am/902-avi") -- White forest
 Metrostroi.AddLastStationTex("700", 901, "metrostroi_skins/destination_am/901-raven") -- Urban park
 Metrostroi.AddLastStationTex("700", 900, "metrostroi_skins/destination_am/900-ms") -- rocklake
-
 -- 702 D Types destination boards.
 Metrostroi.AddLastStationTex("702", 999, "metrostroi_skins/81-702_names/999-nis-d") -- Not in service
 Metrostroi.AddLastStationTex("702", 998, "metrostroi_skins/81-702_names/998-blank-d") -- Blank Texture.
@@ -1002,12 +1001,5 @@ Metrostroi.AddLastStationTex("720", 906, "metrostroi_skins/81-717_schemes/906-rl
 Metrostroi.AddPassSchemeTex("717_new", "Ruralline_1995", {"metrostroi_skins/81-717_schemes/717-ruralline_v3-map",})
 Metrostroi.AddPassSchemeTex("720", "Ruralline_1995", {"metrostroi_skins/81-720_schemes/720-linemap-ruralline-v3-left", "metrostroi_skins/81-720_schemes/720-linemap-ruralline-v3-right",})
 Metrostroi.AddPassSchemeTex("722", "Ruralline_1995", {"metrostroi_skins/81-722_schemes/ruralline_1995r", "metrostroi_skins/81-722_schemes/ruralline-1995",})
-Metrostroi.TickerAdverts = {
-	"DEAR PASSENGERS, WHEN LEAVING THE TRAIN, PLEASE DO NOT FORGET TO TAKE YOUR BELONGINGS WITH YOU.",
-	"FROM THE 6TH OF JULY 1995 ONWARDS, THE USAGE OF THE LAKEVIEW SUBWAY WILL BE FREE OF CHARGE.", 
-	"THE REALIGNMENT OF THE MARKET STREET LINE BETWEEN WHITE FOREST AND ROCKLAKE IS ESTIMATED TO OPEN BY JUNE 1997. THE STATIONS WHITE FOREST AND URBAN PARK WILL BE CLOSED AND REPLACED.",
-	"DEAR PASSENGERS, FOR YOUR OWN SAFETY, PLEASE HOLD ON TO THE HANDRAILS.",
-	"FROM THE 6TH OF JULY 1995 ONWARDS, THE UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE.......................................",
-	".",
-}
+Metrostroi.TickerAdverts = {"DEAR PASSENGERS, WHEN LEAVING THE TRAIN, PLEASE DO NOT FORGET TO TAKE YOUR BELONGINGS WITH YOU.", "FROM THE 6TH OF JULY 1995 ONWARDS, THE USAGE OF THE LAKEVIEW SUBWAY WILL BE FREE OF CHARGE.", "THE REALIGNMENT OF THE MARKET STREET LINE BETWEEN WHITE FOREST AND ROCKLAKE IS ESTIMATED TO OPEN BY JUNE 1997. THE STATIONS WHITE FOREST AND URBAN PARK WILL BE CLOSED AND REPLACED.", "DEAR PASSENGERS, FOR YOUR OWN SAFETY, PLEASE HOLD ON TO THE HANDRAILS.", "FROM THE 6TH OF JULY 1995 ONWARDS, THE UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE.......................................", ".",}
 print("RMDT Announcer loader: RPM Announcer has now loadded fully.")
